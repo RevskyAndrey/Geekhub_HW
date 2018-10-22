@@ -74,12 +74,22 @@ textarea {
 }
 
 
-.leftradio {text-align: left;
-  border: 1px solid orange;
-  width: 200px;
+
+.leftradio {
+  min-width: 200px;
   float: right;
   margin-right: 100px;
 }
+
+.radioc{
+  width: 25px;
+  float: right;
+  margin-right: 350px;
+}
+.leftcheck {
+  border: 1px solid orange;
+}
+
 
 .country {
   margin-top: 120px;
@@ -89,9 +99,6 @@ textarea {
   margin-left: -35px;
 }
 
-.licheck span {
-  margin-left: -125px;
-}
 
 
 input:focus {
