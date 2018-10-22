@@ -83,22 +83,25 @@ textarea {
 
 .radioc{
   width: 25px;
-  float: right;
-  margin-right: 350px;
-}
-.leftcheck {
-  border: 1px solid orange;
+  float: left;
+  margin-left: 200px;
 }
 
+
+.leftcheck {
+  float: right;
+  margin-right: 100px;
+  width: 100px;
+}
+
+.licheck > p  {
+  font-size: 16px;
+  margin-left: -20px;
+}
 
 .country {
   margin-top: 120px;
 }
-
-.licheck  :first-child{
-  margin-left: -35px;
-}
-
 
 
 input:focus {
