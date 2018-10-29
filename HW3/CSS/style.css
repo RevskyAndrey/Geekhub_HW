@@ -1,0 +1,31 @@
+table {
+  width:100%;
+  border: none;
+}
+.table-heder {
+  background: red;
+  height: 80px;
+  color: white;
+}
+
+.table-footer {
+  background: sienna;
+  height: 80px;
+  color: white;
+}
+
+.table-main {
+  background: seagreen;
+  height: 200px;
+  color: white;
+}
+
+.table-body {
+  background: darkslateblue;
+  height: 200px;
+  color: white;
+}
+
+.text-aling {
+  text-align: center;
+}
