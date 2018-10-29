@@ -1,17 +1,17 @@
-.graal {
+.grai l {
   height: 100vh;
 }
 table {
   width:100%;
   border: none;
 }
-.table-heder {
+.heder {
   background: red;
   height: 80px;
   color: white;
 }
 
-.table-footer {
+.footer {
   background: sienna;
   height: 80px;
   color: white;
@@ -37,14 +37,25 @@ h1 {
   margin-top: 150px;
 }
 
+/**2**/
 .column {
   width: 300px;
 }
 
 .float-left {
   float: left;
+  background: blue;
+  color: white;
 }
 
 .float-right {
   float: right;
+}
+
+/**3**/
+
+
+.column-main-centr {
+  background: orange;
+
 }
