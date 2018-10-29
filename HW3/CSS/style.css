@@ -1,3 +1,6 @@
+.graal {
+  height: 100vh;
+}
 table {
   width:100%;
   border: none;
@@ -28,4 +31,20 @@ table {
 
 .text-aling {
   text-align: center;
+}
+
+h1 {
+  margin-top: 150px;
+}
+
+.column {
+  width: 300px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
 }
