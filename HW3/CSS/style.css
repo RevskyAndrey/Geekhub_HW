@@ -1,6 +1,4 @@
-.grai l {
-  height: 100vh;
-}
+
 table {
   width:100%;
   border: none;
@@ -35,6 +33,7 @@ table {
 
 h1 {
   margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 /**2**/
@@ -54,8 +53,11 @@ h1 {
 
 /**3**/
 
+.flex-container {
+  display:flex;
+  flex-direction:row;
+}
 
-.column-main-centr {
-  background: orange;
+.my-flex-block {
 
 }

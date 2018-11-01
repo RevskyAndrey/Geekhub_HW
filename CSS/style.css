@@ -117,7 +117,7 @@ header {
   font-size: 20px;
   text-transform: uppercase;
   color: #dd412c;
-  padding: 20px 0px;
+  padding: 20px 0;
 }
 
 .main-news {
@@ -164,20 +164,21 @@ header {
   border: 1px solid brown;
 }
 
+.right-nav  h3 {
+  color: #dd412c;
+  text-transform: uppercase;
+  padding: 15px 0;
+}
+
+
 .right-nav-ul {
   display: block;
 }
 .right-nav-block {
-  padding: 20px 10px;
-  /***  рамку сделать тенью ?? ***/
-  border-bottom: 1px solid #797979;
+  border: 1px solid #797979;
   border-radius: 5px;
 }
 
-.right-nav-block h3 {
-  color: #dd412c;
-  text-transform: uppercase
-}
 
 
 
