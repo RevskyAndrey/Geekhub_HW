@@ -8,7 +8,7 @@ a {
 }
 
 header {
-  height : 76px;
+  height : 73px;
   background: #dd412c;
   color : #fff;
   display: flex;
@@ -19,7 +19,6 @@ header {
 .logo {
   padding-top: 3px;
   padding-left: 8px;
-  float: left;
   width: 200px;
   height: 70px;
   overflow: hidden;
@@ -27,10 +26,6 @@ header {
 
 /** heder nav-menu */
 
-.main-menu {
-  color:  #fff;
-  float: right;
-}
 
 .main-menu-ul li {
   display: inline;
@@ -41,24 +36,27 @@ header {
   font-size: 12px;
   color: #fff;
   display: inline-block;
-  padding: 30px 11px;
+  padding: 25px 10px;
   text-transform: uppercase;
+  border: 1px solid transparent;
 }
 
 .main-menu-ul li a:hover {
   background: #ffffff;
   color: #797979 ;
 }
-
+.main-menu-ul .active {
+  border-top:  3px solid #fff;
+}
 
 .select-lang {
-  padding: 30px 11px;
+  padding: 25px 10px;
   text-transform: uppercase;
-
 }
 
 .select-lang a {
   color: #fff
+
 }
 
 
@@ -68,7 +66,7 @@ header {
 .welcome {
   height: 750px;
   width: auto;
-  background: #484c4d url(../IMG/BG_welcom.jpg) 50% -350%  no-repeat;
+  background: #484c4d url(../IMG/BG_welcom.jpg) 50% 50%  no-repeat;
   background-size: cover;
 }
 
@@ -80,10 +78,14 @@ header {
 }
 /**boddy**/
 
+.main {
+  display: flex;
+}
+
+
 .left-nav {
   padding-top: 25px;
-  float: left;
-  width: 200px;
+  width: 17.5%;
   border: 1px solid black;
 }
 
@@ -104,33 +106,10 @@ header {
   padding: 10px;
 }
 
-.right-nav {
-  padding-top: 25px;
-  float: right;
-  width: 250px;
-  padding: 20px 10px;
-}
-
-.right-nav-ul {
-  display: block;
-}
-.right-nav-block {
-  padding: 20px 10px;
-  /***  рамку сделать тенью ?? ***/
-  border-bottom: 1px solid #797979;
-  border-radius: 5px;
-}
-
-
-
-.right-nav-block h3 {
-  color: #dd412c;
-  text-transform: uppercase
-}
 
 .main-content {
-  width: 720px;
-  float: left;
+  width: 61%;
+  border: 1px solid blue;
 }
 
 .main-content h2 {
@@ -171,13 +150,7 @@ header {
   color: #797979;
 }
 
-.main-news data {
-  float: left;
-}
 
-.views {
-  float: right;
-}
 
 .views img {
   width: 20px;
@@ -185,19 +158,41 @@ header {
 }
 
 
+.right-nav {
+  width: 21.5%;
+  padding: 20px 10px;
+  border: 1px solid brown;
+}
+
+.right-nav-ul {
+  display: block;
+}
+.right-nav-block {
+  padding: 20px 10px;
+  /***  рамку сделать тенью ?? ***/
+  border-bottom: 1px solid #797979;
+  border-radius: 5px;
+}
+
+.right-nav-block h3 {
+  color: #dd412c;
+  text-transform: uppercase
+}
+
+
 
 /** footer**/
 
+.footer {
+  padding-top: 15px;
+  border-bottom: 5px solid #dd412c;
+}
+
 .btn-up {
-  float: right;
-
+  padding-top: 45px;
 }
 
-.footer-line {
-  height: 4px;
-  background: #dd412c;
-  margin-top: 25px;
-}
+
 
 
 .footer-menu {
