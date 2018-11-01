@@ -1,75 +1,117 @@
-body {
-  padding: 0px;
-  margin: 0px;
-}
-
-
-.header {
-  text-transform: uppercase ;
-  color: darkviolet;
-  height: 100px;
-}
-
-li {    list-style-type: none;}
-
-.header .logo {
-  float: left;
+.wraper {
+  width: 1170px;
   margin-left: 25px;
+  text-align: left;
 }
 
-
-.header .menu {
-  float: right;
-  margin-top: 15px;
-  margin-right: 25px;
+h3 {
+  margin-left: 35px;
 }
 
-.menu .navmenu  li {
-  display: inline;
-  padding: 25px;
-
+fieldset {
+  border: 1px solid grey;
+  padding: 10px;
+  width:575px;
+}
+li {
+  list-style: none;
+  height: 30px;
+  margin: 10px;
 }
 
-.over {
-  overflow: hidden;
-}
-/******/
-.content {
-  min-height: 300px;
-
-}
-
-.content img {
-  height: 200px;
-  width: 200px;
-  border-radius: 150px;
-  margin-left: 550px;
-  padding: 15px;
+li label {
+  width: 120px;
+  text-align: left;
   float: left;
 }
-h2 {
-  text-align: center;
+
+input {
+  width: 300px;
+}
+
+.left{
+  float: right;
+}
+
+.emailbox {
+  float: left;
+  width: 150px;
+  margin-left: 120px;
+}
+
+p {
+  font-size: small;
+  width:300px;
+  margin-left: 185px;
+}
+
+textarea {
+  margin-top: -15px;
+  margin-left: 185px;
+  margin-bottom: 25px;
+}
+
+.avatar {
+  margin-top: 100px;
+}
+
+.avatarInput {
+  margin-top: 100px;
+  /** border : 1px red solid;  **/
+  width: 305px;
+}
+
+.profYears {
+  width: 50px;
+  float: left;
+  margin-left: 60px;
+  margin-right: 20px;
+}
+
+.radioi {
+  width: 50px;
+  margin-left: 150px;
 }
 
 
-/******/
 
-.footer {
-  width: 900px;
-  margin: 0 auto;
+.leftradio {
+  min-width: 200px;
+  float: right;
+  margin-right: 100px;
+}
 
+.radioc{
+  width: 25px;
+  float: left;
+  margin-left: 200px;
 }
 
 
-.footer  img{
-  height: 100px;
+.leftcheck {
+  float: right;
+  margin-right: 100px;
   width: 100px;
-  border-radius: 50px ;
-
-
-
 }
 
-.footer li {
-  display: inline;
-  padding: 25px;}
+.licheck > p  {
+  font-size: 16px;
+  margin-left: -20px;
+}
+
+.country {
+  margin-top: 120px;
+}
+
+
+input:focus {
+  background: lightgray;
+}
+
+textarea:focus {
+  background: lightgray;
+}
+
+.buttonleft {
+  margin-left:450px  ;
+}
