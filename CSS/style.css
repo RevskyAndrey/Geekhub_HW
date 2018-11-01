@@ -1,117 +1,62 @@
-.wraper {
+a {
+  text-decoration: none;
+}
+
+.content {
   width: 1170px;
-  margin-left: 25px;
-  text-align: left;
+  margin: 0 auto;
 }
 
-h3 {
-  margin-left: 35px;
+header {
+  height : 76px;
+  background: #dd412c;
+  color : #fff;
+  display: flex;
+  justify-content: space-around;
 }
 
-fieldset {
-  border: 1px solid grey;
-  padding: 10px;
-  width:575px;
-}
-li {
-  list-style: none;
-  height: 30px;
-  margin: 10px;
-}
 
-li label {
-  width: 120px;
-  text-align: left;
+.logo {
+  padding-top: 3px;
+  padding-left: 8px;
   float: left;
+  width: 200px;
+  height: 70px;
+  overflow: hidden;
 }
 
-input {
-  width: 300px;
-}
+/** heder nav-menu */
 
-.left{
+.main-menu {
+  color:  #fff;
   float: right;
 }
 
-.emailbox {
-  float: left;
-  width: 150px;
-  margin-left: 120px;
+.main-menu-ul li {
+  display: inline;
+  padding-top: 25px;
 }
 
-p {
-  font-size: small;
-  width:300px;
-  margin-left: 185px;
+.main-menu-ul li a{
+  font-size: 12px;
+  color: #fff;
+  display: inline-block;
+  padding: 30px 11px;
+  text-transform: uppercase;
 }
 
-textarea {
-  margin-top: -15px;
-  margin-left: 185px;
-  margin-bottom: 25px;
-}
-
-.avatar {
-  margin-top: 100px;
-}
-
-.avatarInput {
-  margin-top: 100px;
-  /** border : 1px red solid;  **/
-  width: 305px;
-}
-
-.profYears {
-  width: 50px;
-  float: left;
-  margin-left: 60px;
-  margin-right: 20px;
-}
-
-.radioi {
-  width: 50px;
-  margin-left: 150px;
+.main-menu-ul li a:hover {
+  background: #ffffff;
+  color: #797979 ;
 }
 
 
+.select-lang {
+  padding: 30px 11px;
+  text-transform: uppercase;
 
-.leftradio {
-  min-width: 200px;
-  float: right;
-  margin-right: 100px;
 }
 
-.radioc{
-  width: 25px;
-  float: left;
-  margin-left: 200px;
-}
-
-
-.leftcheck {
-  float: right;
-  margin-right: 100px;
-  width: 100px;
-}
-
-.licheck > p  {
-  font-size: 16px;
-  margin-left: -20px;
-}
-
-.country {
-  margin-top: 120px;
-}
-
-
-input:focus {
-  background: lightgray;
-}
-
-textarea:focus {
-  background: lightgray;
-}
-
-.buttonleft {
-  margin-left:450px  ;
+.select-lang a {
+  color: #fff
 }
