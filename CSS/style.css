@@ -1,117 +1,228 @@
-.wraper {
+a {
+  text-decoration: none;
+}
+
+.content {
   width: 1170px;
-  margin-left: 25px;
-  text-align: left;
+  margin: 0 auto;
 }
 
-h3 {
-  margin-left: 35px;
+header {
+  height : 73px;
+  background: #dd412c;
+  color : #fff;
+  display: flex;
+  justify-content: space-around;
 }
 
-fieldset {
-  border: 1px solid grey;
+
+.logo {
+  padding-top: 3px;
+  padding-left: 8px;
+  width: 200px;
+  height: 70px;
+  overflow: hidden;
+}
+
+/** heder nav-menu */
+
+
+.main-menu-ul li {
+  display: inline;
+  padding-top: 25px;
+}
+
+.main-menu-ul li a{
+  font-size: 12px;
+  color: #fff;
+  display: inline-block;
+  padding: 25px 10px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+.main-menu-ul li a:hover {
+  background: #ffffff;
+  color: #797979 ;
+}
+.main-menu-ul .active {
+  border-top:  3px solid #fff;
+}
+
+.select-lang {
+  padding: 25px 10px;
+  text-transform: uppercase;
+}
+
+.select-lang a {
+  color: #fff
+
+}
+
+
+/*-- фото--*/
+
+
+.welcome {
+  height: 750px;
+  width: auto;
+  background: #484c4d url(../IMG/BG_welcom.jpg) 50% 50%  no-repeat;
+  background-size: cover;
+}
+
+
+.tikket-ul li {
+  display: inline-block;
+  padding-top: 570px;
+  margin: 0 auto;
+}
+/**boddy**/
+
+.main {
+  display: flex;
+}
+
+
+.left-nav {
+  padding-top: 25px;
+  width: 17.5%;
+  border: 1px solid black;
+}
+
+.left-nav-ul {
+  display: block;
+}
+
+.left-nav  a{
+  color: #797979;
+  text-transform: uppercase;
+}
+
+.left-nav a:hover {
+  color: #cd2e2d;
+}
+
+.left-nav li {
   padding: 10px;
-  width:575px;
-}
-li {
-  list-style: none;
-  height: 30px;
-  margin: 10px;
 }
 
-li label {
-  width: 120px;
+
+.main-content {
+  width: 61%;
+  border: 1px solid blue;
+}
+
+.main-content h2 {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #dd412c;
+  padding: 20px 0px;
+}
+
+.main-news {
+  width: 600px;
+  margin: 40px auto;
+
+
+}
+
+.main-news img {
+  width: 590px;
+  height: 285px;
+  border-radius: 5px;
+}
+
+.main-news-block {
+  width: 570px;
+  margin: 0 auto;
+  border-bottom: 1px solid grey;
+}
+
+
+.main-news h3 {
+  font-weight: bold;
   text-align: left;
+}
+
+.main-news p {
+  width: 580px;
+  color: #797979;
+}
+
+
+
+.views img {
+  width: 20px;
+  height: 12px;
+}
+
+
+.right-nav {
+  width: 21.5%;
+  padding: 20px 10px;
+  border: 1px solid brown;
+}
+
+.right-nav-ul {
+  display: block;
+}
+.right-nav-block {
+  padding: 20px 10px;
+  /***  рамку сделать тенью ?? ***/
+  border-bottom: 1px solid #797979;
+  border-radius: 5px;
+}
+
+.right-nav-block h3 {
+  color: #dd412c;
+  text-transform: uppercase
+}
+
+
+
+/** footer**/
+
+.footer {
+  padding-top: 15px;
+  border-bottom: 5px solid #dd412c;
+}
+
+.btn-up {
+  padding-top: 45px;
+}
+
+
+
+
+.footer-menu {
+  color:  #898989;
   float: left;
 }
 
-input {
-  width: 300px;
+.footer-menu-ul li {
+  display: inline;
+  padding-top: 15px;
 }
 
-.left{
+.footer-menu-ul li a{
+  font-size: 12px;
+  color:#898989;;
+  display: inline-block;
+  padding: 15px 11px;
+  text-transform: uppercase;
+}
+
+.footer-menu-ul li a:hover {
+  background: #fefefe;
+  color: #cd2e2d ;
+}
+
+
+.social {
   float: right;
 }
 
-.emailbox {
-  float: left;
-  width: 150px;
-  margin-left: 120px;
-}
-
-p {
-  font-size: small;
-  width:300px;
-  margin-left: 185px;
-}
-
-textarea {
-  margin-top: -15px;
-  margin-left: 185px;
-  margin-bottom: 25px;
-}
-
-.avatar {
-  margin-top: 100px;
-}
-
-.avatarInput {
-  margin-top: 100px;
-  /** border : 1px red solid;  **/
-  width: 305px;
-}
-
-.profYears {
-  width: 50px;
-  float: left;
-  margin-left: 60px;
-  margin-right: 20px;
-}
-
-.radioi {
-  width: 50px;
-  margin-left: 150px;
-}
-
-
-
-.leftradio {
-  min-width: 200px;
-  float: right;
-  margin-right: 100px;
-}
-
-.radioc{
-  width: 25px;
-  float: left;
-  margin-left: 200px;
-}
-
-
-.leftcheck {
-  float: right;
-  margin-right: 100px;
-  width: 100px;
-}
-
-.licheck > p  {
-  font-size: 16px;
-  margin-left: -20px;
-}
-
-.country {
-  margin-top: 120px;
-}
-
-
-input:focus {
-  background: lightgray;
-}
-
-textarea:focus {
-  background: lightgray;
-}
-
-.buttonleft {
-  margin-left:450px  ;
+.social-ul li {
+  display: inline;
 }
