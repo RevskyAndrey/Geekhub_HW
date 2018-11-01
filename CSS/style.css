@@ -62,6 +62,130 @@ header {
 }
 
 
+/*-- фото--*/
+
+
+.welcome {
+  height: 750px;
+  width: auto;
+  background: #484c4d url(../IMG/BG_welcom.jpg) 50% -350%  no-repeat;
+  background-size: cover;
+}
+
+
+.tikket-ul li {
+  display: inline-block;
+  padding-top: 570px;
+  margin: 0 auto;
+}
+/**boddy**/
+
+.left-nav {
+  padding-top: 25px;
+  float: left;
+  width: 200px;
+  border: 1px solid black;
+}
+
+.left-nav-ul {
+  display: block;
+}
+
+.left-nav  a{
+  color: #797979;
+  text-transform: uppercase;
+}
+
+.left-nav a:hover {
+  color: #cd2e2d;
+}
+
+.left-nav li {
+  padding: 10px;
+}
+
+.right-nav {
+  padding-top: 25px;
+  float: right;
+  width: 250px;
+  padding: 20px 10px;
+}
+
+.right-nav-ul {
+  display: block;
+}
+.right-nav-block {
+  padding: 20px 10px;
+  /***  рамку сделать тенью ?? ***/
+  border-bottom: 1px solid #797979;
+  border-radius: 5px;
+}
+
+
+
+.right-nav-block h3 {
+  color: #dd412c;
+  text-transform: uppercase
+}
+
+.main-content {
+  width: 720px;
+  float: left;
+}
+
+.main-content h2 {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #dd412c;
+  padding: 20px 0px;
+}
+
+.main-news {
+  width: 600px;
+  margin: 40px auto;
+
+
+}
+
+.main-news img {
+  width: 590px;
+  height: 285px;
+  border-radius: 5px;
+}
+
+.main-news-block {
+  width: 570px;
+  margin: 0 auto;
+  border-bottom: 1px solid grey;
+}
+
+
+.main-news h3 {
+  font-weight: bold;
+  text-align: left;
+}
+
+.main-news p {
+  width: 580px;
+  color: #797979;
+}
+
+.main-news data {
+  float: left;
+}
+
+.views {
+  float: right;
+}
+
+.views img {
+  width: 20px;
+  height: 12px;
+}
+
+
+
 /** footer**/
 
 .btn-up {
