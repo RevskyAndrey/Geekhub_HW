@@ -13,7 +13,7 @@
   <div class="logo">
     <h1>
       <a href="#">
-        <img src="IMG/Logo.png" height="70" width="200" alt="Logo theatre"/>
+        <img src="IMG/Logo.png" height="70" width="200" alt="Логотип Театр імені Т.Г.Шевченка"/>
         Театр імені Т.Г.Шевченка
       </a>
     </h1>
@@ -31,8 +31,16 @@
       <li><a href="#">фестивалі</a></li>
     </ul>
   </nav>
-  <!--выпадающее меню на css?? -->
-  <div class="select-lang"> <a href="#"> Укр <img src="IMG/lang.png" height="4" width="7"/></a></div>
+
+  <!--выпадающее меню на css -->
+  <div class="select-lang">
+    <button class="bnt-select-lang"> Укр <img src="IMG/lang.png" height="4" width="7"/></button>
+    <div class="select-lang-list">
+      <a href="#">Рус</a>
+      <a href="#">Eng</a>
+      <a href="#">Ger</a>
+    </div>
+  </div>
 </header>
 
 <!--- ^ heder ^              ∨ img to slider ∨-->
@@ -159,7 +167,7 @@
 
       <li>
         <h3> вiдео </h3>
-        <div class="right-nav-block">
+        <div class="right-nav-block video-play">
           <img src="IMG/Gallery-video.JPG" height="157" width="233"/>
           <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели
             превратился в страшное насекомое. Лежа</p>
@@ -174,11 +182,13 @@
 
 <footer class="footer">
   <div class="content">
+
   <a class="btn-up" href="#home"><img src="IMG/up_page.png" height="42" width="42"/></a>
-  <div class="footer-line"> </div>
+
+
   <nav class="footer-menu">
     <ul class="footer-menu-ul">
-      <li><a href="#"> Головна </a></li>
+      <li><a href="#home">Головна </a></li>
       <li><a href="#">Афіша</a></li>
       <li><a href="#">репертуар</a></li>
       <li><a href="#">новини</a></li>
