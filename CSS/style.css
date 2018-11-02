@@ -57,6 +57,7 @@ header {
 .select-lang {
   padding: 25px 10px;
   text-transform: uppercase;
+  font-size: 12px;
 }
 
 .bnt-select-lang {
@@ -96,7 +97,7 @@ header {
 
 
 .welcome {
-  min-height: 750px;
+  height: 550px;
   width: auto;
   background: #484c4d url(../IMG/BG_welcom.jpg) 0% 0%  no-repeat;
   background-size: cover;
@@ -105,23 +106,27 @@ header {
 
 .tikket-ul li {
   display: inline-block;
-  padding-top: 570px;
+  padding-top: 450px;
   margin: 0 auto;
 }
 /**boddy**/
 
 .main {
   display: flex;
+  align-content: flex-start;
 }
 
 
 .left-nav {
-  padding-top: 25px;
   width: 17.5%;
+  font-size: 18px;
+  padding-top: 40px;
 }
 
 .left-nav-ul {
   display: block;
+  paddin-top: 40px;
+
 }
 
 .left-nav  a{
@@ -140,12 +145,11 @@ header {
 
 .main-content {
   width: 61%;
-
 }
 
 .main-content h2 {
   text-align: center;
-  font-size: 20px;
+  font-size: 30px;
   text-transform: uppercase;
   color: #dd412c;
   padding: 20px 0;
@@ -165,40 +169,57 @@ header {
 }
 
 .main-news-block {
-  width: 570px;
+  width: 580px;
   margin: 0 auto;
+  box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
+
 
 
 .main-news h3 {
   font-weight: bold;
   text-align: left;
+  padding-left: 14px;
 }
 
 .main-news p {
-  width: 580px;
+  padding-left: 14px;
   color: #797979;
+  box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
-
+.footer-news {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 10px;
+}
 
 .views img {
   width: 20px;
   height: 12px;
+
 }
 
 
 .right-nav {
-  width: 21.5%;
-  padding: 20px 10px;
+  width:235px;
 }
 
-.right-nav  h3 {
+.right-nav-block img {
+  width: 235px;
+  height: 158px;
+}
+
+.right-nav  h2 {
+  font-size: 30px;
   color: #dd412c;
   text-transform: uppercase;
-  padding: 15px 0;
+  padding: 20px;
 }
-
+.right-nav-block p {
+  padding: 10px;
+}
 
 .right-nav-ul {
   display: block;
