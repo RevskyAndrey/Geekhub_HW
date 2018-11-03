@@ -21,13 +21,13 @@
 
   <nav class="main-menu">
     <ul class="main-menu-ul">
-      <li><a href="#" id="home" class="active"> Головна </a></li>
+      <li><a href="#" class="active"> Головна </a></li>
       <li><a href="#">Афіша</a></li>
       <li><a href="#">репертуар</a></li>
       <li><a href="#">новини</a></li>
       <li><a href="#">Про театр</a></li>
       <li><a href="#">Персоналії</a></li>
-      <li><a href="#"> контакти</a></li>
+      <li><a href="#">контакти</a></li>
       <li><a href="#">фестивалі</a></li>
     </ul>
   </nav>
@@ -48,29 +48,70 @@
 <div class="welcome">
   <!--  тут должен быть слайдер на JS или Jqveru ???? -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--- ---------------------------------------------------------------------->
   <img src="IMG/BG_welcom.jpg"/>
   <div class="tikket content">
     <ul class="tikket-ul">
       <li>
-        <a><img src="IMG/arrow-left.png" height="36" width="36"/></a>
+        <button class="arrow-left"></button>
       </li>
       <li>
-        <a><img src="IMG/for_data.png" height="92" width="92"/></a>
+        <button class="tikket_data">
+            <p class="day-tikket">нд</p>
+            <p class="number-tikket">21</p>
+            <p class="month-tikket">березня</p>
+        </button>
       </li>
       <li>
-        <a><img src="IMG/for_data.png" height="92" width="92"/></a>
+        <button class="tikket_data">
+            <p class="day-tikket">пн</p>
+            <p class="number-tikket">28</p>
+            <p class="month-tikket">березня</p>
+        </button>
       </li>
       <li>
-        <a><img src="IMG/for_data_activ.png" height="92" width="555"/></a>
+        <button class="tikket_data_active">
+          <div class="active-date">
+            <p class="day-tikket">пн</p>
+            <p class="number-tikket">28</p>
+            <p class="month-tikket">березня</p>
+          </div>
+          <div class="active-date-content">
+            <h4>Сад гетсиманський</h4>
+            <p>Народна трагедія на 2 дії<br>
+              Тривалість вистави 2 год 20 хв.</p>
+            <a class="buy-tikket">купити квиток</a>
+          </div>
+        </button>
       </li>
       <li>
-        <a><img src="IMG/for_data.png" height="92" width="92"/></a>
+        <button class="tikket_data">
+            <p class="day-tikket">вт</p>
+            <p class="number-tikket">28</p>
+            <p class="month-tikket">квітня</p>
+        </button>
       </li>
       <li>
-        <a><img src="IMG/for_data.png" height="92" width="92"/></a>
+        <button class="tikket_data">
+            <p class="day-tikket">пн</p>
+            <p class="number-tikket">1</p>
+            <p class="month-tikket">вересня</p>
+        </button>
       </li>
       <li>
-        <a><img src="IMG/arrow-right.png" height="36" width="36"/></a>
+        <button class="arrow-right"></button>
       </li>
     </ul>
   </div>
@@ -202,13 +243,12 @@
 <footer class="footer">
   <div class="content">
 
-  <a class="btn-up" href="#home"><img src="IMG/up_page.png" height="42" width="42" alt="кнопка на верх"
-                                      title="на вверх страницы"/></a>
+  <button class="btn-up" href="#"></button>
 
 
   <nav class="footer-menu">
     <ul class="footer-menu-ul">
-      <li><a href="#home" class="active">Головна </a></li>
+      <li><a href="#" class="active">Головна </a></li>
       <li><a href="#">Афіша</a></li>
       <li><a href="#">репертуар</a></li>
       <li><a href="#">новини</a></li>
