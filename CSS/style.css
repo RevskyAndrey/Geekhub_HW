@@ -240,7 +240,6 @@ header {
 .views img {
   width: 20px;
   height: 12px;
-
 }
 
 
@@ -271,24 +270,20 @@ header {
   border-radius: 5px;
 }
 
-.video-play:hover {
-  background: url(../IMG/play.png);
-}
+
 
 
 /** footer**/
 
 .footer {
   padding: 0 10px;
-  border-top: 5px solid #dd412c;
-
+  border-top: 5px solid #bf1e2e;
 }
 
 .btn-up {
   position: relative;
   bottom: 43px;
-  right: -101%;
-}
+  right: -101%;}
 
 
 
@@ -326,12 +321,26 @@ header {
 }
 
 
-.social {
-
-}
 
 .social-ul li {
   display: inline;
+  padding: 10px 11px;
+  cursor: pointer;
 }
 
+/*  social  */
 
+.icon_vk {background: url(../IMG/icon_vk.png) center no-repeat;}
+.icon_vk:hover {background: url(../IMG/icon_vk_active.png) center no-repeat;}
+
+.icon_youtube {background: url(../IMG/icon_youtube.png) center no-repeat;}
+.icon_youtube:hover {background: url(../IMG/icon_youtube_active.png) center no-repeat;}
+
+.icon_google-plus {background: url(../IMG/icon_google-plus.png) center no-repeat;}
+.icon_google-plus:hover {background: url(../IMG/icon_google-plus_active.png) center no-repeat;}
+
+.icon_facebook {background: url(../IMG/icon_facebook.png) center no-repeat;}
+.icon_facebook:hover {background: url(../IMG/icon_facebook_active.png) center no-repeat;}
+
+.icon_tw {background: url(../IMG/icon_tw.png) center no-repeat;}
+.icon_tw:hover {background: url(../IMG/icon_tw_active.png) center no-repeat;}
