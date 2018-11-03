@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Черкаський драматичний театр імені Т. Г. Шевченка</title>
-<link href="CSS\reset.css" rel="stylesheet" type="text/css" >
-<link href="CSS\style.css" rel="stylesheet" type="text/css" >
-<!-- <script type="text/javascript" src="script.js"></script> -->
+  <link rel="stylesheet" href="CSS/reset.css" type="text/css">
+  <link rel="stylesheet" href="CSS/style.css" type="text/css">
+  <!-- <script type="text/javascript" src="script.js"></script> -->
 </head>
 
 <body>
 <header class="header">
-  <div class="logo">
-    <h1>
+
+    <h1  class="logo">
       <a href="#">
         <img src="IMG/Logo.png" height="70" width="200" alt="Логотип Театр імені Т.Г.Шевченка"/>
         Театр імені Т.Г.Шевченка
       </a>
     </h1>
-  </div>
+
 
   <nav class="main-menu">
     <ul class="main-menu-ul">
@@ -86,15 +86,22 @@
 <section class="content main">
 
   <nav class="left-nav">
-    <ul class left-nav-ul>
-      <!--  li надо прописать клас и сделать декорацию картинками ( через background ??? )--->
-      <li>
-        <a href="#"><img src="IMG\" >фотоархiв </a>
+    <ul class="left-nav-ul">
+      <li class="icon-photo">
+        <a href="#"> фотоархiв </a>
       </li>
-      <li><a href="#">вiдеоархiв </a></li>
-      <li><a href="#">пiклувальна Рада </a></li>
-      <li><a href="#">партнери </a></li>
-      <li><a href="#">форум </a></li>
+      <li class="icon-video">
+        <a href="#"> вiдеоархiв </a>
+      </li>
+      <li class="icon-rada">
+        <a href="#">пiклувальна Рада</a>
+      </li>
+      <li class="icon-partners">
+        <a href="#">партнери </a>
+      </li>
+      <li class="icon-forum">
+        <a href="#">форум </a>
+      </li>
     </ul>
   </nav>
 
@@ -103,7 +110,7 @@
 
     <div class="main-news">
       <div class="main-news-block">
-        <img src="IMG/news.JPG" height="287" width="594"/>
+        <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
         <div class="news-block">
           <h3> News name number </h3>
           <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
@@ -117,11 +124,9 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="main-news">
       <div class="main-news-block">
-        <img src="IMG/news.JPG" height="287" width="594"/>
+        <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
         <div class="news-block">
           <h3> News name number </h3>
           <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
@@ -139,7 +144,7 @@
 
     <div class="main-news">
       <div class="main-news-block">
-        <img src="IMG/news.JPG" height="287" width="594"/>
+        <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
         <div class="news-block">
           <h3> News name number </h3>
           <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
@@ -156,7 +161,7 @@
     </div>
     <div class="main-news">
       <div class="main-news-block">
-        <img src="IMG/news.JPG" height="287" width="594"/>
+        <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
         <div class="news-block">
           <h3> News name number </h3>
           <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
@@ -176,9 +181,9 @@
   <aside class="right-nav">
     <ul class="right-nav-ul">
       <li>
-        <h3> Галерея </h3>
+        <h2> Галерея </h2>
         <div class="right-nav-block">
-          <img src="IMG/Gallery.JPG" height="160" width="240"/>
+          <img src="IMG/Gallery.JPG" height="160" width="240" alt="изображение галлереи"/>
           <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели
             превратился в страшное насекомое. Лежа</p>
         </div>
@@ -187,7 +192,7 @@
       <li>
         <h2> вiдео </h2>
         <div class="right-nav-block video-play">
-          <img src="IMG/Gallery-video.JPG" height="157" width="233"/>
+          <img src="IMG/Gallery-video.JPG" height="157" width="233" alt=" первый кадр видео"/>
           <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели
             превратился в страшное насекомое. Лежа</p>
         </div>
@@ -206,7 +211,7 @@
 
   <nav class="footer-menu">
     <ul class="footer-menu-ul">
-      <li><a href="#home">Головна </a></li>
+      <li><a href="#home" class="active">Головна </a></li>
       <li><a href="#">Афіша</a></li>
       <li><a href="#">репертуар</a></li>
       <li><a href="#">новини</a></li>

@@ -13,8 +13,8 @@ a {
 }
 
 header {
-  height : 70px;
-  background: #dd412c;
+  height : 76px;
+  background-image: linear-gradient(to left, #bf1e2e, #f1592a);
   color : #fff;
   display: flex;
   justify-content: space-around;
@@ -62,7 +62,7 @@ header {
 
 .bnt-select-lang {
   color: #fff;
-  background:#dd412c;
+  background:#bf1e2e;
   border: 1px solid transparent;
   cursor: pointer;
   text-transform: uppercase;
@@ -82,7 +82,7 @@ header {
 }
 
 .select-lang-list a {
-  color: #dd412c;
+  color: #bf1e2e;
   text-decoration: none;
   display: block;
   padding-top: 10px;
@@ -99,7 +99,7 @@ header {
 .welcome {
   height: 550px;
   width: auto;
-  background: #484c4d url(../IMG/BG_welcom.jpg) 0% 0%  no-repeat;
+  background: #484c4d url(../IMG/BG_welcom.jpg) 0 0 no-repeat;
   background-size: cover;
 }
 
@@ -118,18 +118,43 @@ header {
 
 
 .left-nav {
-  width: 17.5%;
+  width: 23%;
   font-size: 18px;
   padding-top: 40px;
+  position: relative;
 }
 
 .left-nav-ul {
   display: block;
-  paddin-top: 40px;
-
 }
 
+
+/* картинки для Лишек*/
+
+
+.icon-photo {background: url(../IMG/icon-photo.png) 0 4px no-repeat;}
+.icon-photo:hover {background: url(../IMG/icon-photo-active.png) 0 4px no-repeat;}
+
+.icon-video{background: url(../IMG/icon-video.png) 0 4px no-repeat;}
+.icon-video:hover {background: url(../IMG/icon-video-active.png) 0 4px no-repeat;}
+
+.icon-rada{  background: url(../IMG/icon-rada.png) 0 4px no-repeat;}
+.icon-rada :hover {
+  position: relative;
+  background: url(../IMG/icon-rada-active.png) -12px -6px no-repeat;}
+/*  не спог пофиксить прижки при наведении на раду */
+
+.icon-partners{background: url(../IMG/icon-partners.png) 0 4px no-repeat;}
+.icon-partners:hover {background: url(../IMG/icon-partners-active.png) 0 4px no-repeat;}
+
+.icon-forum{background: url(../IMG/icon-forum.png) 0 4px no-repeat;}
+.icon-forum:hover {  background: url(../IMG/icon-forum-active.png) 0 4px no-repeat;}
+
+
+
+/*   */
 .left-nav  a{
+  padding-left: 30px;
   color: #797979;
   text-transform: uppercase;
 }
@@ -144,7 +169,7 @@ header {
 
 
 .main-content {
-  width: 61%;
+  width: 60%;
 }
 
 .main-content h2 {
@@ -171,7 +196,7 @@ header {
 .main-news-block {
   width: 580px;
   margin: 0 auto;
-  box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
@@ -186,7 +211,7 @@ header {
 .main-news p {
   padding-left: 14px;
   color: #797979;
-  box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 .footer-news {
@@ -203,7 +228,7 @@ header {
 
 
 .right-nav {
-  width:235px;
+  width:17%;
 }
 
 .right-nav-block img {
@@ -237,7 +262,7 @@ header {
 /** footer**/
 
 .footer {
-  padding: 0px 10px;
+  padding: 0 10px;
   border-top: 5px solid #dd412c;
 
 }
@@ -266,6 +291,9 @@ header {
   display: inline;
 }
 
+.footer-menu-ul .active {
+  color: #cd2e2d;
+}
 .footer-menu-ul li a{
   font-size: 12px;
   color:#898989;;
@@ -288,3 +316,5 @@ header {
 .social-ul li {
   display: inline;
 }
+
+
