@@ -99,14 +99,30 @@ header {
 .welcome {
   height: 550px;
   width: auto;
-  background: #484c4d url(../IMG/BG_welcom.jpg) 0 0 no-repeat;
-  background-size: cover;
+  background: #484c4d
 }
 
+.welcome img{
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  margin: 0 auto;
+}
+.tikket{
+  margin: -100px auto 1px;
+  z-index: 1;
+}
+.tikket-ul {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
 .tikket-ul li {
   display: inline-block;
-  padding-top: 450px;
+
   margin: 0 auto;
 }
 /**boddy**/
@@ -126,6 +142,7 @@ header {
 
 .left-nav-ul {
   display: block;
+
 }
 
 
