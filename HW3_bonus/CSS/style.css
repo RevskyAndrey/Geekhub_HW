@@ -1,0 +1,63 @@
+
+table {
+  width:100%;
+  border: none;
+}
+.heder {
+  background: red;
+  height: 80px;
+  color: white;
+}
+
+.footer {
+  background: sienna;
+  height: 80px;
+  color: white;
+}
+
+.table-main {
+  background: seagreen;
+  height: 200px;
+  color: white;
+}
+
+.table-body {
+  background: darkslateblue;
+  height: 200px;
+  color: white;
+}
+
+.text-aling {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+/**2**/
+.column {
+  width: 300px;
+}
+
+.float-left {
+  float: left;
+  background: blue;
+  color: white;
+}
+
+.float-right {
+  float: right;
+}
+
+/**3**/
+
+.flex-container {
+  display:flex;
+  flex-direction:row;
+}
+
+.my-flex-block {
+
+}
