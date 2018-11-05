@@ -1,0 +1,52 @@
+body, html {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+header {
+  height : 80px;
+  background-image: linear-gradient(to top, #eb402c, #d90647);
+  color : #fff;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.logo {
+  width: 121px;
+  height: 45px;
+  overflow: hidden;
+}
+
+/** heder nav-menu */
+
+
+.main-menu-list li {
+  display: inline;
+  padding-top: 25px;
+
+}
+
+.main-menu-list li a{
+  height: 76px;
+  font-size: 12px;
+  color: #fff;
+  display: inline-block;
+  padding: 25px 10px;
+  text-transform: uppercase;
+  border: 3px solid transparent;
+  box-sizing: border-box;
+}
+
+.main-menu-list li a:hover {
+  background: #ffffff;
+  color: #797979 ;
+}
