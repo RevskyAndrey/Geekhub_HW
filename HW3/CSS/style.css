@@ -258,7 +258,7 @@ header {
   position: relative;
 }
 
-.left-nav-ul {
+.left-nav-list {
   display: block;
 }
 
@@ -308,8 +308,6 @@ header {
   padding: 20px 0;
 }
 
-
-
 .main-news-block img {
   width: 550px;
   height: 285px;
@@ -324,15 +322,16 @@ header {
   border-radius: 5px;
 }
 
-.main-news h3 {
+.news-block h3 {
   font-weight: bold;
   text-align: left;
   padding-left: 14px;
 }
 
-.main-news p {
+.news-block p {
   padding-left: 14px;
   color: #797979;
+  padding-bottom: 5px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -340,6 +339,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 14px 10px;
+
 }
 
 .views img {
@@ -366,7 +366,7 @@ header {
   padding: 10px;
 }
 
-.right-nav-ul {
+.right-nav-.list {
   display: block;
 }
 .right-nav-block {
