@@ -29,12 +29,12 @@ header {
 /** heder nav-menu */
 
 
-.main-menu-ul li {
+.main-menu-list li {
   display: inline;
   padding-top: 25px;
 }
 
-.main-menu-ul li a{
+.main-menu-list li a{
   height: 76px;
   font-size: 12px;
   color: #fff;
@@ -45,11 +45,11 @@ header {
   box-sizing: border-box;
 }
 
-.main-menu-ul li a:hover {
+.main-menu-list li a:hover {
   background: #ffffff;
   color: #797979 ;
 }
-.main-menu-ul .active {
+.main-menu-list .active {
   border-top:  3px solid #fff;
 }
 
@@ -91,7 +91,7 @@ header {
 }
 
 .select-lang-list a:hover {
-  background: #797979;
+  background: #bf1e2e;
   color: #fff;
 }
 
@@ -114,6 +114,8 @@ header {
   z-index: -1;
   margin: 0 auto;
 }
+
+/****/
 .tikket{
   z-index: 1;
   width: 900px;
@@ -126,10 +128,10 @@ header {
   background: url(../IMG/arrow-left.png);
   border: 1px solid transparent;
   border-radius: 5px;
+  margin: 5px ;
 }
-.arrow-left:hover , .arrow-right:hover {
-  background-image: linear-gradient(to top, #dd492a, #e54b2b);
-  cursor: pointer
+.arrow-left:hover {
+  background: url(../IMG/arrow-left-active.png);
 }
 
 .arrow-right {
@@ -138,7 +140,13 @@ header {
   background: url(../IMG/arrow-right.png);
   border: 1px solid transparent;
   border-radius: 5px;
+  margin: 5px ;
 }
+
+.arrow-right:hover {
+  background: url(../IMG/arrow-right-active.png);
+}
+
 
 .tikket_data {
   width: 90px;
@@ -233,6 +241,10 @@ header {
   float: right;
 }
 
+.buy-tikket:hover {
+  cursor: pointer;
+}
+
 /**boddy**/
 .main {
   display: flex;
@@ -258,9 +270,7 @@ header {
 .icon-video:hover {background: url(../IMG/icon-video-active.png) 0 4px no-repeat;}
 
 .icon-rada{  background: url(../IMG/icon-rada.png) 0 4px no-repeat;}
-.icon-rada :hover {
-  position: relative;
-  background: url(../IMG/icon-rada-active.png) -12px -6px no-repeat;}
+.icon-rada :hover { background: url(../IMG/icon-rada-active.png) -12px -6px no-repeat;}
 /*  не спог пофиксить прижки при наведении на раду */
 
 .icon-partners{background: url(../IMG/icon-partners.png) 0 4px no-repeat;}
@@ -287,6 +297,7 @@ header {
 
 .main-content {
   width: 60%;
+  margin: 0 auto;
 }
 
 .main-content h2 {
@@ -297,19 +308,17 @@ header {
   padding: 20px 0;
 }
 
-.main-news {
-  width: 600px;
+
+
+.main-news-block img {
+  width: 550px;
+  height: 285px;
+  border-radius: 5px;
   margin: 0 auto;
 }
 
-.main-news img {
-  width: 590px;
-  height: 285px;
-  border-radius: 5px;
-}
-
 .main-news-block {
-  width: 580px;
+  width: 550px;
   margin: 0 auto 25px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -383,7 +392,9 @@ header {
   border-radius: 5px;
 
 }
-
+.btn-up:hover{
+  cursor: pointer;
+}
 
 
 .footer .content {
@@ -398,14 +409,14 @@ header {
 
 }
 
-.footer-menu-ul li {
+.footer-menu-list li {
   display: inline;
 }
 
-.footer-menu-ul .active {
+.footer-menu-list .active {
   color: #cd2e2d;
 }
-.footer-menu-ul li a{
+.footer-menu-list li a{
   font-size: 12px;
   color:#898989;;
   display: inline-block;
@@ -414,7 +425,7 @@ header {
 
 }
 
-.footer-menu-ul li a:hover {
+.footer-menu-list li a:hover {
   background: #fefefe;
   color: #cd2e2d ;
 }
@@ -443,3 +454,6 @@ header {
 
 .icon_tw {background: url(../IMG/icon_tw.png) center no-repeat;}
 .icon_tw:hover {background: url(../IMG/icon_tw_active.png) center no-repeat;}
+
+
+

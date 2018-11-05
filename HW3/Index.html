@@ -5,11 +5,12 @@
 <title>Черкаський драматичний театр імені Т. Г. Шевченка</title>
   <link rel="stylesheet" href="CSS/reset.css" type="text/css">
   <link rel="stylesheet" href="CSS/style.css" type="text/css">
-  <!-- <script type="text/javascript" src="script.js"></script> -->
+  <script src="JS/jquery-3.3.1.slim.min.js"></script>
+  <script src="JS/main.js"></script>
 </head>
 
 <body>
-<header class="header">
+<header class="header" id="top">
 
     <h1  class="logo">
       <a href="#">
@@ -20,7 +21,7 @@
 
 
   <nav class="main-menu">
-    <ul class="main-menu-ul">
+    <ul class="main-menu-list">
       <li><a href="#" class="active"> Головна </a></li>
       <li><a href="#">Афіша</a></li>
       <li><a href="#">репертуар</a></li>
@@ -108,7 +109,6 @@
 
 <!--- ^ img to slider  ^         ∨ img to slider ∨-->
 
-<!-- скмое интересное должно быть тут сделано на float на данный момент -->
 <section class="content main">
 
   <nav class="left-nav">
@@ -134,9 +134,7 @@
   <main class="main-content">
     <h2>Новини</h2>
 
-    <div class="main-news">
-
-      <div class="main-news-block">
+      <article class="main-news-block">
         <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
         <div class="news-block">
           <h3> News name number </h3>
@@ -152,9 +150,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="main-news-block">
+      <article class="main-news-block">
         <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
         <div class="news-block">
           <h3> News name number </h3>
@@ -170,11 +168,9 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </article>
 
-    <div class="main-news">
-      <div class="main-news-block">
+      <article class="main-news-block">
         <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
         <div class="news-block">
           <h3> News name number </h3>
@@ -189,26 +185,24 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="main-news">
-      <div class="main-news-block">
-        <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
-        <div class="news-block">
-          <h3> News name number </h3>
-          <p>Любя, съешь щипцы, — вздохнёт мэр, — кайф жгуч. Шеф взъярён тчк щипцы с эхом гудбай Жюль. Эй, жлоб! Где
-            туз? Прячь юных съёмщиц в шкаф. Экс-граф? Плюш изъят. Бьём чуждый цен хвощ! Эх, чужак! Общий съём цен шляп
-            (юфть) — вдрызг!Любя, съешь щипцы, — вздохнёт мэр, — кайф</p>
-          <div class="footer-news">
-            <data> 31.10.2018</data>
-            <div class="views">
-              <img src="IMG/eye.png" alt="eye">
-              <span> 113 </span>
-            </div>
+      </article>
+
+     <article class="main-news-block">
+      <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
+      <div class="news-block">
+        <h3> News name number </h3>
+        <p> Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего
+          сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив,
+          мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог</p>
+        <div class="footer-news">
+          <data> 31.10.2018</data>
+          <div class="views">
+            <img src="IMG/eye.png" alt="eye">
+            <span> 113 </span>
           </div>
         </div>
       </div>
-    </div>
+    </article>
   </main>
 
   <aside class="right-nav">
@@ -239,11 +233,11 @@
 <footer class="footer">
   <div class="content">
 
-  <button class="btn-up" href="#"></button>
+  <a class="btn-up" href="#top"></a>
 
 
   <nav class="footer-menu">
-    <ul class="footer-menu-ul">
+    <ul class="footer-menu-list">
       <li><a href="#" class="active">Головна </a></li>
       <li><a href="#">Афіша</a></li>
       <li><a href="#">репертуар</a></li>
@@ -257,7 +251,6 @@
   </nav>
 
   <div class="social">
-    <!-- вырезать значки  и поменять, выровнять относительно навигации в футере , сделать hover эффект -->
     <ul class="social-ul">
       <li class="icon_vk"><a href="#"></a></li>
       <li class="icon_youtube"><a href="#"></a></li>
