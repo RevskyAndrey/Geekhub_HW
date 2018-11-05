@@ -1,24 +1,17 @@
-body, html {
-  width: 100%;
-}
-
 a {
   text-decoration: none;
 }
 
 .content {
-  width: 1170px;
+  width: 1300px;
   margin: 0 auto;
 }
 
 header {
   height : 80px;
-  background-image: linear-gradient(to top, #eb402c, #d90647);
-  color : #fff;
   display: flex;
   justify-content: space-around;
 }
-
 
 .logo {
   width: 121px;
@@ -28,25 +21,88 @@ header {
 
 /** heder nav-menu */
 
-
-.main-menu-list li {
+.main-menu-list li,
+.footer-menu-list li{
   display: inline;
   padding-top: 25px;
-
-}
+  }
 
 .main-menu-list li a{
-  height: 76px;
-  font-size: 12px;
+  font-size: 18px;
   color: #fff;
   display: inline-block;
-  padding: 25px 10px;
+  padding: 10px;
   text-transform: uppercase;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
+  border-radius: 15px;
   box-sizing: border-box;
 }
 
 .main-menu-list li a:hover {
   background: #ffffff;
   color: #797979 ;
+}
+
+
+
+
+.bg-welcome {
+  height: 350px;
+  background-image: linear-gradient(to top, #eb402c, #d90647);
+}
+
+section {
+  margin-top: 50px;
+  position: relative;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+section:before,
+section:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+section:before {
+  background-color: #eb402c;
+  transform: rotate(-15deg) skew(-15deg);
+}
+
+/*********/
+
+footer {
+  border-top:  1px solid  #e0e0e0;
+  height : 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-menu-list li a{
+  font-size: 18px;
+  color: #363636;
+  display: inline-block;
+  padding: 10px;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+.footer-menu-list li a:hover {
+  border:2px solid #797979;
+}
+
+.select-language {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  background: #f8f8f8;
+  color: #363636;
+  padding-left: 31px;
 }
