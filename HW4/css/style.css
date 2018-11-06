@@ -67,6 +67,7 @@ header {
 }
 
 .slogan-block {
+  margin-top: 12%;
   width: 550px;
   color: #ffffff;
 }
@@ -94,13 +95,61 @@ header {
   text-shadow: 0 10px 30px rgba(223, 27, 61, 0.3);
 }
 
+.btn-main:hover {
+  background: #f08080;
+  color: #fff;
+}
+
 .image {
   width: 479px;
   height: 810px;
 }
 
+/**Messaging**/
 
+.messaging,
+.Keep-touch{
+  display: flex;
+  justify-content: space-around;
+}
 
+.image-main-block {
+  width: 400px;
+  height: 650px;
+  border: 1px solid green;
+  position: relative;
+}
+
+.main-first-img,
+.main-second-img,
+.main-third-img,
+.main-fourth-img{
+  position: relative;
+}
+
+.mainfirst-img{
+  top :5px;
+}
+
+.main-second-img{
+  top : -520px;
+  left: 170px;
+}
+
+.main-third-img {
+  left: 150px;
+  top: -40px;
+}
+
+.main-fourth-img {
+  top: -520px;
+  right: 80px;
+}
+
+.main-text-block {
+  width: 400px;
+  border: 1px solid blue;
+}
 
 /***   у футерра убрать  маржин !!!! ******/
 
@@ -130,6 +179,7 @@ footer {
 .select-language {
   width: 200px;
   height: 50px;
+  border: 1px solid transparent;
   border-radius: 7px;
   background: #f8f8f8;
   color: #363636;
