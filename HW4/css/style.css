@@ -214,20 +214,29 @@ h2 {
 }
 
 .comment-iteam:after{
-  border-color: rgba(255, 255, 255, 0);
+ /* border-color: rgba(255, 255, 255, 0);*/
   border-top-color: #ffffff;
   border-width: 12px;
   margin-left: -12px;
 }
 .comment-iteam:before {
-  border-color: rgba(224, 224, 224, 0);
+  /*border-color: rgba(224, 224, 224, 0);*/
   border-top-color: #e0e0e0;
   border-width: 13px;
   margin-left: -13px;
 }
 
-.comment-iteam p {
+.comment-iteam blockquote {
  padding: 15px;
+}
+
+.central-comment {
+ margin-top: -15px;
+  box-shadow: 0 30px 60px 0 rgba(54, 54, 54, 0.15);
+}
+
+.central-autor {
+  padding-top: 25px;
 }
 
 a.text-red {
@@ -244,7 +253,22 @@ a.text-red {
   width: 62px;
   height: 62px;
   border-radius: 50%;
+}
 
+.autor-list {
+  padding-left: 15px;
+}
+
+.autor-list p {
+  font-size: 18px;
+  letter-spacing: 1.1px;
+}
+
+.autor-list span {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  color: #667386;
+  text-transform: uppercase;
 }
 
 /***/
@@ -269,13 +293,23 @@ a.text-red {
 .info-text {
   width: 256px;
   padding: 15px;
+  margin-left: 25px;
   position: relative;
 }
+
 
 .info-text h4{
   font-size: 24px;
 }
 
+.info-text p {
+  width: 255px;
+  height: 85px;
+  opacity: 0.6;
+  font-size: 16px;
+  line-height: 1.75;
+  overflow: hidden;
+}
 .center-img{
   padding-top: 25px;
   position: relative;
@@ -301,15 +335,60 @@ a.text-red {
   cursor: pointer;
 }
 
-.sent-video h4:before {
- float: left;
+.img-free-call h4:before {
+  height: 49px;
+  width: 48px;
+  content:"";
+  background:url(../img/free-call.png);
+  position: absolute;
+  left: 275px;
+  top: 0;
+  bottom: 25px;
+  z-index: 1;
+}
+
+
+.img-chat h4:before {
+  height: 44px;
+  width: 48px;
+  content:"";
+  background:url(../img/chat.png);
+  position: absolute;
+  left: 275px;
+  right: 0;
+  top: 0;
+  bottom: 25px;
+  z-index: 1;
+}
+
+
+.img-sent-video h4:before {
   height: 32px;
   width: 48px;
   content:"";
-  margin:0 5px 0 0;
   background:url(../img/video.png);
-  padding-left: 38px;
+  position: absolute;
+  left: -65px;
+  right: 0;
+  top: 16px;
+  bottom: 0;
+  z-index: 1;
 }
+
+
+.img-picture h4:before {
+  height: 40px;
+  width: 48px;
+  content:"";
+  background:url(../img/picture.png);
+  position: absolute;
+  left: -65px;
+  right: 0;
+  top: 10px;
+  bottom: 0;
+  z-index: 1;
+}
+
 
 /******/
 .subscribe {
