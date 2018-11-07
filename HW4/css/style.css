@@ -150,10 +150,11 @@ header {
   width: 550px;
 }
 
-.main-text-block h2 {
+h2 {
   font-size: 60px;
   font-weight: 900;
   color: #363636;
+  text-align: center;
 }
 
 .text-red {
@@ -229,11 +230,46 @@ header {
   height: 520px;
   background-image: linear-gradient(to top, #eb402c, #d90647);
   display: flex;
+  color: #fff;
+  margin: 50px 0 50px;
 }
 
+.free-chat-list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info-text-list {
+  width: 350px;
+}
+
+.info-text {
+  width: 256px;
+  padding: 15px;
+  position: relative;
+}
+
+.info-text h4{
+  font-size: 24px;
+}
+
+.sent-video h4:before {
+ float: left;
+  height: 32px;
+  width: 48px;
+  content:"";
+  margin:0 5px 0 0;
+  background:url(../img/video.png);
+  padding-left: 38px;
+}
 
 /******/
+.subscribe {
+  padding-top: 50px;
+}
 
+/****/
 footer {
   border-top:  1px solid  #e0e0e0;
   height : 80px;
