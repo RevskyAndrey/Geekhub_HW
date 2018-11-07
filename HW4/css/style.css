@@ -120,6 +120,7 @@ header {
   position: relative;
 }
 
+
 .main-first-img,
 .main-second-img,
 .main-third-img,
@@ -197,24 +198,45 @@ h2 {
   margin: 10px;
   padding: 15px;
   font-size: 18px;
+  position: relative;
 }
 
-
-.central-comment {
-  margin-top: -25px;
-  box-shadow: 0 30px 60px 0 rgba(54, 54, 54, 0.15);
+.comment-iteam:after,
+.comment-iteam:before {
+  top: 100%;
+  left: 12%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
 }
 
-.central-autor {
-  padding-top: 25px;
+.comment-iteam:after{
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #ffffff;
+  border-width: 12px;
+  margin-left: -12px;
+}
+.comment-iteam:before {
+  border-color: rgba(224, 224, 224, 0);
+  border-top-color: #e0e0e0;
+  border-width: 13px;
+  margin-left: -13px;
 }
 
 .comment-iteam p {
  padding: 15px;
 }
 
+a.text-red {
+  padding-left: 15px;
+  font-weight: bold;
+}
+
 .autor {
-  margin-top: 25px;
+  margin-top: 55px;
   display: flex;
 }
 
@@ -222,6 +244,7 @@ h2 {
   width: 62px;
   height: 62px;
   border-radius: 50%;
+
 }
 
 /***/
@@ -251,6 +274,31 @@ h2 {
 
 .info-text h4{
   font-size: 24px;
+}
+
+.center-img{
+  padding-top: 25px;
+  position: relative;
+  width: 428px;
+  height: 735px;
+}
+
+.center-img:before {
+  width: 292px;
+  height: 519px;
+  content: '';
+  position: absolute;
+  top: 110px;
+  left: 60px;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5) url(../img/play-circle-1.png) center center no-repeat;
+  z-index: 1;
+}
+
+
+.center-img:hover {
+  cursor: pointer;
 }
 
 .sent-video h4:before {
@@ -284,11 +332,13 @@ h2 {
 }
 
 .input-email {
-  width: 380px;
+  width: 550px;
   height: 50px;
   border: 1px solid transparent;
   border-radius: 25px;
   background-color: #f8f8f8;
+  padding-left: 25px;
+  position: relative;
 }
 
 .btn-subs{
@@ -299,6 +349,8 @@ h2 {
   color: #fff;
   box-shadow: 0 10px 30px 0 rgba(223, 27, 61, 0.3);
   background-image: linear-gradient(to top, #eb402c, #d90647);
+  position: relative;
+  left: -180px;
 }
 
 .btn-subs:hover {
@@ -316,6 +368,7 @@ h2 {
 .img-app-store {
   margin-top: 80px;
   margin-bottom: 200px;
+  cursor: pointer;
 }
   /****/
 footer {
@@ -344,8 +397,43 @@ footer {
   width: 200px;
   height: 50px;
   border: 1px solid transparent;
-  border-radius: 7px;
+  border-radius: 25px;
   background: #f8f8f8;
   color: #363636;
-  padding-left: 31px;
+  padding: 15px 31px 0;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+
+.select-language li{
+  position:relative;
+  display: inline-block;
+  width: 200px;
+}
+
+.select-language-list{
+  display:none;
+  position:absolute;
+  left:0;
+  bottom:100%;
+  padding: 25px;
+  border: 1px solid #808080;
+  border-radius: 10px;
+}
+
+.select-language li:hover ul{
+  display:block;
+  padding: 5px;
+  color: #fff;
+  background: #cccccc;
+}
+.select-language-list li:hover {
+  color: #363636;
+  border-radius: 5px;
+  border: 1px solid #363636;
+}
+
+.select-language img {
+  margin-left: 50px;
 }
