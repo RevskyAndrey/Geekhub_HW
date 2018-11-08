@@ -47,10 +47,6 @@ a {
   text-transform: uppercase;
 }
 
-.active{
-  border-bottom:  3px solid #e8bf5d;
-}
-
 .main-menu-list a:hover {
   border-bottom:  3px solid #e8bf5d;
 }
@@ -59,4 +55,179 @@ a {
 .welcome {
   height: 800px;
   background: #cccccc url(../img/BG_welcome.png) center no-repeat;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.welcome ul {
+  margin-top: 555px;
+  color: #fff;
+}
+
+.welcome .title {
+  font-family: PlayfairDisplay;
+  font-size: 65px;
+  line-height: 0.69;
+  letter-spacing: 2.6px;
+  border-left:3px solid #e8bf5d ;
+  padding-left: 16px;
+}
+
+.welcome .subtitle {
+  font-family: OpenSans;
+  font-size: 31px;
+  line-height: 1.16;
+  letter-spacing: 1.2px;
+  border-left:3px solid #e8bf5d ;
+  padding-left: 16px;
+}
+
+
+.btn-def {
+  margin-top: 555px;
+  height: 50px;
+  font-size: 16px;
+  letter-spacing: 0.6px;
+  color: #111;
+  padding: 18px 46px;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  background: #e8bf5d;
+}
+
+.btn-def:hover {
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #111;
+}
+
+.heder-section {
+  position: relative;
+  padding-left: 50px;
+  padding-top: 81px;
+}
+
+.heder-section h3 {
+  border-left:3px solid #e8bf5d ;
+  padding-left: 16px;
+  font-size: 31px;
+  line-height: 1.45;
+  letter-spacing: 1.2px;
+}
+
+.heder-section p {
+  width: 765px;
+  border-left:3px solid #e8bf5d ;
+  padding-left: 16px;
+  font-size: 21px;
+  line-height: 1.48;
+  letter-spacing: 0.8px;
+  color: #666666;
+}
+
+.number-01:before {
+  content: "";
+  width: 178px;
+  height: 144px;
+  background-image: url(../img/01.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  position: absolute;
+  opacity: 0.1;
+  top :70px;
+  bottom: 0;
+  left: 65px;
+  right: 0;
+}
+
+.about-list {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+h4 {
+  font-size: 21px;
+  line-height: 1.48;
+  letter-spacing: 0.8px;
+}
+
+.history-list li {
+  width: 550px;
+  display: flex;
+  padding-top: 36px;
+}
+
+.history-list span{
+  width: 65px;
+}
+
+.history-list p {
+  width: 430px;
+  font-family: OpenSans;
+  font-size: 16px;
+  line-height: 1.31;
+  letter-spacing: 0.6px;
+  text-align: left;
+  color: #111111;
+  padding-left: 37px;
+}
+
+.history span {
+  font-family: OpenSans;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.48;
+  letter-spacing: 0.8px;
+  text-align: left;
+  color: #111111;
+}
+
+.expertise {
+  width: 500px;
+  font-family: OpenSans;
+  font-size: 14px;
+  text-align: left;
+  color: #666666;
+}
+
+.expertise h4 {
+  color: #111;
+}
+
+.expertise p {
+  padding-top: 36px;
+  line-height: 2.21;
+  letter-spacing: 0.6px;
+}
+
+.Practis-Area {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background: #111;
+  color: #fff;
+}
+
+.number-02:before {
+  content: "";
+  width: 211px;
+  height: 144px;
+  background-image: url(../img/02.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  position: absolute;
+  opacity: 0.1;
+  top :70px;
+  bottom: 0;
+  left: 60px;
+  right: 0;
+}
+
+.practis-area-list {
+  display: flex;
+  padding: 50px;
+  justify-items: center;
+  justify-content: space-between;
 }
