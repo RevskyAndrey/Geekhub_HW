@@ -20,7 +20,6 @@ a {
 }
 
 header .wraper{
-  width: auto;
   height : 110px;
   display: flex;
   justify-content: space-between;
@@ -34,6 +33,9 @@ header .wraper{
 }
 
 
+.main-menu-list li {
+  display:inline ;
+}
 
 
 /* font-family: 'Playfair Display', serif;*/
