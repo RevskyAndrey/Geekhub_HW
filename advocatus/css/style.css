@@ -1,0 +1,39 @@
+body,html {
+  pading: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.welcome {
+  background: #363636 url(../img/bg_welcome.png) no-repeat;
+}
+
+.wraper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header .wraper{
+  width: auto;
+  height : 110px;
+  display: flex;
+  justify-content: space-between;
+  }
+
+.logo {
+  margin: 1%;
+  width: 168px;
+  height: 18px;
+  overflow: hidden;
+}
+
+
+
+
+/* font-family: 'Playfair Display', serif;*/
