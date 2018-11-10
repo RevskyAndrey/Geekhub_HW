@@ -10,6 +10,7 @@
 
 </head>
 <body>
+
 <header class="header wraper">
 	<h1 class="logo">
 		<a href="#">
@@ -25,17 +26,18 @@
 			<li><a href="#lawyers">Lawyers</a></li>
 			<li><a href="#publications">Publications</a></li>
 			<li><a href="#faq">FAQ</a></li>
-			<li><a href="#">Contact</a></li>
+			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</nav>
 
 </header>
+
 <section class="welcome">
  	<ul>
 		<li class="title">Adam Suaerez</li>
 		<li class="subtitle">Lawyer</li>
 	</ul>
-	<button class="btn-def">Contact Me</button>
+	<button class="btn-def ">Contact Me</button>
 </section>
 
 <section class="about-us wraper" id="about-us">
@@ -246,20 +248,48 @@
   </div>
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
   <div class="heder-section number number-07 wraper">
     <h3>Feel Free to Contact</h3>
     <p>We are regarded as industry leaders in stunning website solutions, focused on delivering unsurpassed user
       experiences.</p>
   </div>
-  <div>
-
-
+  <div class="form-box">
+		<form name="contact-free">
+			<ul class="contact-free-list">
+				<li>
+					<input name="name" id="name" type="text" class="input-form" placeholder="Enter your name...">
+				</li>
+				<li>
+					<input name="email" id="email" type="email" class="input-form" placeholder="Enter your email...">
+				</li>
+				<li>
+					<input name="phone" id="phone" type="tel" class="input-form" placeholder="Enter your phone...">
+				</li>
+				<li>
+					<textarea name="massage" id="massage" class="input-form"  rows="4" cols="30"
+										placeholder="Enter your massage...">
+					</textarea>
+				</li>
+				<li>	<button class="btn-def">sent message</button></li>
+			</ul>
+		</form>
+		<div class="map" >	<!-------Тут должна быть карта на гугл карту  по идеи JS ----------------> 	</div>
   </div>
 </section>
 
 <footer>
-  <p class="copy">Copyright © <a href="#">Symu.co</a></p>
+	<div class="inner-footer">
+		<p>Copyright © <a href="#" class="copy">Symu.co</a> </p>
+		<ul class="social">
+			<li><a><img src="img/icon_facebook.png" height="20" width="20"/></a> </li>
+			<li><a><img src="img/icon_tw.png" height="20" width="20"/></a> </li>
+			<li><a><img src="img/icon_google-plus.png" height="20" width="20"/></a> </li>
+			<li><a><img src="img/icon_vk.png" height="20" width="20"/></a> </li>
+
+		</ul>
+	</div>
 </footer>
+
 </body>
 </html>

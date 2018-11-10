@@ -82,14 +82,18 @@ a {
 
 
 .btn-def {
-  margin-top: 555px;
   height: 50px;
   font-size: 16px;
+  text-transform: capitalize;
   color: #111;
   padding: 18px 46px;
   border: 1px solid transparent;
   border-radius: 25px;
   background: #e8bf5d;
+}
+
+.welcome .btn-def {
+  margin-top: 555px;
 }
 
 .btn-def:hover {
@@ -431,4 +435,70 @@ h4 {
 
 .number-07:before {
   content: "07";
+}
+
+.contact {
+  padding-bottom: 75px;
+}
+
+
+.form-box {
+  width: 870px;
+  height: 490px;
+  box-shadow: 0 12px 40px 0 rgba(104, 86, 42, 0.1);
+  margin: 70px auto 5px;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.input-form {
+  width: 350px;
+  font-size: 14px;
+  color: #b9b9b9;
+  background: #fff;
+  border: none;
+  opacity: 0.3;
+  border-bottom: 1px solid #b9b9b9;
+  padding: 18px;
+}
+
+.contact-free-list .btn-def {
+  margin-top: 50px;
+  margin-left: 81px;
+}
+
+.map {
+  width: 363px;
+  height: 363px;
+  background: #e8bf5d url(../img/map.png);
+  border-left: 21px solid  #e8bf5d;
+  border-bottom: 21px solid #e8bf5d ;
+}
+
+footer {
+  height: 81px;
+  background: #111;
+  color: #fff;
+
+}
+
+.inner-footer {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 32px ;
+}
+
+.copy{
+  color: #fff;
+}
+
+.social li {
+  display: inline;
+  padding: 0  5px;
+}
+
+.inner-footer a:hover{
+  cursor: pointer;
 }
