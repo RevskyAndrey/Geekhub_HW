@@ -205,7 +205,6 @@ h4 {
 
 .Practis-Area {
   padding-top: 50px;
-  padding-bottom: 100px;
   background: #111;
   color: #fff;
 }
@@ -226,8 +225,53 @@ h4 {
 }
 
 .practis-area-list {
+  padding: 75px;
   display: flex;
-  padding: 50px;
-  justify-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.practis-area-list  li {
+  width: 45%;
+  padding: 35px 75px;
+  position: relative;
+}
+
+
+.practis-area-list  li:before{
+  position: absolute;
+  content: "";
+
+}
+
+.client-service:before {
+  width:58px;
+  height: 38px;
+  top: 40px;
+  left: -25px;
+  background: url(../img/client-service.png);
+}
+
+.labour-employment:before {
+  width:42px;
+  height: 42px;
+  top: 40px;
+  left: -5px;
+  background: url(../img/labour-employment.png);
+}
+
+.cyber-sequre:before  {
+  width:49px;
+  height: 43px;
+  top: 40px;
+  left: -25px;
+  background: url(../img/cyber-sequre.png);
+}
+
+.real-estate:before {
+  width:42px;
+  height: 33px;
+  top: 40px;
+  left: -5px;
+  background: url(../img/real-estate.png);
 }
