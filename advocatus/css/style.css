@@ -127,7 +127,7 @@ a {
   font-family: 'Open Sans', sans-serif;
   position: absolute;
   opacity: 0.1;
-  top :0px;
+  top :0;
   bottom: 0;
   left: 65px;
   right: 0;
@@ -372,3 +372,63 @@ h4 {
   justify-content: space-between;
 }
 
+.icon-comment,
+.icon-share {
+  width: 20px;
+  height: 20px;
+}
+
+.number-06:before{
+  content: "06";
+}
+
+.faq {
+  padding-top: 50px;
+  background: #000;
+  color: #fff;
+  padding-bottom: 100px;
+}
+
+.faq-tabs{
+  padding-top: 95px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-list .active {
+  color: #e8bf5d;
+  padding: 10px 0;
+}
+
+.faq-list li {
+  padding: 10px 0  ;
+}
+
+.faq-list li{
+  border-bottom: solid 1px #e8bf5d;
+}
+
+
+.faq .answer {
+  width: 500px;
+  height: 285px;
+  border-radius: 3px;
+  box-shadow: 0 12px 40px 0 rgba(216, 178, 87, 0.32);
+  background-color: #e8bf5d;
+  color: #111;
+
+}
+
+.answer p {
+  width: 450px;
+  height: 169px;
+  padding: 40px 45px 25px 45px;
+  text-align: left;
+  line-height: 2.21;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.number-07:before {
+  content: "07";
+}
