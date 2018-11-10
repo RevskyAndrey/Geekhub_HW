@@ -120,19 +120,20 @@ a {
   line-height: 1.48;
   color: #666666;
 }
-
-.number-01:before {
-  content: "";
-  width: 178px;
+.number:before {
+  font-size: 195px;
+  width: 211px;
   height: 144px;
-  background: url(../img/01.png) no-repeat;
-  background-size: 90%;
+  font-family: 'Open Sans', sans-serif;
   position: absolute;
   opacity: 0.1;
-  top :70px;
+  top :0px;
   bottom: 0;
   left: 65px;
   right: 0;
+}
+.number-01:before {
+  content: "01";
 }
 
 .about-list {
@@ -196,17 +197,7 @@ h4 {
 }
 
 .number-02:before {
-  content: "";
-  width: 211px;
-  height: 144px;
-  background: url(../img/02.png) no-repeat;
-  background-size: 90%;
-  position: absolute;
-  opacity: 0.1;
-  top :70px;
-  bottom: 0;
-  left: 60px;
-  right: 0;
+  content: "02";
 }
 
 .practis-area-list {
@@ -217,7 +208,7 @@ h4 {
 }
 
 .practis-area-list  li {
-  width: 45%;
+  width: 50%;
   padding: 35px 75px;
   position: relative;
 }
@@ -262,17 +253,7 @@ h4 {
 }
 
 .number-03:before {
-  content: "";
-  width: 211px;
-  height: 144px;
-  background: url(../img/03.png) no-repeat;
-  background-size: 90%;
-  position: absolute;
-  opacity: 0.1;
-  top :70px;
-  bottom: 0;
-  left: 60px;
-  right: 0;
+  content: "03";
 }
 
 .inner {
@@ -292,21 +273,13 @@ h4 {
 .our-clients-say{
   background: #363636 url(../img/clients-back.png);
   color: #fff;
+  padding-bottom: 100px;
 }
 
 
 .number-04:before {
-  content: "";
+  content: "04";
   width: 218px;
-  height: 144px;
-  background: url(../img/04.png) no-repeat;
-  background-size: 90%;
-  position: absolute;
-  opacity: 0.1;
-  top :70px;
-  bottom: 0;
-  left: 60px;
-  right: 0;
 }
 
 .client-box {
@@ -352,3 +325,50 @@ h4 {
 .client-box-inner span {
   font-size: 14px;
 }
+
+.number-05:before {
+  content: "05";
+}
+
+.publications-list {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.publications-box{
+  margin: 10px;
+  padding-bottom: 15px;
+  border-bottom:3px solid #e8bf5d ;
+}
+
+.publications-box h4 {
+  font-weight: 600;
+}
+
+.pub-autor  em,
+.pub-autor data{
+  color : #666;
+}
+
+.pub-autor data{
+  font-style: italic;
+  float: right;
+}
+
+.pub-autor span {
+  font-size: 16px;
+}
+
+.publications-box .desc {
+  padding-top: 40px;
+  font-size: 14px;
+  color: #666;
+  line-height: 2.21;
+}
+
+.publications-box-list {
+  display: flex;
+  justify-content: space-between;
+}
+
