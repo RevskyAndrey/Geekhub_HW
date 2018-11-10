@@ -1,8 +1,7 @@
 body,html {
-  pading: 0;
   margin: 0;
   max-width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -66,19 +65,17 @@ a {
 }
 
 .welcome .title {
-  font-family: PlayfairDisplay;
+  font-family: 'Playfair Display', serif;
   font-size: 65px;
   line-height: 0.69;
-  letter-spacing: 2.6px;
+  letter-spacing: 2px;
   border-left:3px solid #e8bf5d ;
   padding-left: 16px;
 }
 
 .welcome .subtitle {
-  font-family: OpenSans;
   font-size: 31px;
   line-height: 1.16;
-  letter-spacing: 1.2px;
   border-left:3px solid #e8bf5d ;
   padding-left: 16px;
 }
@@ -88,7 +85,6 @@ a {
   margin-top: 555px;
   height: 50px;
   font-size: 16px;
-  letter-spacing: 0.6px;
   color: #111;
   padding: 18px 46px;
   border: 1px solid transparent;
@@ -106,14 +102,14 @@ a {
   position: relative;
   padding-left: 50px;
   padding-top: 81px;
+  font-family: 'Playfair Display', serif;
 }
 
 .heder-section h3 {
   border-left:3px solid #e8bf5d ;
   padding-left: 16px;
   font-size: 31px;
-  line-height: 1.45;
-  letter-spacing: 1.2px;
+
 }
 
 .heder-section p {
@@ -122,7 +118,6 @@ a {
   padding-left: 16px;
   font-size: 21px;
   line-height: 1.48;
-  letter-spacing: 0.8px;
   color: #666666;
 }
 
@@ -130,9 +125,8 @@ a {
   content: "";
   width: 178px;
   height: 144px;
-  background-image: url(../img/01.png);
-  background-size: 80%;
-  background-repeat: no-repeat;
+  background: url(../img/01.png) no-repeat;
+  background-size: 90%;
   position: absolute;
   opacity: 0.1;
   top :70px;
@@ -151,7 +145,6 @@ a {
 h4 {
   font-size: 21px;
   line-height: 1.48;
-  letter-spacing: 0.8px;
 }
 
 .history-list li {
@@ -161,33 +154,27 @@ h4 {
 }
 
 .history-list span{
-  width: 65px;
+  width: 75px;
 }
 
 .history-list p {
   width: 430px;
-  font-family: OpenSans;
   font-size: 16px;
-  line-height: 1.31;
-  letter-spacing: 0.6px;
   text-align: left;
   color: #111111;
   padding-left: 37px;
 }
 
 .history span {
-  font-family: OpenSans;
   font-size: 21px;
   font-weight: bold;
   line-height: 1.48;
-  letter-spacing: 0.8px;
   text-align: left;
   color: #111111;
 }
 
 .expertise {
   width: 500px;
-  font-family: OpenSans;
   font-size: 14px;
   text-align: left;
   color: #666666;
@@ -200,10 +187,9 @@ h4 {
 .expertise p {
   padding-top: 36px;
   line-height: 2.21;
-  letter-spacing: 0.6px;
 }
 
-.Practis-Area {
+.practis-area {
   padding-top: 50px;
   background: #111;
   color: #fff;
@@ -213,9 +199,8 @@ h4 {
   content: "";
   width: 211px;
   height: 144px;
-  background-image: url(../img/02.png);
-  background-size: 80%;
-  background-repeat: no-repeat;
+  background: url(../img/02.png) no-repeat;
+  background-size: 90%;
   position: absolute;
   opacity: 0.1;
   top :70px;
@@ -274,4 +259,96 @@ h4 {
   top: 40px;
   left: -5px;
   background: url(../img/real-estate.png);
+}
+
+.number-03:before {
+  content: "";
+  width: 211px;
+  height: 144px;
+  background: url(../img/03.png) no-repeat;
+  background-size: 90%;
+  position: absolute;
+  opacity: 0.1;
+  top :70px;
+  bottom: 0;
+  left: 60px;
+  right: 0;
+}
+
+.inner {
+  width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 15px;
+}
+
+.inner > .box {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.our-clients-say{
+  background: #363636 url(../img/clients-back.png);
+  color: #fff;
+}
+
+
+.number-04:before {
+  content: "";
+  width: 218px;
+  height: 144px;
+  background: url(../img/04.png) no-repeat;
+  background-size: 90%;
+  position: absolute;
+  opacity: 0.1;
+  top :70px;
+  bottom: 0;
+  left: 60px;
+  right: 0;
+}
+
+.client-box {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.client-box img {
+  width: 370px;
+  height: 305px;
+  padding: 10px;
+}
+
+.client-box-inner {
+  width: 600px;
+  display:block;
+  position: relative;
+}
+
+.client-box-inner:before {
+  content: "";
+  width: 30px;
+  height: 25px;
+  background: url(../img/icon-quote.png) no-repeat;
+  position: absolute;
+  top: 0;
+  left: -50px;
+}
+
+
+.client-box-inner blockquote {
+  font-size: 14px;
+  line-height: 2;
+  width: 600px;
+  height: 140px;
+}
+
+.client-box-inner h4 {
+  padding-top: 40px;
+}
+
+.client-box-inner span {
+  font-size: 14px;
 }
