@@ -1,3 +1,5 @@
 .idea/
 *.psd
 *.jpg
+*.json
+node_modules/

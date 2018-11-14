@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+  <link href="CSS\style.css" rel="stylesheet" type="text/css">
+  <!--  <script type="text/javascript" src="script.js"></script> -->
+</head>
+
+
+<body>
+<div class="wraper">
+  <h3> Profile edit page </h3>
+  <form action="https://postman-echo.com/post" method="post">
+    <fieldset>
+      <legend>Basic info</legend>
+      <ul>
+        <li>
+          <label for="iduser">ID </label>
+          <input  name="id" type="text" id="iduser" placeholder="725" class="left">
+        </li>
+        <li>
+          <label for="FirstName">First Name </label>
+          <input  name="FirstName" type="text" id="FirstName" class="left">
+        </li>
+        <li>
+          <label for="LastName">LastName </label>
+          <input  name="LastName" type="text" id="LastName" class="left">
+        </li>
+        <li>
+          <label for="password">Password </label>
+          <input  name="Password" type="Password" id="password" class="left">
+        </li>
+        <li>
+          <label for="phoneuser">Phone </label>
+          <input  name="phoneuser" type="tel" id="phoneuser" placeholder="380" class="left">
+        </li>
+        <li>
+          <label for="emailUser">Email </label>
+          <input  name="emailUser" type="email" id="emailUser" placeholder="myemail@placeholder.com" class="left">
+        </li>
+        <li>
+          <input type="checkbox" name="emilprivate" class="emailbox left"> Keep my email adress private
+        </li>
+        <li>
+          <p> We'll remove your public profile email and use 1978331+username@user.noreply.localhost</p>
+        </li>
+        <li>
+          <label for="DOBuser">DOB </label>
+          <input  name="DOBuser" type="date" id="DOBuser" class="left">
+        </li>
+        <li>
+          <label for="BlogURL">Blog URL </label>
+          <input  name="BlogURL" type="url" id="BlogURL"  placeholder="http://" class="left">
+        </li>
+        <li>
+          <label for="AboutME"> About me</label>
+          <textarea id="AboutME" cols="40" rows="8"> </textarea>
+        </li>
+        <li>
+          <label for="avatar" class="avatar">Profile picture </label>
+          <input  name="avatar" type="file" id="avatar" class="avatarInput left">
+        </li>
+        <li>
+          <input name="cheat-doom" type="hidden" value="iddqd">
+        </li>
+      </ul>
+    </fieldset>
+
+  <br>
+  <!-- professional-->
+
+    <fieldset>
+      <legend>professional info</legend>
+      <ul>
+        <li><label>Desire to study</label>
+          <input type="range">
+        </li>
+        <li>
+          <label for="profYers">Experience</label>
+          <input type="number" size="3"class="profYears" id="profYers">
+          <label for="profYers">years</label>
+        </li>
+        <li class="liradio">Development experience<br>
+          <input type="radio" id="learning" name="develop" class="radioi"><label class="leftradio" for="learning">Learning to Program</label>
+          <input type="radio" id="junior" name="develop" checked class="radioi"><label class="leftradio" for="junior">Junior Developer</label>
+          <input type="radio" id="mid" name="develop"class="radioi"><label class="leftradio" for="mid">Mid-Level Developer</label>
+          <input type="radio" id="senior" name="develop"class="radioi"><label class="leftradio" for="senior">Senior Developer</label>
+        </li>
+        <li class="country">
+          Country
+          <select title="Your country">
+            <option>- Choose your country -</option>
+            <option value="UA">Ukraine</option>
+            <option disabled>---------------- </option>
+            <option value="USA">USA</option>
+            <option value="TH">Thailand</option>
+            <option value="ES">Spain</option>
+          </select>
+        </li>
+        <li  class="licheck">
+          <p>Skills</p>
+          <input type="checkbox" id="html" name="skills" value="html" checked><label for="html" class="leftcheck">HTML</label>
+          <input type="checkbox" id="css" name="skills" value="css"><label for="css" class="leftcheck">CSS</label>
+          <input type="checkbox" id="js" name="skills" value="js"><label for="js" class="leftcheck">JavaScript</label>
+          <input type="checkbox" id="ruby" name="skills" value="ruby"><label for="ruby" class="leftcheck">Ruby</label>
+          <input type="checkbox" id="scala" name="skills" value="scala"><label for="scala" class="leftcheck">Scala</label>
+          <input type="checkbox" id="haskell" name="skills" value="haskell"><label for="haskell" class="leftcheck">Haskell</label>
+        </li>
+        <li>
+          <input name="cheat-doom" type="hidden" value="iddqd" >
+        </li>
+      </ul>
+    </fieldset>
+  </form>
+  <br>
+  <div class="buttonleft">
+    <button type="reset">Cancel</button> <button type="submit">Submit</button>
+
+  </div>
+</div>
+
+
+</body>
+</html>
