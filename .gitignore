@@ -1,5 +1,5 @@
 .idea/
 *.psd
 *.jpg
-*.json
 node_modules/
+package-lock.json
