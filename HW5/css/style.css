@@ -59,7 +59,7 @@ a {
 
 }
 
-.welcome ul {
+.welcome .slogan {
   margin-top: 555px;
   color: #fff;
 }
@@ -144,7 +144,7 @@ a {
   padding-top: 50px;
   padding-bottom: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 h4 {
