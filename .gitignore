@@ -2,5 +2,4 @@
 *.psd
 *.jpg
 node_modules/
-*.json
 node_modules/node_modules/
