@@ -1,16 +1,16 @@
+@import "../css/reset.css";
+
 body,html {
   margin: 0;
   max-width: 100%;
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
-}
+a {text-decoration: none;}
 
-.welcome {
-  background: #363636 url(../img/bg_welcome.png) no-repeat;
-}
+.welcome {  background: #363636 url(../img/bg_welcome.png) no-repeat;}
 
 .wraper {
   width: 1250px;
@@ -44,40 +44,36 @@ a {
   color: #111;
   padding: 0 10px;
   text-transform: uppercase;
-}
 
-.main-menu-list a:hover {
-  border-bottom:  3px solid #e8bf5d;
+  &:hover {
+    border-bottom: 3px solid #e8bf5d;
+  }
 }
-
 
 .welcome {
   height: 800px;
   background: #cccccc url(../img/BG_welcome.png) center no-repeat;
   display: flex;
   justify-content: space-around;
-
-}
-
-.welcome .slogan {
-  margin-top: 555px;
-  color: #fff;
-}
-
-.welcome .title {
-  font-family: 'Playfair Display', serif;
-  font-size: 65px;
-  line-height: 0.69;
-  letter-spacing: 2px;
-  border-left:3px solid #e8bf5d ;
-  padding-left: 16px;
-}
-
-.welcome .subtitle {
+  & .slogan {
+    margin-top: 555px;
+    color: #fff;
+  }
+  & .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    line-height: 0.69;
+    letter-spacing: 2px;
+    border-left:3px solid #e8bf5d ;
+    padding-left: 16px;
+  }
+  & .subtitle {
   font-size: 31px;
   line-height: 1.16;
   border-left:3px solid #e8bf5d ;
   padding-left: 16px;
+  }
+  & .btn-def { margin-top: 555px;}
 }
 
 
@@ -90,16 +86,11 @@ a {
   border: 1px solid transparent;
   border-radius: 25px;
   background: #e8bf5d;
-}
-
-.welcome .btn-def {
-  margin-top: 555px;
-}
-
-.btn-def:hover {
-  cursor: pointer;
-  color: #fff;
-  border: 1px solid #111;
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+    transform:scale(1.1,1.1);
+  }
 }
 
 .heder-section {
@@ -107,23 +98,21 @@ a {
   padding-left: 50px;
   padding-top: 81px;
   font-family: 'Playfair Display', serif;
+  & h3 {
+    border-left: 3px solid #e8bf5d;
+    padding-left: 16px;
+    font-size: 31px;
+  }
+  & p {
+    width: 765px;
+    border-left: 3px solid #e8bf5d;
+    padding-left: 16px;
+    font-size: 21px;
+    line-height: 1.48;
+    color: #666666;
+  }
 }
 
-.heder-section h3 {
-  border-left:3px solid #e8bf5d ;
-  padding-left: 16px;
-  font-size: 31px;
-
-}
-
-.heder-section p {
-  width: 765px;
-  border-left:3px solid #e8bf5d ;
-  padding-left: 16px;
-  font-size: 21px;
-  line-height: 1.48;
-  color: #666666;
-}
 .number:before {
   font-size: 195px;
   width: 211px;
@@ -136,9 +125,6 @@ a {
   bottom: 0;
   left: 65px;
   right: 0;
-}
-.number-01:before {
-
 }
 
 .about-list {
@@ -153,22 +139,24 @@ h4 {
   line-height: 1.48;
 }
 
-.history-list li {
-  width: 550px;
-  display: flex;
-  padding-top: 36px;
-}
+.history-list {
+  & li {
+    width: 550px;
+    display: flex;
+    padding-top: 36px;
+  }
 
-.history-list span{
-  width: 75px;
-}
+  & span {
+    width: 75px;
+  }
 
-.history-list p {
-  width: 430px;
-  font-size: 16px;
-  text-align: left;
-  color: #111111;
-  padding-left: 37px;
+  & p {
+    width: 430px;
+    font-size: 16px;
+    text-align: left;
+    color: #111111;
+    padding-left: 37px;
+  }
 }
 
 .history span {
@@ -184,15 +172,13 @@ h4 {
   font-size: 14px;
   text-align: left;
   color: #666666;
-}
-
-.expertise h4 {
-  color: #111;
-}
-
-.expertise p {
-  padding-top: 36px;
-  line-height: 2.21;
+  & h4 {
+    color: #111;
+  }
+  & p {
+    padding-top: 36px;
+    line-height: 2.21;
+  }
 }
 
 .practis-area {
@@ -201,28 +187,21 @@ h4 {
   color: #fff;
 }
 
-.number-02:before {
-  content: "02";
-}
 
 .practis-area-list {
   padding: 75px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.practis-area-list  li {
+  &  li {
   width: 50%;
   padding: 35px 75px;
   position: relative;
-}
-
-
-.practis-area-list  li:before{
+  }
+  & li:before {
   position: absolute;
   content: "";
-
+  }
 }
 
 .client-service:before {
@@ -257,10 +236,6 @@ h4 {
   background: url(../img/real-estate.png);
 }
 
-.number-03:before {
-  content: "03";
-}
-
 .inner {
   width: 1170px;
   margin: 0 auto;
@@ -268,71 +243,53 @@ h4 {
   justify-content: space-between;
   justify-items: center;
   padding: 15px;
-}
 
-.inner > .box {
-  padding-top: 50px;
-  padding-bottom: 100px;
+  & > .box {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
 }
-
 .our-clients-say{
   background: #363636 url(../img/clients-back.png);
   color: #fff;
   padding-bottom: 100px;
 }
 
-
-.number-04:before {
-  content: "04";
-  width: 218px;
-}
-
 .client-box {
   padding-top: 100px;
   display: flex;
   justify-content: space-around;
-}
-
-.client-box img {
-  width: 370px;
-  height: 305px;
-  padding: 10px;
+  & img {
+    width: 370px;
+    height: 305px;
+    padding: 10px;
+  }
 }
 
 .client-box-inner {
   width: 600px;
-  display:block;
+  display: block;
   position: relative;
+  &:before {
+    content: "";
+    width: 30px;
+    height: 25px;
+    background: url(../img/icon-quote.png) no-repeat;
+    position: absolute;
+    top: 0;
+    left: -50px;
+  }
 }
 
-.client-box-inner:before {
-  content: "";
-  width: 30px;
-  height: 25px;
-  background: url(../img/icon-quote.png) no-repeat;
-  position: absolute;
-  top: 0;
-  left: -50px;
-}
-
-
-.client-box-inner blockquote {
-  font-size: 14px;
-  line-height: 2;
-  width: 600px;
-  height: 140px;
-}
-
-.client-box-inner h4 {
-  padding-top: 40px;
-}
-
-.client-box-inner span {
-  font-size: 14px;
-}
-
-.number-05:before {
-  content: "05";
+.client-box-inner {
+  & blockquote {
+    font-size: 14px;
+    line-height: 2;
+    width: 600px;
+    height: 140px;
+  }
+  & h4 { padding-top: 40px;}
+  & span { font-size: 14px; }
 }
 
 .publications-list {
@@ -341,28 +298,21 @@ h4 {
   justify-content: space-between;
 }
 
-.publications-box{
+.publications-box {
   margin: 10px;
   padding-bottom: 15px;
-  border-bottom:3px solid #e8bf5d ;
+  border-bottom: 3px solid #e8bf5d;
+  & h4 {font-weight: 600;}
 }
 
-.publications-box h4 {
-  font-weight: 600;
+.pub-autor em,
+.pub-autor data {
+  color: #666;
 }
 
-.pub-autor  em,
-.pub-autor data{
-  color : #666;
-}
-
-.pub-autor data{
-  font-style: italic;
-  float: right;
-}
-
-.pub-autor span {
-  font-size: 16px;
+.pub-autor data {
+    font-style: italic;
+    float: right;
 }
 
 .publications-box .desc {
@@ -383,10 +333,6 @@ h4 {
   height: 20px;
 }
 
-.number-06:before{
-  content: "06";
-}
-
 .faq {
   padding-top: 50px;
   background: #000;
@@ -394,25 +340,22 @@ h4 {
   padding-bottom: 100px;
 }
 
-.faq-tabs{
+.faq-tabs {
   padding-top: 95px;
   display: flex;
   justify-content: space-between;
 }
 
-.faq-list .active {
-  color: #e8bf5d;
-  padding: 10px 0;
+.faq-list {
+  & .active {
+    color: #e8bf5d;
+    padding: 10px 0;
+  }
+  & li {
+    padding: 10px 0;
+    border-bottom: solid 1px #e8bf5d;
+  }
 }
-
-.faq-list li {
-  padding: 10px 0  ;
-}
-
-.faq-list li{
-  border-bottom: solid 1px #e8bf5d;
-}
-
 
 .faq .answer {
   width: 500px;
@@ -421,10 +364,7 @@ h4 {
   box-shadow: 0 12px 40px 0 rgba(216, 178, 87, 0.32);
   background-color: #e8bf5d;
   color: #111;
-
-}
-
-.answer p {
+  & p{
   width: 450px;
   height: 169px;
   padding: 40px 45px 25px 45px;
@@ -433,21 +373,18 @@ h4 {
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
 }
-
-.number-07:before {
-  content: "07";
 }
 
 .contact {
   padding-bottom: 75px;
 }
 
-
 .form-box {
   width: 870px;
   height: 490px;
   box-shadow: 0 12px 40px 0 rgba(104, 86, 42, 0.1);
   margin: 70px auto 5px;
+  padding-left: 10px;
   display: flex;
   justify-content: space-between;
   justify-items: center;
@@ -473,8 +410,8 @@ h4 {
   width: 384px;
   height: 384px;
   background: #e8bf5d url(../img/map.png);
-  border-left: 21px solid  #e8bf5d;
-  border-bottom: 21px solid #e8bf5d ;
+  border-left: 21px solid #e8bf5d;
+  border-bottom: 21px solid #e8bf5d;
 }
 
 footer {
@@ -488,18 +425,20 @@ footer {
   display: flex;
   justify-content: space-between;
   justify-items: center;
-  padding: 32px ;
+  padding: 32px;
 }
 
-.copy{
+.copy {
   color: #fff;
 }
 
 .social li {
   display: inline;
-  padding: 0  5px;
+  padding: 0 5px;
 }
 
-.inner-footer a:hover{
+.inner-footer a:hover {
   cursor: pointer;
 }
+
+
