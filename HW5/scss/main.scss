@@ -1,5 +1,5 @@
 @import "../css/reset.css";
-
+ //@import "../node_modules/bootstrap/scss/bootstrap";
 body,html {
   margin: 0;
   max-width: 100%;
@@ -30,6 +30,13 @@ a {text-decoration: none;}
   width: 168px;
   height: 18px;
   overflow: hidden;
+  &:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    transform:scale(1.05,1.05);
+    height: 23px;
+    border-bottom: 3px solid #e8bf5d;
+  }
 }
 
 .main-menu {
@@ -44,8 +51,8 @@ a {text-decoration: none;}
   color: #111;
   padding: 0 10px;
   text-transform: uppercase;
-
   &:hover {
+    transition: 0.2s;
     border-bottom: 3px solid #e8bf5d;
   }
 }
@@ -76,7 +83,6 @@ a {text-decoration: none;}
   & .btn-def { margin-top: 555px;}
 }
 
-
 .btn-def {
   height: 50px;
   font-size: 16px;
@@ -89,7 +95,9 @@ a {text-decoration: none;}
   &:hover {
     cursor: pointer;
     color: #fff;
-    transform:scale(1.1,1.1);
+    transition: 0.5s;
+    transform:scale(1.05,1.05);
+    opacity: 0.7;
   }
 }
 
@@ -186,7 +194,6 @@ h4 {
   background: #111;
   color: #fff;
 }
-
 
 .practis-area-list {
   padding: 75px;
@@ -426,6 +433,9 @@ footer {
   justify-content: space-between;
   justify-items: center;
   padding: 32px;
+    a:hover{
+      cursor: pointer;
+    }
 }
 
 .copy {
@@ -435,10 +445,11 @@ footer {
 .social li {
   display: inline;
   padding: 0 5px;
+    img:hover {
+      border-radius: 5px;
+      background: #808080;
+      transition: 0.5s;
+      transform:translate( 5%,5%);
+      opacity: 0.8;
+    }
 }
-
-.inner-footer a:hover {
-  cursor: pointer;
-}
-
-
