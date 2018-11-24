@@ -428,8 +428,7 @@ footer {
 
 .select-language-list li:hover {
   color: #363636;
-  border-radius: 5px;
-  border: 1px solid #363636; }
+  border-radius: 5px; }
 
 .select-language img {
   margin-left: 50px; }
