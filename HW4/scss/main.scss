@@ -7,6 +7,15 @@ html,body {
   font-family: 'Lato', sans-serif;
 }
 
+h2 {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: ".";
+    color: #d90647;
+  }
+}
+
 a , a:hover{
   text-decoration: none;
 }
@@ -125,12 +134,7 @@ header{
   height: 650px;
   position: relative;
 }
-
-
-.main-first-img,
-.main-second-img,
-.main-third-img,
-.main-fourth-img{
+.main-img{
   position: relative;
 }
 
@@ -529,7 +533,6 @@ footer {
   cursor: pointer;
   border-radius: 5px;
   color: #eb402c;
-
 }
 
 
@@ -593,10 +596,10 @@ footer {
 
     &:before {
       position: absolute;
-      width: 155px;
-      height: 365px;
-      top: 60px;
-      left: 30px;
+      width: 215px;
+      height: 410px;
+      top: 95px;
+      left: 45px;
       right: 0;
       bottom: 0;
     }
@@ -772,14 +775,14 @@ footer {
     height: 575px;
     position: absolute;
     right: 0;
-    top: 35%;
-    left: 60%;
+    top: 0;
+    left: 40%;
     &:before {
       position: absolute;
-      width: 215px;
-      height: 365px;
-      top: 60px;
-      left: 45px;
+      width: 240px;
+      height: 407px;
+      top: 75px;
+      left: 190px;
       right: 0;
       bottom: 0;
     }
