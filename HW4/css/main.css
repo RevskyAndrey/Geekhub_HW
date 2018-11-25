@@ -411,17 +411,18 @@ footer {
   color: #363636;
   padding: 15px 31px 0;
   text-transform: uppercase;
-  font-size: 18px; }
-  .select-language:before {
+  font-size: 18px;
+  position: relative; }
+  .select-language:after {
     position: absolute;
     width: 12px;
     height: 8px;
     content: "";
     background: url(../img/arrow-down.png);
-    top: 0;
-    right: 5px;
+    top: 25px;
+    right: 0;
     border: 0;
-    left: 0; }
+    left: 150px; }
 
 .select-language li {
   position: relative;
@@ -451,11 +452,6 @@ footer {
   cursor: pointer;
   border-radius: 5px;
   color: #eb402c; }
-
-.select-language img {
-  width: 12px;
-  height: 12px;
-  margin-left: 50px; }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .wraper {

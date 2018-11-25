@@ -482,16 +482,18 @@ footer {
   padding: 15px 31px 0;
   text-transform: uppercase;
   font-size: 18px;
-  &:before {
+  position: relative;
+  &:after {
     position: absolute;
     width: 12px;
     height: 8px;
     content: "";
     background: url(../img/arrow-down.png);
-    top:0;
-    right: 5px;
+    top:25px;
+    right: 0;
     border: 0;
-    left: 0;
+    left: 150px;
+
   }
 }
 
@@ -521,7 +523,7 @@ footer {
   padding: 5px;
   color: #363636;
   background: #f8f8f8;
-}
+  }
 
 .select-language-list li:hover {
   cursor: pointer;
@@ -530,11 +532,7 @@ footer {
 
 }
 
-.select-language img {
-  width: 12px;
-  height: 12px;
-  margin-left: 50px;
-}
+
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
