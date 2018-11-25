@@ -643,8 +643,8 @@ footer {
     width: 380px;
   }
   .main-second-img{
-    bottom : 65%;
-    left: 35%;
+    bottom : 85%;
+    left: 25%;
   }
 
   .main-fourth-img {
@@ -653,9 +653,9 @@ footer {
   }
 
 
-  .image,img {
-    width: 50%;
-    height: 50%;
+   img {
+    width: 90%;
+    height: 90%;
   }
 
   .inner-commit {
@@ -735,7 +735,6 @@ footer {
     position: absolute;
     left: -20%;
     top: 5%;
-    bottom: 25px;
     z-index: 1;
   }
 
@@ -760,10 +759,10 @@ footer {
     left: 60%;
     &:before {
       position: absolute;
-      width: 180px;
-      height: 305px;
-      top: 50px;
-      left: 35px;
+      width: 215px;
+      height: 365px;
+      top: 60px;
+      left: 45px;
       right: 0;
       bottom: 0;
     }
@@ -807,16 +806,17 @@ footer {
   }
 
   .main-menu {
-    top: 15px;
-    left: 15px;
+    top: 25%;
+    right: 9%;
     position: relative;
     display: inline-block;
+    color: #0000fe;
+    & li {
+      position: relative;
+    }
   }
 
   .main-menu-list {
-    position: relative;
-    left: 0;
-    top: 10px;
     &,
     &:before,
     &:after {
@@ -830,228 +830,246 @@ footer {
       content: '';
     }
     &:before {
-    top: -10px;
+      top: -10px;
     }
     &:after {
-    bottom: -10px;
+      bottom: -10px;
     }
     & li {
       display: none;
     }
-}
-  .main-menu-list:hover {
-    width: 200px;
-    height: 250px;
-    display: block;
-    background: #0000fe;
-    position: absolute;
-    right: -200px;
-    left: 0;
+    &:hover {
+      position: absolute;
+      transition: 0.5s;
+      opacity: 0.9;
+      width: 300px;
+      height:270px;
+      background: #f8f8f8;
+      right: -55px;
+      top:  0;
+      bottom: 0;
+      &:before{
+        display: none;}
+      &:after {display: none}
+      & li {
+        display: block;
+        padding: 5px;
+        color: #0056b3;
+        z-index: 100;
+        &:hover{
+          color: #363636;
+          border-radius: 5px;
+          border: 2px solid red;
+        }
+      }
+    }
   }
 
 
-  .content {
-    width: 520px;
-    margin: 0 auto
-  }
 
-  .inner-commit {
-    width: 500px;
-    margin: 0 auto
-  }
+    .content {
+      width: 520px;
+      margin: 0 auto
+    }
 
-  .slogan-block {
-    margin: 12% auto 0;
-    width: 400px;
-  }
+    .inner-commit {
+      width: 500px;
+      margin: 0 auto
+    }
 
-  .slogan {
-    width: 300px;
-    font-size: 48px;
-  }
+    .slogan-block {
+      margin: 12% auto 0;
+      width: 400px;
+    }
 
-  .slogan-text {
-    width: 380px;
-  }
+    .slogan {
+      width: 300px;
+      font-size: 48px;
+    }
 
-  .image-main-block {
-    width: 400px;
-    height: 650px;
-    position: relative;
-  }
+    .slogan-text {
+      width: 380px;
+    }
 
-  .main-first-img{
-    left:15%;
-  }
+    .image-main-block {
+      width: 400px;
+      height: 650px;
+      position: relative;
+    }
 
-  .main-second-img,
-  .main-fourth-img {
-  display: none;
-  }
+    .main-first-img {
+      left: 15%;
+    }
 
-  .main-third-img {
-    left: -5%;
-    right: 0;
-  }
+    .main-second-img,
+    .main-fourth-img {
+      display: none;
+    }
 
-  .main-text-block {
-    padding: 150px 60px 0;
-    width: 550px;
-    & h2 {
-      font-size: 38px;
-      font-weight: 900;
-      color: #363636;
+    .main-third-img {
+      left: -5%;
+      right: 0;
+    }
+
+    .main-text-block {
+      padding: 150px 60px 0;
+      width: 550px;
+      & h2 {
+        font-size: 38px;
+        font-weight: 900;
+        color: #363636;
+        text-align: center;
+      }
+    }
+
+    .image {
+      display: none;
+    }
+
+    .peeople-say {
+      padding-top: 25px;
+
+      padding-bottom: 25px;
+      & h2 {
+        font-size: 38px;
+        font-weight: 700;
+      }
+    }
+
+    .inner-commit {
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    .comment-list {
+      margin: 100px;
+      display: block;
+    }
+
+    .comment-iteam {
+      width: 370px;
+      height: 210px;
+      border: 1px solid #e0e0e0;
+      margin: 10px;
+      padding: 15px;
+      font-size: 18px;
+      position: relative;
+      box-shadow: 0 30px 60px 0 rgba(54, 54, 54, 0.15);
+      margin-bottom: 100px;
+    }
+
+    .comment-list {
+      margin: 100px;
+      display: block;
+    }
+
+    .autor {
+      margin-top: 55px;
+      padding-top: 5px;
+      & img {
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+      }
+    }
+
+    .central-comment {
+      margin-top: 0;
+    }
+
+    .central-autor {
+      padding-top: 5px;
+    }
+
+    .autor-list {
+      padding-left: 15px;
+      & p {
+        font-size: 18px;
+        letter-spacing: 1.1px;
+      }
+      & span {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 16px;
+        color: #667386;
+        text-transform: uppercase;
+      }
+    }
+
+    .free-chat-list {
+      display: block;
+      position: relative;
+    }
+
+    .free-chat {
+      height: 675px;
+      width: auto;
+      margin: 75px auto;
+    }
+
+    .info-text-list {
+      margin-left: 25%;
+    }
+
+    .img-free-call h4:before {
+      height: 49px;
+      width: 48px;
+      content: "";
+      background: url(../img/free-call.png);
+      position: absolute;
+      left: -20%;
+      top: 5%;
+      bottom: 25px;
+      z-index: 1;
+    }
+
+    .img-chat h4:before {
+      height: 44px;
+      width: 48px;
+      content: "";
+      background: url(../img/chat.png);
+      position: absolute;
+      left: -20%;
+      top: 5%;
+      bottom: 25px;
+      z-index: 1;
+    }
+
+    .center-img {
+      display: none;
+    }
+
+    .downloads {
       text-align: center;
     }
-  }
 
-  .image{
-  display: none;
-  }
+    .row {
+      width: 475px;
+      margin: 0 auto;
+    }
+    .email-to-spam {
+      width: 525px;
+      position: relative;
+    }
+    .input-email {
+      width: 475px;
+      position: relative;
+    }
 
-  .peeople-say {
-    padding-top: 25px;
+    .btn-subs {
+      width: 125px;
+      height: 50px;
+      position: absolute;
+      left: 425px;
+      right: 0;
+      top: 0;
+      bottom: 50px;
+    }
 
-    padding-bottom: 25px;
-    & h2 {
-      font-size: 38px;
-      font-weight: 700;
+    .footer-menu {
+      display: none;
     }
   }
 
-  .inner-commit {
-    width: 500px;
-    margin: 0 auto;
-  }
-
-  .comment-list {
-    margin:100px;
-    display: block;
-  }
-
-  .comment-iteam {
-    width: 370px;
-    height: 210px;
-    border: 1px solid #e0e0e0;
-    margin: 10px;
-    padding: 15px;
-    font-size: 18px;
-    position: relative;
-    box-shadow: 0 30px 60px 0 rgba(54, 54, 54, 0.15);
-    margin-bottom: 100px;
-  }
-
-  .comment-list {
-    margin:100px ;
-    display: block;
-  }
-
-  .autor {
-    margin-top: 55px;
-    padding-top: 5px;
-    & img{
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-    }
-  }
-
-  .central-comment {
-    margin-top: 0;
-  }
-
-  .central-autor {
-    padding-top: 5px;
-  }
-
-  .autor-list {
-    padding-left: 15px;
-    & p {
-      font-size: 18px;
-      letter-spacing: 1.1px;
-    }
-    & span {
-      font-family: 'Ubuntu', sans-serif;
-      font-size: 16px;
-      color: #667386;
-      text-transform: uppercase;
-    }
-  }
-
-
-  .free-chat-list{
-    display: block;
-    position: relative;
-  }
-
-  .free-chat {
-    height: 675px;
-    width: auto;
-    margin: 75px auto;
-  }
-
-  .info-text-list{
-    margin-left: 25%;
-  }
-
-  .img-free-call h4:before {
-    height: 49px;
-    width: 48px;
-    content: "";
-    background: url(../img/free-call.png);
-    position: absolute;
-    left: -20%;
-    top: 5%;
-    bottom: 25px;
-    z-index: 1;
-  }
-
-  .img-chat h4:before {
-    height: 44px;
-    width: 48px;
-    content: "";
-    background: url(../img/chat.png);
-    position: absolute;
-    left: -20%;
-    top: 5%;
-    bottom: 25px;
-    z-index: 1;
-  }
-
-  .center-img {
-   display: none;
-  }
-
-  .downloads {
-    text-align: center;
-  }
-
-  .row {
-    width: 475px;
-    margin: 0 auto;
-  }
-  .email-to-spam {
-    width: 525px;
-    position: relative;
-  }
-  .input-email {
-    width: 475px;
-    position: relative;
-  }
-
-  .btn-subs {
-    width: 125px;
-    height: 50px;
-    position: absolute;
-    left: 425px;
-    right: 0;
-    top: 0;
-    bottom: 50px;
-  } }
-
-  .footer-menu {
-    display: none;
-  }
 /*
 @media (max-width: 575.98px) { ... }
 
