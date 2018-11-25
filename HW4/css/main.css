@@ -635,10 +635,10 @@ footer {
     top: 25%;
     right: 9%;
     position: relative;
-    display: inline-block;
-    color: #0000fe; }
+    display: inline-block; }
     .main-menu li {
-      position: relative; }
+      position: relative;
+      color: #5a6268; }
   .main-menu-list, .main-menu-list:before, .main-menu-list:after {
     cursor: pointer;
     border-radius: 1px;
@@ -654,12 +654,16 @@ footer {
     bottom: -10px; }
   .main-menu-list li {
     display: none; }
+    .main-menu-list li a {
+      padding: 5px 50px;
+      color: #363636; }
   .main-menu-list:hover {
     position: absolute;
     transition: 0.5s;
-    opacity: 0.9;
-    width: 300px;
-    height: 270px;
+    opacity: 0.75;
+    border-radius: 5px;
+    width: 200px;
+    height: 205px;
     background: #f8f8f8;
     right: -55px;
     top: 0;
@@ -671,12 +675,13 @@ footer {
     .main-menu-list:hover li {
       display: block;
       padding: 5px;
-      color: #0056b3;
-      z-index: 100; }
+      z-index: 1000; }
       .main-menu-list:hover li:hover {
-        color: #363636;
+        transition: 0.3s;
         border-radius: 5px;
-        border: 2px solid red; }
+        border: 2px solid #eb402c; }
+        .main-menu-list:hover li:hover a:hover {
+          color: #d90647; }
   .content {
     width: 520px;
     margin: 0 auto; }
@@ -799,16 +804,16 @@ footer {
     width: 525px;
     position: relative; }
   .input-email {
-    width: 475px;
+    width: 470px;
     position: relative; }
   .btn-subs {
-    width: 125px;
+    width: 160px;
     height: 50px;
     position: absolute;
-    left: 425px;
+    left: 180px;
     right: 0;
-    top: 0;
-    bottom: 50px; }
+    top: 55px;
+    bottom: 0; }
   .footer-menu {
     display: none; } }
 
