@@ -8,7 +8,7 @@ directories:
 before_install:
 - npm update
 install:
-- package.json
+
 - npm install
 script:
 - npm test
