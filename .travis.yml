@@ -8,7 +8,7 @@ directories:
 before_install:
 - npm update
 install:
-- cd hw6-js/package.json
+- cd hw6-js/
 - npm install
 script:
 - npm test
