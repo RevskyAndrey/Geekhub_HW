@@ -24,55 +24,33 @@ restart - restart
  */
 
 
-if (isFree('east') != false) {
-    while (isFree('east')) {
-        east();
-    }
+while (isFree('east')) {
+    east();
+}
+while (isFree('south')) {
+    south();
+}
+while (isFree('west')) {
+    west();
+}
+while (isFree('south')) {
+    south();
+}
+while (isFree('west')) {
+    west();
+}
+while (isFree('north')) {
+    north();
+}
+while (isFree('west')) {
+    west();
+}
+while (isFree('south')) {
+    south();
+}
+while (isFree('east')) {
+    east();
 }
 
-if (isFree('south') == true) {
-    while (isFree('south')) {
-        south();
-    }
-}
-if (isFree('west') == true) {
-    while (isFree('west')) {
-        west();
-    }
-}
-
-if (isFree('south') == true) {
-    while (isFree('south')) {
-        south();
-    }
-}
-
-if (isFree('west') == true) {
-    while (isFree('west')) {
-        west();
-    }
-}
-
-if (isFree('north') != false) {
-    while (isFree('north')) {
-        north();
-    }
-}
-
-if (isFree('west') == true) {
-    while (isFree('west')) {
-        west();
-    }
-}
-if (isFree('south') == true) {
-    while (isFree('south')) {
-        south();
-    }
-}
-if (isFree('east') != false) {
-    while (isFree('east')) {
-        east();
-    }
-}
 
 //"next"
