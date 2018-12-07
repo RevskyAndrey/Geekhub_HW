@@ -1,0 +1,77 @@
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.header {
+  text-transform: uppercase ;
+  color: darkblue;
+  height: 100px;
+}
+
+li {    list-style-type: none;}
+
+.header .logo {
+  float: left;
+  margin-left: 25px;
+}
+
+
+.header .menu {
+  float: right;
+  margin-top: 15px;
+  margin-right: 25px;
+}
+
+.menu .navmenu  li {
+  display: inline;
+  padding: 25px;
+
+}
+
+.over {
+  overflow: hidden;
+}
+/******/
+.content {
+  min-height: 400px;
+
+}
+
+.content img {
+  height: 150px;
+  width: 150px;
+  border-radius: 35px;
+  margin-left: 450px;
+  padding: 15px;
+  float: left;
+}
+h2 {
+  text-align: center;
+}
+
+
+/******/
+
+.footer {
+  width: 900px;
+  margin: 0 auto;
+
+}
+
+
+.footer  img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50px ;
+
+
+
+}
+
+.footer li {
+  display: inline;
+  padding: 25px;}
+
