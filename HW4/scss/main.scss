@@ -1,22 +1,38 @@
 html,body {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   font-family: 'Lato', sans-serif;
 }
 
-a {
+h2 {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: ".";
+    color: #d90647;
+  }
+}
+
+a , a:hover{
   text-decoration: none;
 }
-
-.wraper {
-  width: 1250px;
-  margin: 0 auto;
+.bg-welcome {
+  background: url(../img/BG-welcome.png ) center no-repeat;
+  height: 950px;
+  background-size: cover;
+}
+header{
+  height : 80px;
 }
 
-header {
-  width: auto;
-  height : 80px;
+
+
+.wraper {
+  width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -26,44 +42,43 @@ header {
   width: 121px;
   height: 45px;
   overflow: hidden;
+  &:hover{
+    cursor: pointer;
+    transition: 0.75s;
+    transform: scale(1.05, 1.05);
+  }
 }
 
 /** heder nav-menu */
 
 .main-menu-list li,
-.footer-menu-list li{
+.footer-menu-list li {
   display: inline;
   padding-top: 25px;
+  & a {
+    font-size: 18px;
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    box-sizing: border-box;
+    &:hover {
+      transition: 0.5s;
+      text-decoration: line-through;
+      color: #721c24;
+    }
+  }
 }
 
-.main-menu-list li a{
-  font-size: 18px;
-  color: #fff;
-  display: inline-block;
-  padding: 10px;
-  text-transform: uppercase;
-  border: 2px solid transparent;
-  border-radius: 15px;
-  box-sizing: border-box;
-}
 
-.main-menu-list li a:hover {
-  text-decoration:line-through;
-}
-
-.bg-welcome {
-  background: url(../img/BG-welcome.png );
-  height: 950px;
-  width: auto;
-  background-size: cover;
-}
 
 .content {
   width: 1100px;
   display: flex;
   margin: 4% auto 0;
   justify-content: space-between;
-
 }
 
 .slogan-block {
@@ -93,17 +108,17 @@ header {
   font-size: 18px;
   color: #d90647;
   text-shadow: 0 10px 30px rgba(223, 27, 61, 0.3);
-}
-
-.btn-main:hover {
-  text-decoration:line-through;
-  cursor: pointer;
-  border: 2px solid #363636;
+  &:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: line-through;
+    color: #721c24;
+  }
 }
 
 .image {
-  width: 479px;
-  height: 810px;
+  width: 100%;
+  height: 100%;
 }
 
 /**Main**/
@@ -119,45 +134,34 @@ header {
   height: 650px;
   position: relative;
 }
-
-
-.main-first-img,
-.main-second-img,
-.main-third-img,
-.main-fourth-img{
+.main-img{
   position: relative;
 }
 
-.mainfirst-img{
-  top :5px;
-}
-
 .main-second-img{
-  top : -520px;
-  left: 170px;
+  bottom : 85%;
+  left: 45%;
 }
 
 .main-third-img {
-  left: 150px;
+  left: 30%;
 }
 
 .main-fourth-img {
-  top: -480px;
-  right: 80px;
+  bottom: 70%;
+  right: 28%;
 }
 
 .main-text-block {
   padding: 200px 60px 0;
   width: 550px;
+  & h2 {
+    font-size: 60px;
+    font-weight: 900;
+    color: #363636;
+    text-align: center;
+  }
 }
-
-h2 {
-  font-size: 60px;
-  font-weight: 900;
-  color: #363636;
-  text-align: center;
-}
-
 .text-red {
   color: #d90647;
 }
@@ -170,28 +174,32 @@ h2 {
 
 .peeople-say {
   padding-top: 50px;
-  border-top: 1px solid  #e0e0e0;
+  border-top: 1px solid #e0e0e0;
   padding-bottom: 50px;
+  & h2 {
+    font-size: 60px;
+    font-weight: 900;
+    color: #363636;
+    text-align: center;
+  }
 }
 
-
-.peeople-say h2 {
-  font-size: 60px;
-  font-weight: 900;
-  color: #363636;
-  text-align: center;
-}
 .inner-commit {
   width: 1200px;
   margin: 0 auto;
 }
 
+.comment a:hover{
+  transition: 0.5s;
+  text-decoration: line-through;
+  color: #721c24;
+}
 .comment-list {
   margin:100px;
   display: flex;
 }
 
-.comment-iteam{
+.comment-iteam {
   width: 370px;
   height: 210px;
   border: 1px solid #e0e0e0;
@@ -226,8 +234,6 @@ h2 {
   margin-left: -13px;
 }
 
-
-
 .central-comment {
   margin-top: -15px;
   box-shadow: 0 30px 60px 0 rgba(54, 54, 54, 0.15);
@@ -245,42 +251,38 @@ a.text-red {
 .autor {
   margin-top: 55px;
   display: flex;
-}
-
-.autor img{
+  & img{
   width: 62px;
   height: 62px;
   border-radius: 50%;
+  }
 }
 
 .autor-list {
   padding-left: 15px;
-}
-
-.autor-list p {
+  & p {
   font-size: 18px;
   letter-spacing: 1.1px;
-}
-
-.autor-list span {
+  }
+  & span {
   font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
   color: #667386;
   text-transform: uppercase;
+  }
 }
-
 /***/
 .free-chat {
   height: 520px;
-  background-image: linear-gradient(to top, #eb402c, #d90647);
+  background: linear-gradient(to top, #eb402c, #d90647) center;
   display: flex;
   color: #fff;
-  margin: 50px 0 50px;
+  margin: 50px auto 50px;
 }
 
 .free-chat-list{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -293,107 +295,97 @@ a.text-red {
   padding: 15px;
   margin-left: 25px;
   position: relative;
-}
-
-
-.info-text h4{
+  & h4{
   font-size: 24px;
-}
-
-.info-text p {
+  }
+  & p {
   width: 255px;
   height: 85px;
   opacity: 0.6;
   font-size: 16px;
   line-height: 1.75;
   overflow: hidden;
-}
-.center-img{
-  padding-top: 25px;
-  position: relative;
-  width: 428px;
-  height: 735px;
+  }
 }
 
-.center-img:before {
-  width: 292px;
-  height: 519px;
-  content: '';
-  position: absolute;
-  top: 110px;
-  left: 60px;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.5) url(../img/play-circle-1.png) center center no-repeat;
-  z-index: 1;
+.center-img {
+    margin-top: 3%;
+    position: relative;
+    width: 428px;
+    height: 735px;
+    &:before {
+      width: 292px;
+      height: 519px;
+      content: '';
+      position: absolute;
+      top: 95px;
+      left: 60px;
+      right: 0;
+      bottom: 0;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.5) url(../img/play-circle-1.png) center center no-repeat;
+      z-index: 1;
+    }
+
 }
 
-
-.center-img:hover {
-  cursor: pointer;
-}
 
 .img-free-call h4:before {
   height: 49px;
   width: 48px;
-  content:"";
-  background:url(../img/free-call.png);
+  content: "";
+  background: url(../img/free-call.png);
   position: absolute;
-  left: 275px;
+  right: -15%;
   top: 0;
   bottom: 25px;
   z-index: 1;
 }
-
 
 .img-chat h4:before {
   height: 44px;
   width: 48px;
-  content:"";
-  background:url(../img/chat.png);
+  content: "";
+  background: url(../img/chat.png);
   position: absolute;
-  left: 275px;
-  right: 0;
+  right: -15%;
   top: 0;
   bottom: 25px;
   z-index: 1;
 }
 
-
 .img-sent-video h4:before {
   height: 32px;
   width: 48px;
-  content:"";
-  background:url(../img/video.png);
+  content: "";
+  background: url(../img/video.png);
   position: absolute;
-  left: -65px;
+  left: -20%;
   right: 0;
   top: 16px;
   bottom: 0;
   z-index: 1;
 }
 
-
 .img-picture h4:before {
   height: 40px;
   width: 48px;
-  content:"";
-  background:url(../img/picture.png);
+  content: "";
+  background: url(../img/picture.png);
   position: absolute;
-  left: -65px;
+  left: -20%;
   right: 0;
   top: 10px;
   bottom: 0;
   z-index: 1;
 }
 
-
 /******/
 .subscribe {
-  padding-top: 50px;
+  padding-top: 100px;
   padding-bottom: 50px;
   text-align: center;
-  border-bottom:1px solid  #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .row {
@@ -418,10 +410,10 @@ a.text-red {
   position: relative;
 }
 
-.btn-subs{
+.btn-subs {
   width: 180px;
   height: 50px;
-  border:2px solid transparent;
+  border: 2px solid transparent;
   border-radius: 25px;
   color: #fff;
   box-shadow: 0 10px 30px 0 rgba(223, 27, 61, 0.3);
@@ -431,32 +423,45 @@ a.text-red {
 }
 
 .btn-subs:hover {
-  border:  2px solid #363636;
-  text-decoration:line-through;
   cursor: pointer;
+  transition: 0.75s;
+  transform: scale(1.1, 1.1);
 }
 
 /****/
 .downloads {
   margin: 100px auto 5px;
   text-align: center;
+   &> img {
+     width: 219px;
+     height: 219px;
+   }
 }
 
 .img-app-store {
   margin-top: 80px;
-  margin-bottom: 200px;
   cursor: pointer;
+  width: 183px;
+  height: 60px;
+  &:hover {
+    transition: 0.75s;
+    transform: scale(1.1, 1.1);
+  }
 }
+
+
+
 /****/
 footer {
-  border-top:  1px solid  #e0e0e0;
-  height : 80px;
+  margin-top: 200px;
+  border-top: 1px solid #e0e0e0;
+  height: 80px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.footer-menu-list li a{
+.footer-menu-list li a {
   font-size: 18px;
   color: #363636;
   display: inline-block;
@@ -466,10 +471,11 @@ footer {
   border-radius: 15px;
   box-sizing: border-box;
 }
-.footer-menu-list li a:hover {
-  text-decoration:line-through; ;
-}
 
+.footer-menu-list li a:hover {
+  text-decoration: line-through;;
+}
+//
 .select-language {
   width: 200px;
   height: 50px;
@@ -480,40 +486,889 @@ footer {
   padding: 15px 31px 0;
   text-transform: uppercase;
   font-size: 18px;
+  position: relative;
+  &:after {
+    position: absolute;
+    width: 12px;
+    height: 8px;
+    content: "";
+    background: url(../img/arrow-down.png);
+    top:25px;
+    right: 0;
+    border: 0;
+    left: 150px;
+
+  }
 }
 
-
-.select-language li{
-  position:relative;
+.select-language li {
+  position: relative;
   display: inline-block;
   width: 200px;
 }
 
-.select-language-list{
-  display:none;
-  position:absolute;
-  left:0;
-  bottom:100%;
+.select-language-list {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
   padding: 25px;
   border-radius: 10px;
-  border:  1px solid transparent;
+  border: 1px solid transparent;
   background: #f8f8f8;
+  & li {
+    padding-left: 25px;
+    border: 2px solid transparent;
+  }
 }
 
-
-
-.select-language li:hover ul{
-  display:block;
+.select-language li:hover ul {
+  display: block;
   padding: 5px;
   color: #363636;
   background: #f8f8f8;
-}
+  }
+
 .select-language-list li:hover {
-  color: #363636;
+  cursor: pointer;
   border-radius: 5px;
+  color: #eb402c;
+}
+
+
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  .wraper {
+    width: 950px;
+    margin: 0 auto;
+  }
+  .content {
+    width: 900px;
+    margin: 0 auto
+  }
+
+  .inner-commit {
+    width: 950px;
+    margin: 0 auto
+  }
+
+  .slogan-block {
+    margin-top: 12%;
+    width: 450px;
+  }
+
+  .slogan {
+    width: 350px;
+    font-size: 64px;
+  }
+
+  .slogan-text {
+    width: 450px;
+  }
+
+  .images,img {
+    width: 90%;
+    height: 90%;
+  }
+  .main-second-img{
+    bottom : 85%;
+    left: 25%;
+  }
+
+  .main-fourth-img {
+    bottom: 70%;
+    left: 5%;
+  }
+
+  .free-chat {
+    height: 360px;
+    width: auto;
+    margin: 100px auto;
+  }
+
+  .center-img {
+    margin-top: 10%;
+    width: 350px;
+    height: 575px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      width: 215px;
+      height: 410px;
+      top: 95px;
+      left: 45px;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .row {
+    width: 800px;
+  }
+  .email-to-spam {
+    width: 700px;
+    position: relative;
+  }
+
+  .input-email {
+    width: 550px;
+    position: relative;
+  }
+
+  .btn-subs {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    left: 500px;
+    right: 0;
+    top: 0;
+    bottom: 50px;
+  }
+
 
 }
 
-.select-language img {
-  margin-left: 50px;
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  .wraper {
+    width: 720px;
+    margin: 0 auto;
+  }
+  .content {
+    width: 680px;
+    margin: 0 auto
+  }
+
+  .inner-commit {
+    width: 720px;
+    margin: 0 auto
+  }
+
+
+  .slogan-block {
+    margin-top: 12%;
+    width: 400px;
+  }
+
+  .slogan {
+    width: 300px;
+    font-size: 48px;
+  }
+
+  .slogan-text {
+    width: 380px;
+  }
+  .main-second-img{
+    bottom : 85%;
+    left: 25%;
+  }
+
+  .main-fourth-img {
+    bottom: 65%;
+    right: 5%;
+  }
+
+
+   img {
+    width: 90%;
+    height: 90%;
+  }
+
+  .inner-commit {
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .comment-list {
+    margin:100px;
+    display: block;
+  }
+
+  .comment-iteam {
+    width: 370px;
+    height: 210px;
+    border: 1px solid #e0e0e0;
+    margin: 10px;
+    padding: 15px;
+    font-size: 18px;
+    position: relative;
+    box-shadow: 0 30px 60px 0 rgba(54, 54, 54, 0.15);
+    margin-bottom: 100px;
+  }
+
+  .autor {
+    margin-top: 55px;
+    padding-top: 5px;
+    & img{
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+    }
+  }
+
+  .central-comment {
+    margin-top: 0;
+  }
+
+  .central-autor {
+    padding-top: 5px;
+  }
+
+  .autor-list {
+    padding-left: 15px;
+    & p {
+      font-size: 18px;
+      letter-spacing: 1.1px;
+    }
+    & span {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 16px;
+      color: #667386;
+      text-transform: uppercase;
+    }
+  }
+
+  .free-chat-list{
+    display: block;
+    position: relative;
+  }
+
+  .free-chat {
+    height: 700px;
+    width: auto;
+    margin: 75px auto;
+  }
+
+  .info-text-list{
+    margin-left: 2%;
+  }
+
+  .img-free-call h4:before {
+    height: 49px;
+    width: 48px;
+    content: "";
+    background: url(../img/free-call.png);
+    position: absolute;
+    left: -20%;
+    top: 5%;
+    z-index: 1;
+  }
+
+  .img-chat h4:before {
+    height: 44px;
+    width: 48px;
+    content: "";
+    background: url(../img/chat.png);
+    position: absolute;
+    left: -20%;
+    top: 5%;
+    bottom: 25px;
+    z-index: 1;
+  }
+
+  .center-img {
+    width: 350px;
+    height: 575px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 40%;
+    &:before {
+      position: absolute;
+      width: 240px;
+      height: 407px;
+      top: 75px;
+      left: 190px;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .row {
+    width: 600px;
+  }
+  .email-to-spam {
+    width: 600px;
+    position: relative;
+  }
+
+  .input-email {
+    width: 450px;
+    position: relative;
+  }
+
+  .btn-subs {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    left: 500px;
+    right: 0;
+    top: 0;
+    bottom: 50px;
+  }
+
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  .bg-welcome {
+    height: 650px;
+  }
+
+  .wraper {
+    width: 540px;
+    margin: 0 auto;
+  }
+
+  .main-menu {
+    top: 25%;
+    right: 9%;
+    position: relative;
+    display: inline-block;
+    & li {
+      position: relative;
+      color: #5a6268;
+    }
+  }
+
+  .main-menu-list {
+    &,
+    &:before,
+    &:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 5px;
+      width: 35px;
+      background: white;
+      position: absolute;
+      display: block;
+      content: '';
+    }
+    &:before {
+      top: -10px;
+    }
+    &:after {
+      bottom: -10px;
+    }
+    & li {
+      display: none;
+      & a {
+        padding: 5px 50px;
+        color: #363636;
+      }
+    }
+    &:hover {
+      position: absolute;
+      transition: 0.5s;
+      opacity: 0.75;
+      border-radius: 5px;
+      width: 200px;
+      height:205px;
+      background: #f8f8f8;
+      right: -55px;
+      top:  0;
+      bottom: 0;
+      &:before{display: none;}
+      &:after {display: none}
+      & li{
+        display: block;
+        padding: 5px;
+        z-index: 1000;
+        &:hover{
+          transition: 0.3s;
+          border-radius: 5px;
+          border: 2px solid #eb402c;
+          & a:hover {
+            color:  #d90647;
+          }
+        }
+      }
+    }
+  }
+
+
+
+    .content {
+      width: 520px;
+      margin: 0 auto
+    }
+
+    .inner-commit {
+      width: 500px;
+      margin: 0 auto
+    }
+
+    .slogan-block {
+      margin: 12% auto 0;
+      width: 400px;
+    }
+
+    .slogan {
+      width: 300px;
+      font-size: 48px;
+    }
+
+    .slogan-text {
+      width: 380px;
+    }
+
+    .image-main-block {
+      width: 400px;
+      height: 650px;
+      position: relative;
+    }
+
+    .main-first-img {
+      left: 15%;
+    }
+
+    .main-second-img,
+    .main-fourth-img {
+      display: none;
+    }
+
+    .main-third-img {
+      left: -5%;
+      right: 0;
+    }
+
+    .main-text-block {
+      padding: 150px 60px 0;
+      width: 550px;
+      & h2 {
+        font-size: 38px;
+        font-weight: 900;
+        color: #363636;
+        text-align: center;
+      }
+    }
+
+    .image {
+      display: none;
+    }
+
+    .peeople-say {
+      padding-top: 25px;
+
+      padding-bottom: 25px;
+      & h2 {
+        font-size: 38px;
+        font-weight: 700;
+      }
+    }
+
+    .inner-commit {
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    .comment-list {
+      margin: 100px;
+      display: block;
+    }
+
+    .comment-iteam {
+      width: 370px;
+      height: 210px;
+      border: 1px solid #e0e0e0;
+      margin: 10px;
+      padding: 15px;
+      font-size: 18px;
+      position: relative;
+      box-shadow: 0 30px 60px 0 rgba(54, 54, 54, 0.15);
+      margin-bottom: 100px;
+    }
+
+    .comment-list {
+      margin: 100px;
+      display: block;
+    }
+
+    .autor {
+      margin-top: 55px;
+      padding-top: 5px;
+      & img {
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+      }
+    }
+
+    .central-comment {
+      margin-top: 0;
+    }
+
+    .central-autor {
+      padding-top: 5px;
+    }
+
+    .autor-list {
+      padding-left: 15px;
+      & p {
+        font-size: 18px;
+        letter-spacing: 1.1px;
+      }
+      & span {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 16px;
+        color: #667386;
+        text-transform: uppercase;
+      }
+    }
+
+    .free-chat-list {
+      display: block;
+      position: relative;
+    }
+
+    .free-chat {
+      height: 675px;
+      width: auto;
+      margin: 75px auto;
+    }
+
+    .info-text-list {
+      margin-left: 25%;
+    }
+
+    .img-free-call h4:before {
+      height: 49px;
+      width: 48px;
+      content: "";
+      background: url(../img/free-call.png);
+      position: absolute;
+      left: -20%;
+      top: 5%;
+      bottom: 25px;
+      z-index: 1;
+    }
+
+    .img-chat h4:before {
+      height: 44px;
+      width: 48px;
+      content: "";
+      background: url(../img/chat.png);
+      position: absolute;
+      left: -20%;
+      top: 5%;
+      bottom: 25px;
+      z-index: 1;
+    }
+
+    .center-img {
+      display: none;
+    }
+
+    .downloads {
+      text-align: center;
+    }
+
+    .row {
+      width: 475px;
+      margin: 0 auto;
+    }
+    .email-to-spam {
+      width: 525px;
+      position: relative;
+    }
+    .input-email {
+      width: 470px;
+      position: relative;
+    }
+
+    .btn-subs {
+      width: 160px;
+      height: 50px;
+      position: absolute;
+      left: 180px;
+      right: 0;
+      top: 55px;
+      bottom: 0;
+    }
+
+    .footer-menu {
+      display: none;
+    }
+  }
+
+
+@media (max-width: 575.98px) {
+
+  .bg-welcome {
+    height: 525px;
+  }
+
+  .wraper {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .main-menu {
+    top: 25%;
+    right: 9%;
+    position: relative;
+    display: inline-block;
+    & li {
+      position: relative;
+      color: #5a6268;
+    }
+  }
+
+  .main-menu-list {
+    &,
+    &:before,
+    &:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 5px;
+      width: 35px;
+      background: white;
+      position: absolute;
+      display: block;
+      content: '';
+    }
+    &:before {
+      top: -10px;
+    }
+    &:after {
+      bottom: -10px;
+    }
+    & li {
+      display: none;
+      & a {
+        padding: 5px 50px;
+        color: #363636;
+      }
+    }
+    &:hover {
+      position: absolute;
+      transition: 0.5s;
+      opacity: 0.95;
+      border-radius: 5px;
+      width: 320px;
+      height:205px;
+      background: #f8f8f8;
+      right: -55px;
+      top:  0;
+      bottom: 0;
+      &:before{display: none;}
+      &:after {display: none}
+      & li{
+        display: block;
+        padding: 5px;
+        z-index: 1000;
+        &:hover{
+          transition: 0.3s;
+          border-radius: 5px;
+          border: 2px solid #eb402c;
+          & a:hover {
+            color:  #d90647;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  .content {
+    width: 100%;
+    margin: 0 auto
+  }
+
+  .inner-commit {
+    width: 100%;
+    margin: 0 auto
+  }
+
+  .slogan-block {
+    margin: 12% auto 0;
+    width: 400px;
+  }
+
+  .slogan {
+    width: 85%;
+    font-size: 36px;
+  }
+
+  .slogan-text {
+    width: 90%
+  }
+
+  .image-main-block {
+   display: none;
+  }
+
+
+  .main-text-block {
+    display: block;
+    padding: 100px 60px 0;
+    width: 100%;
+    & h2 {
+      font-size: 38px;
+      font-weight: 900;
+      color: #363636;
+      text-align: center;
+    }
+  }
+
+  .image {
+    display: none;
+  }
+
+  .peeople-say {
+    padding-top: 25px;
+
+    padding-bottom: 25px;
+    & h2 {
+      font-size: 38px;
+      font-weight: 700;
+    }
+  }
+
+  .inner-commit {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .comment-list {
+    margin: 100px;
+    display: block;
+  }
+
+  .comment-iteam {
+    width: 300px;
+    height: 240px;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    font-size: 18px;
+    position: relative;
+    box-shadow: 0 30px 60px 0 rgba(54, 54, 54, 0.15);
+    margin-bottom: 100px;
+  }
+
+  .comment-list {
+    margin: 100px;
+    display: block;
+  }
+
+  .autor {
+    margin-top: 55px;
+    padding-top: 15px;
+    & img {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+    }
+  }
+
+  .central-comment {
+    margin-top: 0;
+  }
+
+  .central-autor {
+    padding-top: 15px;
+  }
+
+  .autor-list {
+    padding-left: 15px;
+    & p {
+      font-size: 18px;
+      letter-spacing: 1.1px;
+    }
+    & span {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 16px;
+      color: #667386;
+      text-transform: uppercase;
+    }
+  }
+
+  .free-chat-list {
+    display: block;
+    position: relative;
+  }
+
+  .free-chat {
+    height: 675px;
+    width: auto;
+    margin: 75px auto;
+  }
+
+  .info-text-list {
+    margin-left: 25%;
+  }
+
+  .img-free-call h4:before {
+    height: 49px;
+    width: 48px;
+    content: "";
+    background: url(../img/free-call.png);
+    position: absolute;
+    left: -20%;
+    top: 5%;
+    bottom: 25px;
+    z-index: 1;
+  }
+
+  .img-chat h4:before {
+    height: 44px;
+    width: 48px;
+    content: "";
+    background: url(../img/chat.png);
+    position: absolute;
+    left: -20%;
+    top: 5%;
+    bottom: 25px;
+    z-index: 1;
+  }
+
+  .center-img {
+    display: none;
+  }
+
+   .subscribe{
+     & h2{
+       font-size: 18px;
+     }
+ }
+
+
+  .downloads {
+    text-align: center;
+  }
+
+  .row {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .email-to-spam {
+    width: 100%;
+    position: relative;
+  }
+  .input-email {
+    width: 95%;
+    position: relative;
+  }
+
+  .btn-subs {
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    left: 30%;
+    right: 0;
+    top: 55px;
+    bottom: 0;
+  }
+
+  .footer-menu {
+    display: none;
+  }
+}
+
+
