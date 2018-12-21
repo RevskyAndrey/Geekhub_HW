@@ -3,12 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let btn_prev = document.querySelector('#slider .buttons .arrow-left');
 let btn_next = document.querySelector('#slider .buttons .arrow-right');
-
 let images = document.querySelectorAll('#slider .photos img');
 let item = document.querySelectorAll(' .js_button');
 let i = 2;
-console.log (images);
-console.log (item); // ???
+
 
 btn_prev.onclick = function(){
     images[i].className = '';
@@ -22,7 +20,7 @@ btn_prev.onclick = function(){
 
     images[i].className = 'showed';
     item[i].classList.add('active');
-}
+};
 
 btn_next.onclick = function(){
     images[i].className = '';
@@ -40,3 +38,6 @@ btn_next.onclick = function(){
 }
 
 });
+
+
+
