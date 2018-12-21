@@ -12,6 +12,7 @@ console.log (item); // ???
 
 btn_prev.onclick = function(){
     images[i].className = '';
+    item[i].classList.remove('active');
      i-- ;
 
 
@@ -20,11 +21,13 @@ btn_prev.onclick = function(){
     }
 
     images[i].className = 'showed';
-
+    item[i].classList.add('active');
 }
 
 btn_next.onclick = function(){
     images[i].className = '';
+    item[i].classList.remove('active');
+
      i++ ;
 
 
@@ -33,7 +36,7 @@ btn_next.onclick = function(){
     }
 
     images[i].className = 'showed';
-
+    item[i].classList.add('active');
 }
 
 });
