@@ -1,24 +1,59 @@
-
-html {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    font-size: 16px; 
-    font-weight: normal;
-    line-height: 1.4;
+html, body, ul, li{
+  margin: 0;
+  padding: 0;
 }
 
-*,
-*:before,
-*:after  { box-sizing: inherit; }
-
-h1 { 
-    color: #fff;
-    line-height: 1.2;
-    margin: 0.5em 0 3em;
-    text-shadow: 1px 1px 1px #333;
+li {
+  list-style-type: none;
 }
 
-/*
+#slider{
+  min-width: 1170px;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  background: #cccccc;
+  overflow: hidden;
+}
+
+#slider .photos{
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+#slider .photos img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s;
+
+}
+
+#slider .photos img.showed{
+  opacity: 1;
+}
+
+.buttons{
+  background: #cccccc;
+  margin: 0 auto;
+  width: 1100px;
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top:50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid red;
+}
+
+.buttons-list{
+  display: flex;
+}
+
 .arrow-left {
     width: 36px;
     height: 36px;
@@ -44,100 +79,85 @@ h1 {
     background: url(../IMG/arrow-right-active.png);
 }
 
-*/
+.buttons-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 92px;
+  height: 92px;
+  background: url(../img/item.png);
+  border: 1px solid transparent;
+}
 
-.tikket_data {
-    width: 90px;
-    height: 90px;
-    background: url(../IMG/tikket_data.png);
+.buttons-item:hover, .active {
+    width: 92px;
+    height: 92px;
+    background: url(../IMG/item-hover.png);
     border: 1px solid transparent;
 }
 
-.tikket_data:hover {
-    width: 90px;
-    height: 90px;
-    background: url(../IMG/tikket_data_hover.png);
+.buttons-item-content{
+    width: 464px;
+    height: 92px;
+    background: url(../IMG/item-content.png);
     border: 1px solid transparent;
 }
 
-.tikket_data_active {
-    width: 555px;
-    height: 90px;
-    background: url(../IMG/tikket_data_activ.png);
-    border: 1px solid transparent;
-}
 
-.active-date {
-    float: left;
-    padding-left: 5px;
-}
-
-.tikket--menu-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.tikket-menu-list  li {
-     display: inline-block;
-     margin: 0 auto;
- }
-
-.day-tikket{
+.buttons-item-day{
     color: rgba(255, 255, 255, 0.4);
     font-size: 17px;
     text-transform :capitalize;
 }
 
-.number-tikket {
+.buttons-item-number{
     color: #fff;
     font-size: 44px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.month-tikket {
+.buttons-item-month {
     color: rgba(255, 255, 255, 0.4);
     font-size: 13px;
     text-transform:uppercase;
 }
 
-/****/
-.tikket_data_active{
-    width: 555px;
-    display: block;
-}
+/*!****!*/
+/*.tikket_data_active{*/
+/*width: 555px;*/
+/*display: block;*/
+/*}*/
 
-.active-date_active{
-    width: 90px;
-    height: 90px;
-    border: 1px solid transparent;
-}
+/*.active-date_active{*/
+/*width: 90px;*/
+/*height: 90px;*/
+/*border: 1px solid transparent;*/
+/*}*/
 
-.active-date-content {
-    color: #fff;
-    width: 465px;
-    display: block;
+/*.active-date-content {*/
+/*color: #fff;*/
+/*width: 465px;*/
+/*display: block;*/
 
-}
+/*}*/
 
-.active-date-content  h4{
-    font-size: 28px;
+/*.active-date-content  h4{*/
+/*font-size: 28px;*/
 
-}
+/*}*/
 
-.active-date-content p {
-    font-size: 13px;
-    text-align: left;
-    margin-left: 20%;
-}
+/*.active-date-content p {*/
+/*font-size: 13px;*/
+/*text-align: left;*/
+/*margin-left: 20%;*/
+/*}*/
 
-.buy-tikket {
-    background-color: #484c4d;
-    padding: 5px 10px;
-    float: right;
-}
+/*.buy-tikket {*/
+/*background-color: #484c4d;*/
+/*padding: 5px 10px;*/
+/*float: right;*/
+/*}*/
 
-.buy-tikket:hover {
-    cursor: pointer;
-}
+/*.buy-tikket:hover {*/
+/*cursor: pointer;*/
+/*}*/

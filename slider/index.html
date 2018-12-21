@@ -5,92 +5,68 @@
 	<title>slider</title>
 	<title>CSS слайдер</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<!--<link rel="stylesheet" type="text/css" href="css/slider.css">-->
 </head>
 <body>
-<div class="wrap">
 
-	<input id="slide-1" type="radio" name="slides" checked>
-	<section class="slide slide-one">
-		<h1> Представление 1 </h1>
-	</section>
-	<input id="slide-2" type="radio" name="slides">
-	<section class="slide slide-two">
-		<h1>Представление 2</h1>
-	</section>
-	<input id="slide-3" type="radio" name="slides" checked>
-	<section class="slide slide-three">
-		<h1>Представление 3</h1>
-	</section>
-	<input id="slide-4" type="radio" name="slides">
-	<section class="slide slide-four">
-		<h1>Представление 4</h1>
-	</section>
-	<input id="slide-5" type="radio" name="slides">
-	<section class="slide slide-fifti">
-		<h1>Представление 5</h1>
-	</section>
-
-	<div class="tikket-menu slide-menu">
-		<ul class="tikket-menu-list">
+<div id="slider">
+	<div class="photos">
+		<img src="img/images1.png"/>
+		<img src="img/images2.jpg"/>
+		<img src="img/images3.jpg" class="showed"/>
+		<img src="img/images4.jpg"/>
+		<img src="img/images5.jpg"/>
+	</div>
+	<div class="buttons">
+		<input type="button" class="arrow-left">
+		<ul class="buttons-list">
 			<li>
-					<label for="slide-1">
-						<div class="tikket_data">
-							<p class="day-tikket">нд</p>
-							<p class="number-tikket">21</p>
-							<p class="month-tikket">березня</p>
-						</div>
-					</label>
-		</li>
-			<li>
-				<label  for="slide-2">
-					<div class="tikket_data">
-						<p class="day-tikket">пн</p>
-						<p class="number-tikket">28</p>
-						<p class="month-tikket">березня</p>
-					</div>
-				</label>
+				<ul class="buttons-item">
+					<li class="buttons-item-day">нд</li>
+					<li class="buttons-item-number">21</li>
+					<li class="buttons-item-month">березня</li>
+				</ul>
 			</li>
 			<li>
-				<label for="slide-3">
-					<div class="tikket_data_active">
-						<div class="active-date">
-							<p class="day-tikket">вт</p>
-							<p class="number-tikket">29</p>
-							<p class="month-tikket">березня</p>
-						</div>
-						<div class="active-date-content">
-							<h4>Сад гетсиманський</h4>
-							<p>Народна трагедія на 2 дії<br>
-								Тривалість вистави 2 год 20 хв.</p>
-							<a class="buy-tikket">купити квиток</a>
-						</div>
-					</div>
-				</label>
-		</li>
+				<ul class="buttons-item">
+					<li class="buttons-item-day">пн</li>
+					<li class="buttons-item-number">28</li>
+					<li class="buttons-item-month">березня</li>
+				</ul>
+			</li>
 			<li>
-				<label for="slide-4">
-					<div class="tikket_data">
-						<p class="day-tikket">вт</p>
-						<p class="number-tikket">28</p>
-						<p class="month-tikket">квітня</p>
-					</div>
-				</label>
-		</li>
-			<li>
-			<label for="slide-5">
-				<div class="tikket_data">
-					<p class="day-tikket">пн</p>
-					<p class="number-tikket">1</p>
-					<p class="month-tikket">вересня</p>
-				</div>
-			</label>
-		</li>
+				<ul class="buttons-item active">
+					<li class="buttons-item-day">вт</li>
+					<li class="buttons-item-number">29</li>
+					<li class="buttons-item-month">березня</li>
+				</ul>
+				<li class="buttons-item-content">
+					<!--<h4>Сад гетсиманський</h4>-->
+					<!--<p>Народна трагедія на 2 дії<br>-->
+					<!--Тривалість вистави 2 год 20 хв.</p>-->
+					<!--<a class="buy-tikket">купити квиток</a>-->
+					<!--</div>-->
+				</li>
+			</li>
+
+			<li class="buttons-item ">
+				<p class="buttons-item-day">нд</p>
+				<p class="buttons-item-number">21</p>
+				<p class="buttons-item-month">березня</p>
+			</li>
+
+			<li class="buttons-item ">
+				<p class="buttons-item-day">пн</p>
+				<p class="buttons-item-number">28</p>
+				<p class="buttons-item-month">березня</p>
+			</li>
 		</ul>
-		</div>
+		<input type="button" class="arrow-right">
+	</div>
 </div>
 
 
 </div>
+<script src="js/slider.js"></script>
 </body>
 </html>
