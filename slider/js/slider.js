@@ -1,14 +1,14 @@
 'use strict';
-
-document.addEventListener(DOMContentLoaded, function() {
+document.addEventListener('DOMContentLoaded', function() {
 
 let btn_prev = document.querySelector('#slider .buttons .arrow-left');
 let btn_next = document.querySelector('#slider .buttons .arrow-right');
 
 let images = document.querySelectorAll('#slider .photos img');
+let item = document.querySelectorAll('#slider .button-list li');
 let i = 3;
 console.log (images);
-
+console.log (item); // ???
 btn_prev.onclick = function(){
     images[i].className = '';
     i = i - 1; /* i-- */
@@ -32,6 +32,5 @@ btn_next.onclick = function(){
 
     images[i].className = 'showed';
 }
-
 
 });
