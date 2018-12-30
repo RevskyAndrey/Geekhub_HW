@@ -41,7 +41,7 @@ li {
   position: absolute;
   left: 5%;
   right: 5%;
-  top: 50%;
+  top: 70%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,6 +87,7 @@ li {
 }
 
 .buttons-item:hover, .active {
+  cursor: pointer;
     width: 92px;
     height: 92px;
     background: url(../IMG/item-hover.png);
@@ -94,12 +95,18 @@ li {
 }
 
 .buttons-item-content{
+     display: none;
     width: 464px;
     height: 92px;
     background: url(../IMG/item-content.png);
     border: 1px solid transparent;
     position: relative;
 }
+.show{
+  display: block;
+
+}
+
 .buttons-item-content:after{
   position: absolute;
   content:  "";
@@ -110,7 +117,6 @@ li {
   right: 10px;
   background: url(../img/barcode.png);
 }
-
 
 .buttons-item-day{
     color: rgba(255, 255, 255, 0.4);
