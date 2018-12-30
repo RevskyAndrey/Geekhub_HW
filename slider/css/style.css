@@ -157,9 +157,9 @@ font-size: 28px;
 
 .buttons-item-content p {
 font-size: 13px;
-text-align: left;
-margin-left: 20%;
+  text-align: left;
 }
+
 
 .buttons-item-content .buy-tikket {
 background-color: #484c4d;
@@ -169,5 +169,5 @@ float: right;
 
 .buttons-item-content .buy-tikket:hover {
 cursor: pointer;
-  box-shadow: 0 0 5;
+  box-shadow: 0 0 5px #cd2e2d;
 }
