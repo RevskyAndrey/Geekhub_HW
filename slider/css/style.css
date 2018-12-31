@@ -1,4 +1,4 @@
-html, body, ul, li{
+html, body, ul, li {
   margin: 0;
   padding: 0;
 }
@@ -7,7 +7,7 @@ li {
   list-style-type: none;
 }
 
-#slider{
+#slider {
   min-width: 1170px;
   width: 100%;
   height: 600px;
@@ -15,13 +15,13 @@ li {
   overflow: hidden;
 }
 
-#slider .photos{
+#slider .photos {
   position: relative;
   width: 100%;
   height: 600px;
 }
 
-#slider .photos img{
+#slider .photos img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -31,7 +31,7 @@ li {
 
 }
 
-#slider .photos img.showed{
+#slider .photos img.showed {
   opacity: 1;
 }
 
@@ -41,42 +41,44 @@ li {
   position: absolute;
   left: 5%;
   right: 5%;
-  top: 70%;
+  top: 60%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.buttons-list{
+.buttons-list {
   display: flex;
+  height: 92px;
 }
 
 .arrow-left {
-    width: 36px;
-    height: 36px;
-    background: url(../IMG/arrow-left.png);
-    border: 1px solid transparent;
-    border-radius: 5px;
-    margin: 5px ;
+  width: 36px;
+  height: 36px;
+  background: url(../IMG/arrow-left.png);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin: 5px;
 }
+
 .arrow-left:hover {
-    background: url(../IMG/arrow-left-active.png);
+  background: url(../IMG/arrow-left-active.png);
 }
 
 .arrow-right {
-    width: 36px;
-    height: 36px;
-    background: url(../IMG/arrow-right.png);
-    border: 1px solid transparent;
-    border-radius: 5px;
-    margin: 5px ;
+  width: 36px;
+  height: 36px;
+  background: url(../IMG/arrow-right.png);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin: 5px;
 }
 
 .arrow-right:hover {
-    background: url(../IMG/arrow-right-active.png);
+  background: url(../IMG/arrow-right-active.png);
 }
 
-.buttons-item {
+.item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,96 +86,127 @@ li {
   height: 92px;
   background: url(../img/item.png);
   border: 1px solid transparent;
+  position: relative;
 }
 
-.buttons-item:hover, .active {
+.item-list {
+  width: 93px;
+  height: 93px;
+  position: absolute;
+  left :0;
+  top: 0;
+  bottom: 0;
+}
+
+
+.item:hover {
   cursor: pointer;
-    width: 92px;
-    height: 92px;
-    background: url(../IMG/item-hover.png);
-    border: 1px solid transparent;
+  background: url(../IMG/item-hover.png) no-repeat;
+  border: 1px solid transparent;
 }
 
-.buttons-item-content{
-     display: none;
-    width: 464px;
-    height: 92px;
-    background: url(../IMG/item-content.png);
-    border: 1px solid transparent;
-    position: relative;
+.item-active {
+  width: 555px;
+  height: 92px;
+  background: url(../img/item-active-1.png);
+  border: 1px solid transparent;
+  position: relative;
 }
-.show{
+.item-active:hover {
+  width: 555px;
+  height: 92px;
+  background: url(../img/item-active-1.png);
+}
+
+.item-content {
+  display: none;
+  width: 464px;
+  height: 93px;
+}
+
+
+.item-day {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 17px;
+  text-transform: capitalize;
+}
+
+.item-number {
+  text-align: center;
+  color: #fff;
+  font-size: 44px;
+  width: 93px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.item-month {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.content-list {
+  position: absolute;
+  width: 464px;
+  height: 93px;
+  top:0;
+  bottom: 0;
+  left: 50px;
+  color: #fff;
   display: block;
 
 }
+.content-item {
+  display: none;
+}
 
-.buttons-item-content:after{
+.item-content-title {
+  font-size: 28px;
   position: absolute;
-  content:  "";
-  height: 74px;
-  width: 31px;
-  top: 10%;
-  bottom: 10%;
-  right: 10px;
-  background: url(../img/barcode.png);
+  bottom: 18px;
+
 }
 
-.buttons-item-day{
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 17px;
-    text-transform :capitalize;
+.content-active {
+  display: block;
+  width: 464px;
+  height: 92px;
+  border: 1px solid transparent;
+  position: relative;
 }
 
-.buttons-item-number{
-    color: #fff;
-    font-size: 44px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.buttons-item-month {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 13px;
-    text-transform:uppercase;
-}
-
-/*!****!*/
-/*.tikket_data_active{*/
-/*width: 555px;*/
-/*display: block;*/
+/*.content-active:hover {*/
+  /*width: 464px;*/
+  /*height: 93px;*/
+  /*background: url(../img/item-content.png);*/
+  /*border: 1px solid transparent;*/
 /*}*/
 
-/*.active-date_active{*/
-/*width: 90px;*/
-/*height: 90px;*/
-/*border: 1px solid transparent;*/
-/*}*/
 
-.buttons-item-content{
-color: #fff;
-width: 465px;
-display: block;
-
-
+.item-content-name {
+  font-size: 13px;
+  position: absolute;
+  left: 5px;
+  top: 35px;
 }
 
-.buttons-item-content-title{
-font-size: 28px;
-
+.item-content-time   {
+  font-size: 13px;
+  position: absolute;
+  left: 5px;
+  top: 50px;
+}
+ .buy-tikket {
+  background-color: #484c4d;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 50px;
 }
 
-.buttons-item-content p {
-font-size: 13px;
-  text-align: left;
-}
-
-
-.buttons-item-content .buy-tikket {
-background-color: #484c4d;
-padding: 5px 10px;
-float: right;
-}
-
-.buttons-item-content .buy-tikket:hover {
-cursor: pointer;
-  box-shadow: 0 0 5px #cd2e2d;
+.buy-tikket:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px #fff;
 }
