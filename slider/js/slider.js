@@ -6,66 +6,55 @@ document.addEventListener('DOMContentLoaded', function () {
     let images = document.querySelectorAll('#slider .photos img');
     let item = document.querySelectorAll('#slider .js_button');
 // let item_content = document.querySelectorAll('#slider .js_content');
-    let i = 0;
+    let i = 2;
     let items;
 
-    for (let i = 0; i < item.length; i++) {
-        items = item.item(i);
+
+    for (let j = 0; j < item.length; j++) {
+        items = item.item(j);
         items.addEventListener("click", function (ent) {
-            this.classList.toggle("active");
-            console.log(i);
+            i=j;
             showSlides(i)
         });
-    }
-    ;
+    };
 
 
     btn_prev.addEventListener("click", function () {
-
-        images[i].className = '';
-        this.classList.toggle("active");
         i--;
         if (i < 0) {
             i = images.length - 1;
-        }
-
-        images[i].className = 'showed';
-        this.classList.toggle("active");
+        } ;
+        showSlides(i)
     });
 
-    btn_next.addEventListener("click", function () {
-        images[i].className = '';
-        this.classList.toggle("active");
-        i++;
-        if (i >= images.length) {
-            i = 0;
-        }
 
-        images[i].className = 'showed';
-        this.classList.toggle("active");
 
-    });
-
-    function showSlides(n) {
-
-        // let slides = document.getElementsByClassName("slider-item");
-        // let dots = document.getElementsByClassName("dot");
-
-        if (i >= images.length) {
-            i = 0;
-        }
-        images[i].className = 'showed';
-        this.classList.toggle("active");
-
-        if (i < 0) {
-            i = images.length - 1;
-        }
-        images[i].className = 'showed';
-        this.classList.toggle("active");
+btn_next.addEventListener("click", function () {
+    i++;
+    if (i >= images.length) {
+        i = 0;
     };
+    showSlides(i)
 
 });
 
+function dellclass(targets) {
+        item = targets;
+    for (let j = 0; j < item.length; j++) {
+        items = item.item(j);
+        items.classList.remove('active');
+        items.classList.remove('showed');
+    };
+};
+
+    function showSlides(i) {
+        console.log(i);
+        dellclass(images);
+        dellclass(item  );
+        images[i].className = 'showed';
+        item[i].classList.toggle("active");
+    };
 
 
+});
 
