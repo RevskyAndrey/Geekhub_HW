@@ -6,8 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let images = document.querySelectorAll('#slider .photos img');
     let item = document.querySelectorAll('#slider .js_button');
     let item_content = document.querySelectorAll('#slider .content-item');
-    let i = 2;
-    let items;
+    let i ,items;
 
     console.log(item_content);
 

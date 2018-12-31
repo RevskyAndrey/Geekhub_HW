@@ -62,6 +62,7 @@ li {
 }
 
 .arrow-left:hover {
+  transition: 0.5s;
   background: url(../IMG/arrow-left-active.png);
 }
 
@@ -75,6 +76,7 @@ li {
 }
 
 .arrow-right:hover {
+  transition: 0.5s;
   background: url(../IMG/arrow-right-active.png);
 }
 
@@ -119,6 +121,7 @@ li {
 }
 
 .item-content {
+  transition: 0.75s;
   display: none;
   width: 464px;
   height: 93px;
