@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Черкаський драматичний театр імені Т. Г. Шевченка</title>
+  <link rel="stylesheet" href="CSS/reset.css" type="text/css">
+  <link rel="stylesheet" href="CSS/style.css" type="text/css">
+  <script src="JS/jquery-3.3.1.slim.min.js"></script>
+  <script src="JS/main.js"></script>
+</head>
+
+<body>
+<header class="header" id="top">
+
+    <h1  class="logo">
+      <a href="#">
+        <img src="IMG/Logo.png" height="70" width="200" alt="Логотип Театр імені Т.Г.Шевченка"/>
+        Театр імені Т.Г.Шевченка
+      </a>
+    </h1>
+
+
+  <nav class="main-menu">
+    <ul class="main-menu-list">
+      <li><a href="#" class="active"> Головна </a></li>
+      <li><a href="#">Афіша</a></li>
+      <li><a href="#">репертуар</a></li>
+      <li><a href="#">новини</a></li>
+      <li><a href="#">Про театр</a></li>
+      <li><a href="#">Персоналії</a></li>
+      <li><a href="#">контакти</a></li>
+      <li><a href="#">фестивалі</a></li>
+    </ul>
+  </nav>
+
+  <!--выпадающее меню на css -->
+  <div class="select-lang">
+    <button class="bnt-select-lang"> Укр <img src="IMG/lang.png" height="4" width="7"/></button>
+    <div class="select-lang-list">
+      <a href="#">Рус</a>
+      <a href="#">Eng</a>
+      <a href="#">Ger</a>
+    </div>
+  </div>
+</header>
+
+<!--- ^ heder ^              ∨ img to slider ∨-->
+
+<div class="welcome">
+  <!--  тут должен быть слайдер на JS или Jqveru ???? -->
+
+
+  <!--- -----------------------  подумать переделать----------------------------------------------->
+  <img src="IMG/BG_welcom.jpg"/>
+  <div class="tikket content">
+    <ul class="tikket-ul">
+      <li>
+        <button class="arrow-left"></button>
+      </li>
+      <li>
+        <button class="tikket_data">
+            <p class="day-tikket">нд</p>
+            <p class="number-tikket">21</p>
+            <p class="month-tikket">березня</p>
+        </button>
+      </li>
+      <li>
+        <button class="tikket_data">
+            <p class="day-tikket">пн</p>
+            <p class="number-tikket">28</p>
+            <p class="month-tikket">березня</p>
+        </button>
+      </li>
+      <li>
+        <button class="tikket_data_active">
+          <div class="active-date">
+            <p class="day-tikket">вт</p>
+            <p class="number-tikket">29</p>
+            <p class="month-tikket">березня</p>
+          </div>
+          <div class="active-date-content">
+            <h4>Сад гетсиманський</h4>
+            <p>Народна трагедія на 2 дії<br>
+              Тривалість вистави 2 год 20 хв.</p>
+            <a class="buy-tikket">купити квиток</a>
+          </div>
+        </button>
+      </li>
+      <li>
+        <button class="tikket_data">
+            <p class="day-tikket">вт</p>
+            <p class="number-tikket">28</p>
+            <p class="month-tikket">квітня</p>
+        </button>
+      </li>
+      <li>
+        <button class="tikket_data">
+            <p class="day-tikket">пн</p>
+            <p class="number-tikket">1</p>
+            <p class="month-tikket">вересня</p>
+        </button>
+      </li>
+      <li>
+        <button class="arrow-right"></button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!--- ^ img to slider  ^     -->
+
+<div class="content main">
+  <nav class="left-nav">
+    <ul class="left-nav-list">
+      <li class="icon-photo">
+        <a href="#"> фотоархiв </a>
+      </li>
+      <li class="icon-video">
+        <a href="#"> вiдеоархiв </a>
+      </li>
+      <li class="icon-rada">
+        <a href="#">пiклувальна Рада</a>
+      </li>
+      <li class="icon-partners">
+        <a href="#">партнери </a>
+      </li>
+      <li class="icon-forum">
+        <a href="#">форум </a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <h2>Новини</h2>
+
+      <article class="main-news-block">
+        <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
+        <div class="news-block">
+          <h3> News name number </h3>
+          <p> Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели
+            превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову,
+            свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось
+            готовое вот-вот окончательно сползти одеяло. Его многочисленные, убого тонкие</p>
+          <footer class="footer-news">
+            <data> 31.10.2018</data>
+            <div class="views">
+              <img src="IMG/eye.png" alt="eye">
+              <span> 110 </span>
+            </div>
+          </footer>
+        </div>
+      </article>
+
+      <article class="main-news-block">
+        <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
+        <div class="news-block">
+          <h3> News name number </h3>
+          <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут
+            они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей
+            стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные
+             предложения залетают прямо  </p>
+          <footer class="footer-news">
+            <data> 31.10.2018</data>
+            <div class="views">
+              <img src="IMG/eye.png" alt="eye">
+              <span> 111 </span>
+            </div>
+          </footer>
+        </div>
+      </article>
+
+      <article class="main-news-block">
+        <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
+        <div class="news-block">
+          <h3> News name number </h3>
+          <p> Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего
+            сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив,
+            мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог</p>
+          <footer class="footer-news">
+            <data> 31.10.2018</data>
+            <div class="views">
+              <img src="IMG/eye.png" alt="eye">
+              <span> 112 </span>
+            </div>
+          </footer>
+        </div>
+      </article>
+
+     <article class="main-news-block">
+      <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
+      <div class="news-block">
+        <h3> News name number </h3>
+        <p> Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего
+          сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив,
+          мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог</p>
+        <div class="footer-news">
+          <data> 31.10.2018</data>
+          <div class="views">
+            <img src="IMG/eye.png" alt="eye">
+            <span> 113 </span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <aside class="right-nav">
+    <ul class="right-nav-list">
+      <li>
+        <h2> Галерея </h2>
+        <div class="right-nav-block">
+          <a href="#"><img src="IMG/Gallery.JPG" height="160" width="240" alt="изображение галлереи"/></a>
+          <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели
+            превратился в страшное насекомое. Лежа</p>
+        </div>
+      </li>
+
+      <li>
+        <h2> вiдео </h2>
+        <div class="right-nav-block video-play">
+          <a href="#"><img src="IMG/Gallery-video.JPG" height="157" width="233" alt=" первый кадр видео"/></a>
+          <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели
+            превратился в страшное насекомое. Лежа</p>
+        </div>
+      </li>
+    </ul>
+  </aside>
+</div>
+
+
+
+<footer class="footer">
+  <div class="content">
+
+  <a class="btn-up" href="#top"></a>
+
+
+  <nav class="footer-menu">
+    <ul class="footer-menu-list">
+      <li><a href="#" class="active">Головна </a></li>
+      <li><a href="#">Афіша</a></li>
+      <li><a href="#">репертуар</a></li>
+      <li><a href="#">новини</a></li>
+      <li><a href="#">Про театр</a></li>
+      <li><a href="#">Персоналії</a></li>
+      <li><a href="#">контакти</a></li>
+      <li><a href="#">фестивалі</a></li>
+      <li><a href="#">Форум</a></li>
+    </ul>
+  </nav>
+
+  <div class="social">
+    <ul class="social-ul">
+      <li class="icon_vk"><a href="#"></a></li>
+      <li class="icon_youtube"><a href="#"></a></li>
+      <li class="icon_google-plus"><a href="#"></a></li>
+      <li class="icon_facebook"><a href="#"></a></li>
+      <li class="icon_tw"><a href="#"></a></li>
+    </ul>
+  </div>
+  </div>
+</footer>
+
+</body>
+</html>
