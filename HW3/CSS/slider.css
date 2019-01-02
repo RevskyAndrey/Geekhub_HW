@@ -1,11 +1,11 @@
-html, body, ul, li {
-  margin: 0;
-  padding: 0;
-}
+/*html, body, ul, li {*/
+  /*margin: 0;*/
+  /*padding: 0;*/
+/*}*/
 
-li {
-  list-style-type: none;
-}
+/*li {*/
+  /*list-style-type: none;*/
+/*}*/
 
 .slider {
   min-width: 1170px;
@@ -52,33 +52,32 @@ li {
   height: 92px;
 }
 
-
-.slider .arrow-left {
+.arrow-left {
   width: 36px;
   height: 36px;
-  background: url(../IMG/arrow-left.png);
+  background: url(../img/arrow-left.png);
   border: 1px solid transparent;
   border-radius: 5px;
   margin: 5px;
 }
 
-.slider .arrow-left:hover {
+.arrow-left:hover {
   transition: 0.5s;
-  background: url(../IMG/arrow-left-active.png);
+  background: url(../img/arrow-left-active.png);
 }
 
-.slider .arrow-right {
+.arrow-right {
   width: 36px;
   height: 36px;
-  background: url(../IMG/arrow-right.png);
+  background: url(../img/arrow-right.png);
   border: 1px solid transparent;
   border-radius: 5px;
   margin: 5px;
 }
 
-.slider .arrow-right:hover {
+.arrow-right:hover {
   transition: 0.5s;
-  background: url(../IMG/arrow-right-active.png);
+  background: url(../img/arrow-right-active.png);
 }
 
 .item {
@@ -104,7 +103,7 @@ li {
 
 .item:hover {
   cursor: pointer;
-  background: url(../IMG/item-hover.png) no-repeat;
+  background: url(../img/item-hover.png) no-repeat;
   border: 1px solid transparent;
 }
 
@@ -180,7 +179,8 @@ li {
 .item-content-title {
   font-size: 28px;
   position: absolute;
-  bottom: 18px;
+  top: 5px;
+  left: 5px;
 
 }
 
@@ -189,21 +189,21 @@ li {
   width: 464px;
   height: 92px;
   border: 1px solid transparent;
-  position: relative;
+  position: absolute;
 }
 
 .item-content-name {
   font-size: 13px;
   position: absolute;
-  left: 5px;
-  top: 35px;
+  left: 8px;
+  bottom: 35px;
 }
 
 .item-content-time   {
   font-size: 13px;
   position: absolute;
-  left: 5px;
-  top: 50px;
+  left: 8px;
+  bottom: 20px;
 }
  .buy-tikket {
   background-color: #484c4d;

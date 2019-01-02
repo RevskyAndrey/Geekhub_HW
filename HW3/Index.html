@@ -5,8 +5,7 @@
 <title>Черкаський драматичний театр імені Т. Г. Шевченка</title>
   <link rel="stylesheet" href="CSS/reset.css" type="text/css">
   <link rel="stylesheet" href="CSS/style.css" type="text/css">
-  <script src="JS/jquery-3.3.1.slim.min.js"></script>
-  <script src="JS/main.js"></script>
+  <link rel="stylesheet" href="CSS/slider.css" type="text/css">
 </head>
 
 <body>
@@ -23,13 +22,13 @@
   <nav class="main-menu">
     <ul class="main-menu-list">
       <li><a href="#" class="active"> Головна </a></li>
-      <li><a href="#">Афіша</a></li>
-      <li><a href="#">репертуар</a></li>
-      <li><a href="#">новини</a></li>
-      <li><a href="#">Про театр</a></li>
-      <li><a href="#">Персоналії</a></li>
-      <li><a href="#">контакти</a></li>
-      <li><a href="#">фестивалі</a></li>
+      <li><a href="javascript:void(0)">Афіша</a></li>
+      <li><a href="javascript:void(0)">репертуар</a></li>
+      <li><a href="javascript:void(0)">новини</a></li>
+      <li><a href="javascript:void(0)">Про театр</a></li>
+      <li><a href="javascript:void(0)">Персоналії</a></li>
+      <li><a href="javascript:void(0)">контакти</a></li>
+      <li><a href="javascript:void(0)">фестивалі</a></li>
     </ul>
   </nav>
 
@@ -37,95 +36,128 @@
   <div class="select-lang">
     <button class="bnt-select-lang"> Укр <img src="IMG/lang.png" height="4" width="7"/></button>
     <div class="select-lang-list">
-      <a href="#">Рус</a>
-      <a href="#">Eng</a>
-      <a href="#">Ger</a>
+      <a  href="javascript:void(0)">Рус</a>
+  
     </div>
   </div>
 </header>
 
-<!--- ^ heder ^              ∨ img to slider ∨-->
+<div class="slider">
+  <div class="photos">
+    <img src="img/images-1.jpg"/>
+    <img src="img/images-2.jpg"/>
+    <img src="img/images-3.jpg" class="showed"/>
+    <img src="img/images-4.jpg"/>
+    <img src="img/images-5.jpg"/>
+  </div>
 
-<div class="welcome">
-  <!--  тут должен быть слайдер на JS или Jqveru ???? -->
+  <div class="buttons">
+    <input type="button" class="arrow-left">
+    <ul class="buttons-list">
 
-
-  <!--- -----------------------  подумать переделать----------------------------------------------->
-  <img src="IMG/BG_welcom.jpg"/>
-  <div class="tikket content">
-    <ul class="tikket-ul">
-      <li>
-        <button class="arrow-left"></button>
-      </li>
-      <li>
-        <button class="tikket_data">
-            <p class="day-tikket">нд</p>
-            <p class="number-tikket">21</p>
-            <p class="month-tikket">березня</p>
-        </button>
-      </li>
-      <li>
-        <button class="tikket_data">
-            <p class="day-tikket">пн</p>
-            <p class="number-tikket">28</p>
-            <p class="month-tikket">березня</p>
-        </button>
-      </li>
-      <li>
-        <button class="tikket_data_active">
-          <div class="active-date">
-            <p class="day-tikket">вт</p>
-            <p class="number-tikket">29</p>
-            <p class="month-tikket">березня</p>
-          </div>
-          <div class="active-date-content">
-            <h4>Сад гетсиманський</h4>
-            <p>Народна трагедія на 2 дії<br>
-              Тривалість вистави 2 год 20 хв.</p>
+      <li class="item js_button">
+        <ul class="item-list">
+          <li class="item-day">нд</li>
+          <li class="item-number">21</li>
+          <li class="item-month">березня</li>
+        </ul>
+        <div class="content-item">
+          <ul class="content-list">
+            <li><h4 class="item-content-title">Сад гетсиманський 1</h4></li>
+            <li><p class="item-content-name">Народна трагедія на 1 дії</p></li>
+            <li><p class="item-content-time">Тривалість вистави 1 год .</p></li>
             <a class="buy-tikket">купити квиток</a>
-          </div>
-        </button>
+          </ul>
+        </div>
       </li>
-      <li>
-        <button class="tikket_data">
-            <p class="day-tikket">вт</p>
-            <p class="number-tikket">28</p>
-            <p class="month-tikket">квітня</p>
-        </button>
+
+      <li class="item js_button">
+        <ul class="item-list">
+          <li class="item-day">пн</li>
+          <li class="item-number">28</li>
+          <li class="item-month">березня</li>
+        </ul>
+        <div class="content-item">
+          <ul class="content-list">
+            <li><h4 class="item-content-title">Сад гетсиманський 2</h4></li>
+            <li><p class="item-content-name">Народна трагедія на 2 дії</p></li>
+            <li><p class="item-content-time">Тривалість вистави 2 год .</p></li>
+            <a class="buy-tikket">купити квиток</a>
+          </ul>
+        </div>
       </li>
-      <li>
-        <button class="tikket_data">
-            <p class="day-tikket">пн</p>
-            <p class="number-tikket">1</p>
-            <p class="month-tikket">вересня</p>
-        </button>
+
+      <li class="item js_button item-active ">
+        <ul class="item-list">
+          <li class="item-day">вт</li>
+          <li class="item-number">29</li>
+          <li class="item-month">березня</li>
+        </ul>
+        <div class="content-item content-active ">
+          <ul class="content-list">
+            <li><h4 class="item-content-title">Сад гетсиманський 3</h4></li>
+            <li><p class="item-content-name">Народна трагедія на 3 дії</p></li>
+            <li><p class="item-content-time">Тривалість вистави 3 год .</p></li>
+            <a class="buy-tikket">купити квиток</a>
+          </ul>
+        </div>
       </li>
-      <li>
-        <button class="arrow-right"></button>
+
+      <li class="item js_button">
+        <ul class="item-list">
+          <li class="item-day">нд</li>
+          <li class="item-number">21</li>
+          <li class="item-month">травня</li>
+        </ul>
+        <div class="content-item">
+          <ul class="content-list">
+            <li><h4 class="item-content-title">Сад гетсиманський 4</h4></li>
+            <li><p class="item-content-name">Народна трагедія на 4 дії</p></li>
+            <li><p class="item-content-time">Тривалість вистави 4 год .</p></li>
+            <a class="buy-tikket">купити квиток</a>
+          </ul>
+        </div>
       </li>
+
+      <li class="item js_button">
+        <ul class="item-list">
+          <li class="item-day">пн</li>
+          <li class="item-number">28</li>
+          <li class="item-month">травня</li>
+        </ul>
+
+        <div class="content-item">
+          <ul class="content-list">
+            <li><h4 class="item-content-title">Сад гетсиманський 5</h4></li>
+            <li><p class="item-content-name">Народна трагедія на 5 дії</p></li>
+            <li><p class="item-content-time">Тривалість вистави 5 год .</p></li>
+            <a class="buy-tikket">купити квиток</a>
+          </ul>
+        </div>
+      </li>
+
     </ul>
+    <input type="button" class="arrow-right">
   </div>
 </div>
-
-<!--- ^ img to slider  ^     -->
 
 <div class="content main">
   <nav class="left-nav">
     <ul class="left-nav-list">
       <li class="icon-photo">
-        <a href="#"> фотоархiв </a>
+        <a  href="javascript:void(0)"> фотоархiв </a>
       </li>
       <li class="icon-video">
-        <a href="#"> вiдеоархiв </a>
+        <a  href="javascript:void(0)"> вiдеоархiв </a>
       </li>
       <li class="icon-rada">
-        <a href="#">пiклувальна Рада</a>
+        <a  href="javascript:void(0)">пiклувальна Рада</a>
       </li>
       <li class="icon-partners">
-        <a href="#">партнери </a>
+        <a  href="javascript:void(0)">партнери </a>
       </li>
       <li class="icon-forum">
-        <a href="#">форум </a>
+        <a  href="javascript:void(0)">форум </a>
       </li>
     </ul>
   </nav>
@@ -134,7 +166,7 @@
     <h2>Новини</h2>
 
       <article class="main-news-block">
-        <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
+        <img src="IMG/news.png"  alt="Изображение для данной новости"/>
         <div class="news-block">
           <h3> News name number </h3>
           <p> Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели
@@ -152,7 +184,7 @@
       </article>
 
       <article class="main-news-block">
-        <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
+        <img src="IMG/news.png"  alt="Изображение для данной новости"/>
         <div class="news-block">
           <h3> News name number </h3>
           <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут
@@ -170,7 +202,7 @@
       </article>
 
       <article class="main-news-block">
-        <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
+        <img src="IMG/news.png"  alt="Изображение для данной новости"/>
         <div class="news-block">
           <h3> News name number </h3>
           <p> Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего
@@ -187,7 +219,7 @@
       </article>
 
      <article class="main-news-block">
-      <img src="IMG/news.jpg" height="232" width="484" alt="Изображение для данной новости"/>
+       <img src="IMG/news.png"  alt="Изображение для данной новости"/>
       <div class="news-block">
         <h3> News name number </h3>
         <p> Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего
@@ -209,7 +241,8 @@
       <li>
         <h2> Галерея </h2>
         <div class="right-nav-block">
-          <a href="#"><img src="IMG/Gallery.JPG" height="160" width="240" alt="изображение галлереи"/></a>
+          <a  href="javascript:void(0)">
+            <img src="IMG/Gallery.JPG" height="160" width="240" alt="изображение галлереи"/></a>
           <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели
             превратился в страшное насекомое. Лежа</p>
         </div>
@@ -218,7 +251,8 @@
       <li>
         <h2> вiдео </h2>
         <div class="right-nav-block video-play">
-          <a href="#"><img src="IMG/Gallery-video.JPG" height="157" width="233" alt=" первый кадр видео"/></a>
+          <a  href="javascript:void(0)">
+            <img src="IMG/play.png" height="157" width="233" alt=" первый кадр видео"/></a>
           <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели
             превратился в страшное насекомое. Лежа</p>
         </div>
@@ -238,28 +272,28 @@
   <nav class="footer-menu">
     <ul class="footer-menu-list">
       <li><a href="#" class="active">Головна </a></li>
-      <li><a href="#">Афіша</a></li>
-      <li><a href="#">репертуар</a></li>
-      <li><a href="#">новини</a></li>
-      <li><a href="#">Про театр</a></li>
-      <li><a href="#">Персоналії</a></li>
-      <li><a href="#">контакти</a></li>
-      <li><a href="#">фестивалі</a></li>
-      <li><a href="#">Форум</a></li>
+      <li><a href="javascript:void(0)">Афіша</a></li>
+      <li><a href="javascript:void(0)">репертуар</a></li>
+      <li><a href="javascript:void(0)">новини</a></li>
+      <li><a href="javascript:void(0)">Про театр</a></li>
+      <li><a href="javascript:void(0)">Персоналії</a></li>
+      <li><a href="javascript:void(0)">контакти</a></li>
+      <li><a href="javascript:void(0)">фестивалі</a></li>
+      <li><a href="javascript:void(0)">Форум</a></li>
     </ul>
   </nav>
 
   <div class="social">
     <ul class="social-ul">
-      <li class="icon_vk"><a href="#"></a></li>
-      <li class="icon_youtube"><a href="#"></a></li>
-      <li class="icon_google-plus"><a href="#"></a></li>
-      <li class="icon_facebook"><a href="#"></a></li>
-      <li class="icon_tw"><a href="#"></a></li>
+      <li class="icon_vk"><a href="javascript:void(0)"></a></li>
+      <li class="icon_youtube"><a href="javascript:void(0)"></a></li>
+      <li class="icon_google-plus"><a href="javascript:void(0)"></a></li>
+      <li class="icon_facebook"><a href="javascript:void(0)"></a></li>
+      <li class="icon_tw"><a href="javascript:void(0)"></a></li>
     </ul>
   </div>
   </div>
 </footer>
-
+<script src="js/slider.js"></script>
 </body>
 </html>
