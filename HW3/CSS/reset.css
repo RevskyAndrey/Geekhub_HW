@@ -126,7 +126,9 @@ button, input, select, textarea {margin: 0;}
 
 /* make buttons play nice in IE */
 button,
+
 input[type=button] { overflow: visible;}
+
 
 /* scale images in IE7 more attractively */
 .ie7 img {-ms-interpolation-mode: bicubic;}
