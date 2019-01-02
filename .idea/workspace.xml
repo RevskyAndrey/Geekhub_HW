@@ -2,60 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1d13940-924b-4c26-b3fe-1f201aa6e94f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/Index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/css/lib-bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/css/lib-bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/css/main.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/css/reset.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/css/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/BG-welcome.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/Logo-heyU.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/Start conversation.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/Take-picture.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/app-store.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/arrow-down.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/chat.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/contacts-copy.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/conversation.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/free-call.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/groups.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/i-phone-7-silver-1-copy.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/i-phone-7-silver.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/messages.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/picture.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/play-circle-1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/sent-video.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/svg/ic_chatbubble.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/svg/ic_photocamera.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/svg/ic_videocamera.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/user.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/video.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/img/your-app-icon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/scss/lib-bootstrap.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW4/scss/main.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW6-JS1/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW6-JS1/package-lock.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW6-JS1/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/HW6-JS1/start.test.js" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/HW1/CSS/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HW1/IMG/facebook.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HW1/IMG/git.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HW1/IMG/gmail.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HW1/IMG/instagram.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HW1/IMG/photo.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HW1/IMG/slack.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HW1/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HW2/CSS/Table.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HW2/CSS/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HW2/Form01.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HW2/Form02.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HW2/Index.html" afterPath="$PROJECT_DIR$/HW2/Index.html" />
-      <change beforePath="$PROJECT_DIR$/HW2/Table.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HW2/Table.html" afterPath="$PROJECT_DIR$/HW2/Table.html" />
-      <change beforePath="$PROJECT_DIR$/HW3/Index.html" afterPath="$PROJECT_DIR$/HW3/Index.html" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/HW3/CSS/style.css" afterPath="$PROJECT_DIR$/HW3/CSS/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -77,63 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="slider.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HW3/CSS/slider.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="205" column="11" lean-forward="false" selection-start-line="205" selection-start-column="11" selection-end-line="205" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="slider.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HW3/JS/slider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HW3/CSS/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="89" column="32" lean-forward="false" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HW3/Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
+            <state relative-caret-position="255">
               <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HW3/CSS/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="258">
+              <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -230,10 +136,10 @@
         <option value="$PROJECT_DIR$/slider/css/style.css" />
         <option value="$PROJECT_DIR$/HW3/CSS/reset.css" />
         <option value="$PROJECT_DIR$/HW3/CSS/slider.css" />
-        <option value="$PROJECT_DIR$/HW3/CSS/style.css" />
-        <option value="$PROJECT_DIR$/HW3/Index.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/HW3/Index.html" />
+        <option value="$PROJECT_DIR$/HW3/CSS/style.css" />
       </list>
     </option>
   </component>
@@ -283,6 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,32 +200,24 @@
             <path>
               <item name="Geekhub_HW" type="b2602c69:ProjectViewProjectNode" />
               <item name="Geekhub_HW" type="462c0819:PsiDirectoryNode" />
-              <item name="slider" type="462c0819:PsiDirectoryNode" />
+              <item name="HW3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Geekhub_HW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Geekhub_HW" type="462c0819:PsiDirectoryNode" />
+              <item name="HW3" type="462c0819:PsiDirectoryNode" />
+              <item name="CSS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Geekhub_HW" type="b2602c69:ProjectViewProjectNode" />
               <item name="Geekhub_HW" type="462c0819:PsiDirectoryNode" />
               <item name="slider" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Geekhub_HW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Geekhub_HW" type="462c0819:PsiDirectoryNode" />
-              <item name="slider" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Geekhub_HW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Geekhub_HW" type="462c0819:PsiDirectoryNode" />
-              <item name="slider" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -500,13 +399,6 @@
       <workItem from="1546336119235" duration="5947000" />
       <workItem from="1546345844189" duration="1654000" />
       <workItem from="1546421196038" duration="3654000" />
-    </task>
-    <task id="LOCAL-00028" summary="add node">
-      <created>1542738333568</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1542738333568</updated>
     </task>
     <task id="LOCAL-00029" summary="замена классов number-01&#10;content:attr">
       <created>1542830439262</created>
@@ -844,7 +736,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546424295404</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="передалана кнопка смены языка">
+      <created>1546435654860</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1546435654862</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -880,7 +779,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="373191000" />
+    <option name="totallyTimeSpent" value="374323000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -893,25 +792,36 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3079848" sideWeight="0.4827586" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3079848" sideWeight="0.4827586" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252688" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5196451" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22446236" sideWeight="0.47338402" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22446236" sideWeight="0.47338402" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31048387" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24968314" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24193548" sideWeight="0.46894804" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24193548" sideWeight="0.46894804" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17427123" sideWeight="0.51724136" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39919356" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252688" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32258064" sideWeight="0.48035488" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5196451" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22446236" sideWeight="0.47338402" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31048387" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24193548" sideWeight="0.46894804" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3079848" sideWeight="0.4827586" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32795697" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24968314" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17427123" sideWeight="0.51724136" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39919356" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32795697" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -969,7 +879,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <option name="RELOAD_CONTEXT" value="false" />
-    <MESSAGE value=" .travis.yml maybe fix2" />
     <MESSAGE value="fix1" />
     <MESSAGE value="fix2" />
     <MESSAGE value="fix3" />
@@ -994,7 +903,8 @@
     <MESSAGE value="cleaning js  ( kill 12  string cod  | add new function cleaningClass)" />
     <MESSAGE value="cleaning js  ( kill 5  string cod )" />
     <MESSAGE value="redone HW3  (add slider ) &#10;replacement id on class in slider ( JS and HTML and CSS)" />
-    <option name="LAST_COMMIT_MESSAGE" value="redone HW3  (add slider ) &#10;replacement id on class in slider ( JS and HTML and CSS)" />
+    <MESSAGE value="передалана кнопка смены языка" />
+    <option name="LAST_COMMIT_MESSAGE" value="передалана кнопка смены языка" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1044,7 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="7" lean-forward="false" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1052,7 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="3" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,9 +968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="108" selection-end-column="6" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1070,7 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="52" lean-forward="false" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1078,7 +982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="128" column="20" lean-forward="false" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1086,7 +989,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
           <caret line="205" column="11" lean-forward="false" selection-start-line="205" selection-start-column="11" selection-end-line="205" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1109,7 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1117,33 +1018,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW3/CSS/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="89" column="32" lean-forward="false" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW3/Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1151,6 +1025,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW3/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW3/CSS/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -85,7 +85,7 @@ header {
   top: 50px;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .select-lang-list a {
@@ -102,11 +102,9 @@ header {
 
 }
 
-
-
 .select-lang:hover .select-lang-list {
   display: block;
-
+}
 
 /**boddy**/
 .main {
