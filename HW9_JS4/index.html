@@ -3,22 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>HW9_JS4</title>
-<style>
-  pre {
-    font-size: 18px;
-  }
-  div {
-    width: 250px;
-    margin: 35px;
-    border: 1px solid #737373;
-    border-radius: 5px;
-    padding: 10px;
-  }
-  .name{
-   margin-right:50px ;
-  }
 
-</style>
+  <style>
+    pre {
+      font-size: 18px;
+    }
+
+    .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px auto ;
+      border: none;
+    }
+
+    .fun {
+      width: 150px;
+      margin: 10px;
+      border: 1px solid #737373;
+      border-radius: 5px;
+      padding: 20px;
+    }
+    .text {
+      padding-right: 10px;
+    }
+
+    .out-api {
+      margin: 10px auto;
+      width: 500px;
+      border: 1px solid #737373;
+      border-radius: 5px;
+      padding: 20px;
+    }
+
+  </style>
 
 </head>
 <body>
@@ -30,12 +47,13 @@
   де limitNumber ви отримуєте з першої функції, pageNumber - з другої, результат запиту вивести в консоль
   реалізувати 3 рішення: через callback, Promise, async
 </pre>
+<div class="wrap">
+  <div class="fun"><span class="text">limitNumber </span> <span id="limitNumber"></span></div>
+  <div class="fun"><span  class="text">pageNumber </span> <span id="pageNumber"></span></div>
+  <div class="out-api"><span  class="text">API</span><span id="MyAPI"></span></div>
+  <div class="out-api"><span  class="text">Request1</span><span id="Request1"></span></div>
 
-<div><span class="name">limitNumber </span> <span id="limitNumber"></span></div>
-<div><span class="name">pageNumber </span> <span id="pageNumber"></span></div>
-
-<div><p>out</p></div>
-
+</div>
 
 
 <script src="main.js"></script>
