@@ -34,25 +34,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let myXMLHttp = new XMLHttpRequest();
 
-    myXMLHttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            console.warn(JSON.parse(this.responseText));
+    function GetCallback(callback) {
+          myXMLHttp.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                callback(this.responseText);
+                // console.warn(JSON.parse(this.responseText));
+            };
         };
     };
 
+
     function myXMLHttpPrint() {
         myXMLHttp.open("GET",MyAPI);
-        document.getElementById("Request1").textContent = myXMLHttp;
+        document.getElementById("callback_Request").textContent = myXMLHttp;
         myXMLHttp.send();
         console.log(myXMLHttp);
     };
 
+    GetCallback( function (callback) {
+        console.log (callback);
+    });
+
     function go() {
         delay(getLimitNumber, 1000);
         delay(getPageNumber, 2000);
-        delay(getApi,3000)
+        delay(getApi,3000);
         delay(myXMLHttpPrint, 6000);
     };
 
-go();
+    go();
 });
