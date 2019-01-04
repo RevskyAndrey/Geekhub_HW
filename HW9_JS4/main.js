@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             myPromis.then( (resolve) => {
-                console.warn("Promise =>",JSON.parse(resolve));
+                console.warn("Promise1 =>",JSON.parse(resolve));
 
 
             }).catch((reject) =>{
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             myPromis.then( (resolve) => {
-                console.warn("Promise =>",JSON.parse(resolve));
+                console.warn("Promise2=>",JSON.parse(resolve));
 
 
             }).catch((reject) =>{
@@ -152,10 +152,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         }, 5000);
 
+        async function testAsync() {
+            let test = await getPromis();
+            console.error("Good Work !!!");
+        }
 
     }
 
     start();
-
 
 });
