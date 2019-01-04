@@ -33,23 +33,19 @@ document.addEventListener('DOMContentLoaded', function () {
         randomNumber = rand;
     }
 
-
     let myXMLHttp = new XMLHttpRequest();
-
-
 
     // запрос на сервер и возврат результата через callback
     function GetCallback(callback) {
         myXMLHttp.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
                 callback(JSON.parse(this.responseText));
-                // console.warn(JSON.parse(this.responseText));
             }
         }
     }
 
     //функция вывода информации в консоль и на html страницу
-    function mycallbackPrint(MyAPI1) {
+    function myСallbackPrint(MyAPI1) {
         myXMLHttp.open("GET", MyAPI1);
         myXMLHttp.send();
         GetCallback(function (callback) {
@@ -73,9 +69,9 @@ document.addEventListener('DOMContentLoaded', function () {
             MyAPI1 = MyAPI;
         }, 3000);
         delay(function () {
-            mycallbackPrint(MyAPI1,)
+            myСallbackPrint(MyAPI1,)
         }, 5000);
-        delay(goPromise, 6500);
+        delay(goPromise, 6000);
     }
 
     // функция для последовательного вызова функций
@@ -92,7 +88,9 @@ document.addEventListener('DOMContentLoaded', function () {
             getApi(MyAPI2, limitNumber2, pageNumber2, "MyAPI2");
             MyAPI2 = MyAPI;
         }, 3000);
-        delay(function () {
+
+        // функция получения промиса (!?!)
+        delay(function getPromis() {
             let myPromis = new Promise((resolve, reject) => {
                 let XMLHttp = new XMLHttpRequest();
                 XMLHttp.onreadystatechange = function () {
@@ -109,10 +107,52 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.warn("Promise =>",JSON.parse(resolve));
 
 
+            }).catch((reject) =>{
+                console.error("Sorry, you or we have some problem");
+            })
+
+        }, 5000);
+        delay(goPromise2, 6000);
+    }
+
+    function goPromise2 (){
+        delay(function () {
+            RandomN(limitNumber3, "limitNumber3");
+            limitNumber3 = randomNumber;
+        }, 1000);
+        delay(function () {
+            RandomN(pageNumber3, "pageNumber3");
+            pageNumber3 = randomNumber;
+        }, 2000);
+        delay(function () {
+            getApi(MyAPI3, limitNumber3, pageNumber3, "MyAPI3");
+            MyAPI3 = MyAPI;
+        }, 3000);
+        // функция получения промиса (!?!)
+        delay(function getPromis2 () {
+            let myPromis = new Promise((resolve, reject) => {
+                let XMLHttp = new XMLHttpRequest();
+                XMLHttp.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        resolve(this.responseText);
+                    }
+                };
+                XMLHttp.open("GET", MyAPI3);
+                XMLHttp.send();
+
             });
 
-        }, 6000);
-        // delay(printPromise, 6000);
+            myPromis.then( (resolve) => {
+                console.warn("Promise =>",JSON.parse(resolve));
+
+
+            }).catch((reject) =>{
+                console.error("Sorry, you or we have some problem");
+            })
+
+        }, 5000);
+
+
     }
 
     start();
