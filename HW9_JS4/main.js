@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         API = str1 + limitN + str2 + pageN;
         document.getElementById(id).textContent = API;
         console.log("API", API);
-       MyAPI = API;
+        MyAPI = API;
     }
 
     // функция генерации рандомного числа //
@@ -35,23 +35,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     let myXMLHttp = new XMLHttpRequest();
-
+    let myXMLHttp2;
     let myPromis = new Promise((resolve, reject) => {
-            let XMLHttp = new XMLHttpRequest();
-            XMLHttp.onreadystatechange = function () {
-                if (this.readyState === 4 && this.status === 200) {
-                    resolve(this.responseText);
-                }
+                let XMLHttp = new XMLHttpRequest();
+                XMLHttp.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        resolve(this.responseText);
+                    }
+                };
+
+                myXMLHttp.open("GET", MyAPI2);
+                myXMLHttp.send();
+
             }
-        }
-    );
+        );
 
-    myPromis.then((response) => {
-        console.warn(JSON.parse(response));
 
-    }).catch((reject) => {
-        console.error("Sorry :( we have some problem")
-    });
+    function printPromise() {
+       console.warn(myXMLHttp2);
+
+    }
 
     // запрос на сервер и возврат результата через callback
     function GetCallback(callback) {
@@ -64,13 +67,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     //функция вывода информации в консоль и на html страницу
-    function myXMLHttpPrint(myXML, MyAPI, id) {
-        myXML.open("GET", MyAPI);
-        document.getElementById(id).textContent = myXML;
-        myXML.send();
-
-
-        //вызов функции Callback
+    function mycallbackPrint(MyAPI) {
+        myXMLHttp.open("GET", MyAPI);
+        myXMLHttp.send();
         GetCallback(function (callback) {
             console.warn("callback =>", callback);
         });
@@ -92,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
             MyAPI1 = MyAPI;
         }, 3000);
         delay(function () {
-            myXMLHttpPrint(myXMLHttp, MyAPI1, "callback_Request")
+            mycallbackPrint(MyAPI1,)
         }, 5000);
         delay(goPromise, 6500);
     }
@@ -103,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function () {
             RandomN(limitNumber2, "limitNumber2");
             limitNumber2 = randomNumber;
         }, 1000);
-
         delay(function () {
             RandomN(pageNumber2, "pageNumber2");
             pageNumber2 = randomNumber;
@@ -112,31 +110,15 @@ document.addEventListener('DOMContentLoaded', function () {
             getApi(MyAPI2, limitNumber2, pageNumber2, "MyAPI2");
             MyAPI2 = MyAPI;
         }, 3000);
-        delay(function () {}, 5000);
-            delay(function () {}, 6500);
-        }
-
-
-    //     function goAsync() {
-    //         delay(function () {
-    //             RandomN(limitNumber3, "limitNumber3");
-    //             limitNumber3 = randomNumber;
-    //         }, 1000);
-    //
-    //         delay(function () {
-    //             RandomN(pageNumber3, "pageNumber3");
-    //             pageNumber3 = randomNumber;
-    //         }, 2000);
-    //         delay(function () {
-    //             getApi(MyAPI3, limitNumber3, pageNumber3, "MyAPI3");
-    //             MyAPI3 = MyAPI;
-    //         }, 4000);
-    //         delay(function () {
-    //             myXMLHttpPrint("async_Request")
-    //         }, 6000);
-    // }
-
+        delay(function(){
+            myPromis.then((response) => {
+            console.warn(JSON.parse(response));
+        });
+        } , 6000);
+        delay(printPromise , 6000);
+    }
 
     start();
+
 
 });
