@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         API = str1 + limitN + str2 + pageN;
         document.getElementById(id).textContent = API;
         console.log("API", API);
-        MyAPI = API;
+       MyAPI = API;
     }
 
     // функция генерации рандомного числа //
@@ -68,14 +68,13 @@ document.addEventListener('DOMContentLoaded', function () {
         myXML.open("GET", MyAPI);
         document.getElementById(id).textContent = myXML;
         myXML.send();
-        console.warn(myXML);
+
+
+        //вызов функции Callback
+        GetCallback(function (callback) {
+            console.warn("callback =>", callback);
+        });
     }
-
-
-    //вызов функции Callback
-    GetCallback(function (callback) {
-        console.error("callback =>", callback);
-    });
 
     // функция для последовательного вызова функций
     function start() {
@@ -113,33 +112,31 @@ document.addEventListener('DOMContentLoaded', function () {
             getApi(MyAPI2, limitNumber2, pageNumber2, "MyAPI2");
             MyAPI2 = MyAPI;
         }, 3000);
-        delay(function () {goPromise()
-        }, 5000);
-        //     delay(goAsync, 6500);
-        // }
-        //
-        //
-        // function goAsync() {
-        //     delay(function () {
-        //         RandomN(limitNumber3, "limitNumber3");
-        //         limitNumber3 = randomNumber;
-        //     }, 1000);
-        //
-        //     delay(function () {
-        //         RandomN(pageNumber3, "pageNumber3");
-        //         pageNumber3 = randomNumber;
-        //     }, 2000);
-        //     delay(function () {
-        //         getApi(MyAPI3, limitNumber3, pageNumber3, "MyAPI3");
-        //         MyAPI3 = MyAPI;
-        //     }, 4000);
-        //     // delay(function () {
-        //     //     myXMLHttpPrint("async_Request")
-        //     // }, 6000);
-    }
+        delay(function () {}, 5000);
+            delay(function () {}, 6500);
+        }
 
 
+    //     function goAsync() {
+    //         delay(function () {
+    //             RandomN(limitNumber3, "limitNumber3");
+    //             limitNumber3 = randomNumber;
+    //         }, 1000);
     //
+    //         delay(function () {
+    //             RandomN(pageNumber3, "pageNumber3");
+    //             pageNumber3 = randomNumber;
+    //         }, 2000);
+    //         delay(function () {
+    //             getApi(MyAPI3, limitNumber3, pageNumber3, "MyAPI3");
+    //             MyAPI3 = MyAPI;
+    //         }, 4000);
+    //         delay(function () {
+    //             myXMLHttpPrint("async_Request")
+    //         }, 6000);
+    // }
+
+
     start();
 
 });
