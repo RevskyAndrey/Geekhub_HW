@@ -35,26 +35,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     let myXMLHttp = new XMLHttpRequest();
-    let myXMLHttp2;
-    let myPromis = new Promise((resolve, reject) => {
-                let XMLHttp = new XMLHttpRequest();
-                XMLHttp.onreadystatechange = function () {
-                    if (this.readyState === 4 && this.status === 200) {
-                        resolve(this.responseText);
-                    }
-                };
-
-                myXMLHttp.open("GET", MyAPI2);
-                myXMLHttp.send();
-
-            }
-        );
 
 
-    function printPromise() {
-       console.warn(myXMLHttp2);
-
-    }
 
     // запрос на сервер и возврат результата через callback
     function GetCallback(callback) {
@@ -67,8 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     //функция вывода информации в консоль и на html страницу
-    function mycallbackPrint(MyAPI) {
-        myXMLHttp.open("GET", MyAPI);
+    function mycallbackPrint(MyAPI1) {
+        myXMLHttp.open("GET", MyAPI1);
         myXMLHttp.send();
         GetCallback(function (callback) {
             console.warn("callback =>", callback);
@@ -110,12 +92,27 @@ document.addEventListener('DOMContentLoaded', function () {
             getApi(MyAPI2, limitNumber2, pageNumber2, "MyAPI2");
             MyAPI2 = MyAPI;
         }, 3000);
-        delay(function(){
-            myPromis.then((response) => {
-            console.warn(JSON.parse(response));
-        });
-        } , 6000);
-        delay(printPromise , 6000);
+        delay(function () {
+            let myPromis = new Promise((resolve, reject) => {
+                let XMLHttp = new XMLHttpRequest();
+                XMLHttp.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        resolve(this.responseText);
+                    }
+                };
+                XMLHttp.open("GET", MyAPI2);
+                XMLHttp.send();
+
+            });
+
+            myPromis.then( (resolve) => {
+                console.warn("Promise =>",JSON.parse(resolve));
+
+
+            });
+
+        }, 6000);
+        // delay(printPromise, 6000);
     }
 
     start();
