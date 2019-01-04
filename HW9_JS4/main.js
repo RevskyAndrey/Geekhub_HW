@@ -2,9 +2,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     let min = 1;
     let max = 10;
-    let pageNumber,pageNumber1,pageNumber2;
-    let limitNumber,limitNumber1,limitNumber2;
-    let MyAPI,MyAPI1,MyAPI2;
+    let randomNumber;
+    let pageNumber1,pageNumber2,pageNumber3;
+    let limitNumber1,limitNumber2,limitNumber3;
+    let MyAPI,MyAPI1,MyAPI2,MyAPI3;
 
     function delay(f,t) {
         setTimeout( f,t) ;
@@ -19,20 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
         MyAPI = API ;
     };
 
-    function getLimitNumber(limitN,id) {
-        limitN = min + Math.random() * (max + 1 - min);
-        limitN = Math.floor(limitN);
-        document.getElementById(id).textContent = limitN;
-        console.log(id, limitN);
-        limitNumber = limitN ;
-    };
-
-    function getPageNumber(pageN,id) {
-        pageN = min + Math.random() * (max + 1 - min);
-        pageN = Math.floor(pageN);
-        document.getElementById(id).textContent = pageN;
-        console.log(id, pageN);
-        pageNumber =  pageN;
+    function RandomN(rand,id) {
+        rand = min + Math.random() * (max + 1 - min);
+        rand = Math.floor(rand);
+        document.getElementById(id).textContent = rand;
+        console.log(id, rand);
+        randomNumber = rand ;
     };
 
     let myXMLHttp = new XMLHttpRequest();
@@ -54,27 +47,20 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(myXMLHttp);
     };
 
-    GetCallback( function (myXMLHttp_callback,callback) {
+    GetCallback( function (callback) {
         console.log (callback);
     });
 
 
-    //
-    //
-    // getApi(MyAPI2,limitNumber2,pageNumber2 );
-    // getLimitNumber(limitNumber2);
-    // getPageNumber(pageNumber2);
-
-
     function goCallback() {
         delay(function () {
-            getLimitNumber(limitNumber1,"limitNumber1");
-            limitNumber1 = limitNumber;
+            RandomN(limitNumber1,"limitNumber1");
+            limitNumber1 = randomNumber;
         }, 1000);
 
         delay(function () {
-            getPageNumber(pageNumber1,"pageNumber1");
-            pageNumber1 = pageNumber;
+            RandomN(pageNumber1,"pageNumber1");
+            pageNumber1 = randomNumber;
         }, 2000);
         delay(function () {
             getApi(MyAPI1,limitNumber1,pageNumber1,"MyAPI1");
@@ -89,13 +75,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function goPromise() {
         delay(function () {
-            getLimitNumber(limitNumber2,"limitNumber2");
-            limitNumber2 = limitNumber;
+            RandomN(limitNumber2,"limitNumber2");
+            limitNumber2 = randomNumber;
         }, 1000);
 
         delay(function () {
-            getPageNumber(pageNumber2,"pageNumber2");
-            pageNumber2 = pageNumber;
+            RandomN(pageNumber2,"pageNumber2");
+            pageNumber2 = randomNumber;
         }, 2000);
         delay(function () {
             getApi(MyAPI2,limitNumber2,pageNumber2,"MyAPI2");
@@ -103,6 +89,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }    ,4000);
         delay(function(){
             myXMLHttpPrint("promise_Request")
+        }, 6000);
+        delay( goAsync,6500);
+    };
+
+
+    function goAsync() {
+        delay(function () {
+            RandomN(limitNumber3, "limitNumber3");
+            limitNumber3 = randomNumber;
+        }, 1000);
+
+        delay(function () {
+            RandomN(pageNumber3, "pageNumber3");
+            pageNumber3 = randomNumber;
+        }, 2000);
+        delay(function () {
+            getApi(MyAPI3, limitNumber3, pageNumber3, "MyAPI3");
+            MyAPI3 = MyAPI;
+        }, 4000);
+        delay(function () {
+            myXMLHttpPrint("async_Request")
         }, 6000);
     };
 
