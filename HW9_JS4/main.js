@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let max = 10;
     let pageNumber1, pageNumber2, pageNumber3;
     let limitNumber1, limitNumber2, limitNumber3;
-    let MyAPI1, MyAPI2, MyAPI3;
     let myXMLHttp = new XMLHttpRequest();
     // функция генерации рандомного числа //
     function RandomN(rand, id) {
@@ -68,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error("Sorry, you or we have some problem");
             })
         }, 3000);
-        // функция получения промиса (!?!)
+        // функция получения промиса //
         setTimeout(
             async function setAsync() {
                 try {
