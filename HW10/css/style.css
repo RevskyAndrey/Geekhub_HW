@@ -2,23 +2,77 @@ body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+}
+.main{
+  margin-top: 20px;
+  position: relative;
+
 }
 
 .task {
   width: 800px;
   height: 275px;
-  margin: 0 auto;
+  margin: 35px auto 0;
   border: 2px solid #6c757d;
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 4px 2px 4px 2px #ccc;
 }
+
+/*.hide {*/
+  /*display: none;*/
+/*}*/
+
+/*.popup {*/
+  /*position: absolute;*/
+  /*left: 10%;*/
+  /*right: 10%;*/
+  /*width: 80%;*/
+  /*height: 500px;*/
+  /*border: 2px solid #5a6268;*/
+/*box-shadow: 4px 2px 4px 2px #ccc;*/
+/*}*/
+
+/*.popup_header {*/
+  /*height: 35px;*/
+  /*width: 100%;*/
+  /*background: #ccc;*/
+  /*display: flex;*/
+  /*justify-content: space-between;*/
+  /*align-items: center;*/
+  /*color: #fff;*/
+/*}*/
+
+/*.popup_name {*/
+  /*width: 765px;*/
+  /*padding-left: 25px;*/
+  /*text-transform: uppercase;*/
+/*}*/
+
+/*.close {*/
+  /*line-height: 35px;*/
+  /*text-align: center;*/
+  /*top: 10px;*/
+  /*color: #ff0000;*/
+  /*width: 35px;*/
+  /*height: 32px;*/
+  /*border: 2px solid #ff0000;*/
+  /*cursor: pointer;*/
+/*}*/
+/*.close:hover {*/
+  /*transition: 0.5s;*/
+  /*color: #fff;*/
+  /*background: #ff0000;*/
+/*}*/
+
 
 h1 {
   text-align: center;
   font-size: 25px;
 }
 
-.error{
+.error {
   width: 800px;
   height: 25px;
   margin: 0 auto;
@@ -26,34 +80,37 @@ h1 {
   color: #dd0000;
 }
 
+/*.form {*/
+  /*height: 52px;*/
+  /*width: 600px;*/
+  /*padding: 0 100px;*/
+  /*margin: 30px auto;*/
+  /*display: flex;*/
+  /*justify-content: space-around;*/
+  /*align-items: center;*/
+  /*background: #ccc;*/
 
-.form {
-  height: 52px;
-  width: 800px;
-  margin: 30px auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: #ccc;
+/*}*/
 
-}
-.form_list{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/*.txt {*/
+  /*width: 150px;*/
+  /*height: 30px;*/
+  /*border: none;*/
+  /*border-radius: 10px;*/
+  /*padding-left: 15px;*/
+/*}*/
 
-.txt {
-  width: 150px;
-  height: 30px;
-  border: none;
-  border-radius:  5px 0 0 5px ;
-}
-.btn {
-  width: 50px;
-  height: 33px;
-  border: 2px solid #5a6268;
-  border-radius: 0 5px 5px 0;
-}
+/*.btn {*/
+  /*width: 100px;*/
+  /*height: 33px;*/
+  /*border: 2px solid #5a6268;*/
+  /*border-radius: 8px;*/
+  /*text-transform: uppercase;*/
+/*}*/
 
+/*.btn:hover {*/
+  /*transition: 0.5s;*/
+  /*color: #fff;*/
+  /*background: #5a6268;*/
+/*}*/
 
