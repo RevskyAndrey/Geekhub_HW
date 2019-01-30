@@ -1,55 +1,15 @@
 'use strict';
-
-import {showError} from './module.mjs';
-
+// import {showError} from './module.mjs';
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // let myX, myY,
-    //     yourX = document.querySelector('.js_x'),
-    //     yourY = document.querySelector('.js_y'),
-    //     btn = document.querySelector('.js_bnt'),
-    //     btn_close = document.querySelector('.close');
-    //
-    // btn_close.addEventListener("click", function () {
-    //     document.querySelector(".popup").classList.add("hide");
-    //     document.querySelector(".task").classList.remove("hide");
-    // });
-    //
-    // btn.addEventListener("click", function () {
-    //     let tempX = yourX.value;
-    //     let tempY = yourY.value;
-    //     let str_error = "Вы не ввели значение";
-    //     let error = false;
-    //     if (tempX === "") {
-    //         showError(".error", str_error, "X");
-    //         error = true;
-    //     } else if (tempY === "") {
-    //         showError(".error", str_error, "Y");
-    //         error = true;
-    //     }
-    //     myX = tempX;
-    //     myY = tempY;
-    //     console.log("myX", myX);
-    //     console.log("myY", myY);
-    //     yourX.value = "";
-    //     yourY.value = "";
-    //     if (error == false) {
-    //         start();
-    //     }
-    // });
-    //
-    // function showPopup() {
-    //     document.querySelector(".popup").classList.remove("hide");
-    //     document.querySelector(".task").classList.add("hide");
-    // }
+
     class Point {
         constructor(x, y) {
             this._x = x;
             this._y = y;
         }
 
-        //  получение данных
         get x() {
             return this._x;
         }
@@ -64,64 +24,101 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         //  получить растояние
-        getDistance(point) {
-            return Math.sqrt(Math.pow(this.x - point.x, 2) + Math.pow(this.y - point.y,2));
+        getDistance(point_1,point_2) {
+            return Math.sqrt(Math.pow(point_1.x - point_2.x, 2) + Math.pow(point_1.y - point_2.y, 2));
         }
+        getradius(point){
+            return Math.sqrt(Math.pow(this.y - point.x, 2) + Math.pow(this.x - point.y, 2));
+        }
+
     }
 
-    //     фігура:  ( координати:   х, у  )
     class Shape {
         constructor(center) {
             this._x = center.x;
             this._y = center.y;
         }
+
+        get x() {
+            return this._x;
+        }
+
+        get y() {
+            return this._y;
+        }
+
     }
 
-    // class Polygon {
-    //     constructor(center, points) { }
-    // }
-    //
-    // class Rectangle {
-    //     constructor(center, width, height) { }
-    // }
-    //
-    // class Square extends Rectangle {
-    //     constructor(center, width) {
-    //         super(center, width, width);
-    //     }
-    // }
+    class Circle extends Shape {
+        constructor(center, _radius) {
+            super(center);
+            this.radius = _radius;
+        }
 
-    class Circle {
-        constructor(center, radius) {
-            this._x = center.x;
-            this._y = center.y;
-            this._r = radius;
+        get area() {
+            return 3.14 * (this.radius * this.radius);
+        }
+
+        get perimeter() {
+            return (2 * (3.14 * this.radius))
         }
 
     }
 
 
+    class Polygon extends Shape {
+        constructor(center, [point1 ,point2,point3]) {
+            super(center);
+            this.x1 = point1.x;
+            this.y1 = point1.y;
+            this.x2 = point2.x;
+            this.y2 = point2.y;
+            this.x3 = point3.x;
+            this.y3 = point3.y;
+            this.side1 = point.getDistance(center,point1);
+            this.side2 = point.getDistance(point1,point2);
+            this.side3 = point.getDistance(point2,point3);
+            this.side4 = point.getDistance(point3,center);
+        }
+        get perimeter() {
+            return (this.side1+this.side2+this.side3+this.side4)
+        }
+
+
+    }
+
+    class Rectangle extends Polygon{
+        constructor(center, width, height) {
+            super(center);
+    }
+
+
     let Shapes = {
         Shape: Shape,
-        // Polygon: Polygon,
-        // Rectangle: Rectangle,
-        // Square: Square,
+        Polygon: Polygon,
+        Rectangle: Rectangle,
+        // Square: Square,  //квадрад
         Circle: Circle,
         Point: Point
     };
-    console.warn(Shapes);
+
 
     let point = new Point(4, 10);
     let share = new Shape(point);
-    let center = point.getDistance(point);
-    let circle = new Circle(point,center );
+    let circle = new Circle(share, point.getradius(point));
 
-    console.log(point.getDistance(point));
+    let point1 =point.getPointAtOffset((point.x+2), (point.y)+2);
+    let point2 =point.getPointAtOffset((point1.x+4), (point1.y+4));
+    let point3 =point.getPointAtOffset(point2.x, point2.y);
+
+    let polygon = new Polygon(share, [point1,point2,point3]);
+    let rectangle = new Rectangle ()
+
 
     let shapes = {
         Shape: share,
-        // Polygon: Polygon,
-        // Rectangle: Rectangle,
+        Polygon: polygon,
+        Rectangle: rectangle,
         // Square: Square,
         Circle: circle,
         Point: point
@@ -129,4 +126,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     console.warn(shapes);
 
-});
+})
+;
