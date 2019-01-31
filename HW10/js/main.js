@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // for poligon //
         let point1 = point.getPointAtOffset(point.x + 2, point.y + 2);
-        let point2 = point.getPointAtOffset((point1.x + 4), (point1.y + 4));
-        let point3 = point.getPointAtOffset(point2.x, point2.y);
+        let point2 = point.getPointAtOffset(4, 4);
+        let point3 = clone point;
         let points = {point1, point2, point3};
         let polygon = new Polygon(share, points);
 
