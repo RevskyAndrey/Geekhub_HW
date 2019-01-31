@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     btn.addEventListener("click", function () {
-        let myX = yourX.value;
-        let myY = yourY.value;
-        let myPoints = yourPoints.value;
+        let myX = +yourX.value;
+        let myY = +yourY.value;
+        let myPoints = +yourPoints.value;
         let tempX = yourX.value;
         let error = testError(myX, myY, myPoints);
         yourX.value = "";
@@ -31,26 +31,25 @@ document.addEventListener('DOMContentLoaded', function () {
             let share = new Shape(point);
             let circle = new Circle(share, point.getradius(point));
             let points = [];
-
-            for (let i = 0; i < myPoints; i++) {
-                let rand = (Math.random() * 100 + 2).toFixed();
+            points[0] = point;
+            for (let i = 1; i < myPoints; i++) {
+                let rand = +(Math.random() * 100 + 2).toFixed();
                 points[i] = new Point(+rand + 3, +rand - 5);
             }
 
-
             let polygon = new Polygon(share, points);
-            console.warn(points);
-            // // for rectangle and square
-            // let _width = point.getDistance(points[1]);
-            // let _height = point.getDistance(points[2]);
-            // let rectangle = new Rectangle(point, _width, _height);
-            // let square = new Square(share, _width, _width);
+            console.log(points);
+            // for rectangle and square
+            let _width = +point.getDistance(points[1]).toFixed(3);
+            let _height = +point.getDistance(points[2]).toFixed(3);
+            let rectangle = new Rectangle(point, _width, _height);
+            let square = new Square(share, _width, _width);
 
             let shapes = {
                 Shape: share,
                 Polygon: polygon,
-                // Rectangle: rectangle,
-                // Square: square,
+                Rectangle: rectangle,
+                Square: square,
                 Circle: circle,
                 Point: point
             };
@@ -62,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function printLog(item) {
         console.warn(item);
     }
+
 
     function showPopup() {
         document.querySelector(".popup").classList.remove("hide");

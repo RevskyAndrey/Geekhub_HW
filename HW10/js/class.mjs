@@ -17,11 +17,11 @@ export class Point {
     }
 
     getDistance(point) {
-        return Math.sqrt(Math.pow(this.x - point.x, 2) + Math.pow(this.y - point.y, 2));
+        return +(Math.sqrt(Math.pow(this.x - point.x, 2) + Math.pow(this.y - point.y, 2))).toFixed(3);
     }
 
     getradius(point) {
-        return Math.sqrt(Math.pow(this.y - point.x + 1, 2) + Math.pow(this.x - point.y + 2, 2));
+        return +(Math.sqrt(Math.pow(this.y - point.x + 1, 2) + Math.pow(this.x - point.y + 2, 2))).toFixed(3);
     }
 
 }
@@ -48,38 +48,39 @@ export class Circle extends Shape {
     }
 
     get area() {
-        return 3.14 * (this.radius * this.radius).toFixed(3);
+        return +(3.14 * (this.radius * this.radius)).toFixed(3);
     }
 
     get perimeter() {
-        return (2 * (3.14 * this.radius)).toFixed(3)
+        return +(2 * (3.14 * this.radius)).toFixed(3);
     }
-
 }
 
 export class Polygon extends Shape {
     constructor(center, points) {
         super(center);
+        this._points = points;
     }
 
     get perimeter() {
-        this.points = [point1, point2, point3];
-        let
-            x1 = point1.x,
-            y1 = point1.y,
-            x2 = point2.x,
-            y2 = point2.y,
-            x3 = point3.x,
-            y3 = point3.y,
-            side1 = point.getDistance(this.x, this.y, x1, y1),
-            side2 = point.getDistance(x1, y1, x2, y2),
-            side3 = point.getDistance(x2, y2, x3, y3),
-            side4 = point.getDistance(x3, y3, this.x, this.y);
-        return (side1 + side2 + side3 + side4)
+        let arrSide = [];
+        let j = this._points.length;
+        this._perimeter = 0;
+        for (let i = 0; i < j; i++) {
+            if (i === j - 1) {
+                arrSide[i] = +(points(i).getDistance(points[0]));
+            }
+// что то тут не так  ... (Math.sqrt(Math.pow(this.x - point.x, 2) + Math.pow(this.y - point.y, 2))).toFixed(3) ..
+            // переписать функцию под себя снова ?)
+            arrSide[i] = +(points(i).getDistance(points[i + 1]));
+            this._perimeter = this._perimeter + arrSide[i];
+        }
+        return this._perimeter;
     }
 }
 
-export class Rectangle extends Polygon {
+export class Rectangle
+    extends Polygon {
     constructor(center, width, height) {
         super(center);
         this._width = width;
@@ -87,11 +88,11 @@ export class Rectangle extends Polygon {
     }
 
     get perimeter() {
-        return (2 * (this._width + this._height));
+        return +(2 * (this._width + this._height)).toFixed(3);
     }
 
     get area() {
-        return (this._width * this._height);
+        return +(this._width * this._height).toFixed(3);
     }
 }
 
