@@ -11,27 +11,32 @@ document.addEventListener('DOMContentLoaded', function () {
         btn = document.querySelector('.js_bnt'),
         btn_close = document.querySelector('.close');
 
+    btn_close.addEventListener("click", function () {
+        document.querySelector(".popup").classList.add("hide");
+        document.querySelector(".task").classList.remove("hide");
+    });
+
     btn.addEventListener("click", function () {
         let myX = yourX.value;
         let myY = yourY.value;
         let myPoints = yourPoints.value;
         let tempX = yourX.value;
-        let error =  testError(myX, myY, myPoints);
+        let error = testError(myX, myY, myPoints);
         yourX.value = "";
         yourY.value = "";
+        yourPoints.value = "";
         if (error == false) {
-
 
             let point = new Point(myX, myY);
             let share = new Shape(point);
             let circle = new Circle(share, point.getradius(point));
+            let points = [];
 
-            // for poligon //
-            let point1 = point.getPointAtOffset(point.x + 2, point.y + 2);
-            let point2 = point.getPointAtOffset((point1.x + 4), (point1.y + 4));
-            let point3 = point.getPointAtOffset(point2.x, point2.y);
+            for (let i = 0; i < myPoints; i++) {
+                let rand = (Math.random() * 100 + 2).toFixed();
+                points[i] = new Point(+rand + 3, +rand - 5);
+            }
 
-            let points = [point1, point2, point3];
 
             let polygon = new Polygon(share, points);
             console.warn(points);
@@ -50,11 +55,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 Point: point
             };
             printLog(shapes);
+            showPopup();
         }
     });
 
     function printLog(item) {
         console.warn(item);
     }
+
+    function showPopup() {
+        document.querySelector(".popup").classList.remove("hide");
+        document.querySelector(".task").classList.add("hide");
+    }
+
 });
 
