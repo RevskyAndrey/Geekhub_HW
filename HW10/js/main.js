@@ -1,11 +1,30 @@
 'use strict';
-import {Point,Shape,Circle,Polygon,Rectangle,Square} from "./module.mjs";
+import {Point, Shape, Circle, Polygon, Rectangle, Square} from "./class.mjs";
+import {testError, showError} from "./module.mjs";
 
 document.addEventListener('DOMContentLoaded', function () {
 
-        let point = new Point(5, 10);
-        let share = new Shape(point);
-        let circle = new Circle(share, point.getradius(point));
+    let
+        yourX = document.querySelector('.js_x'),
+        yourY = document.querySelector('.js_y'),
+        yourPoints = document.querySelector('.js_points'),
+        btn = document.querySelector('.js_bnt'),
+        btn_close = document.querySelector('.close');
+
+    btn.addEventListener("click", function () {
+        let myX = yourX.value;
+        let myY = yourY.value;
+        let myPoints = yourPoints.value;
+        let tempX = yourX.value;
+        let error =  testError(myX, myY, myPoints);
+        yourX.value = "";
+        yourY.value = "";
+        if (error == false) {
+
+
+            let point = new Point(myX, myY);
+            let share = new Shape(point);
+            let circle = new Circle(share, point.getradius(point));
 
             // for poligon //
             let point1 = point.getPointAtOffset(point.x + 2, point.y + 2);
@@ -22,15 +41,20 @@ document.addEventListener('DOMContentLoaded', function () {
             // let rectangle = new Rectangle(point, _width, _height);
             // let square = new Square(share, _width, _width);
 
-        let shapes = {
-            Shape: share,
-            Polygon: polygon,
-            Rectangle: rectangle,
-            Square: square,
-            Circle: circle,
-            Point: point
-        };
-        console.warn(shapes);
+            let shapes = {
+                Shape: share,
+                Polygon: polygon,
+                // Rectangle: rectangle,
+                // Square: square,
+                Circle: circle,
+                Point: point
+            };
+            printLog(shapes);
+        }
+    });
 
+    function printLog(item) {
+        console.warn(item);
+    }
 });
 
