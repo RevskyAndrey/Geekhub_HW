@@ -1,5 +1,5 @@
 .idea/
-
+*/node_modules/
 *.psd
 *.jpg
 node_modules/
