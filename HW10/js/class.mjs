@@ -27,24 +27,23 @@ export class Point {
 }
 
 export class Shape {
+    /**
+     * @param {center} center
+     */
     constructor(center) {
-        this._x = center.x;
+        this._center = center;
         this._y = center.y;
-    }
-
-    get x() {
-        return this._x;
-    }
-
-    get y() {
-        return this._y;
     }
 }
 
 export class Circle extends Shape {
-    constructor(center, _radius) {
+    /**
+     * @param {center} center
+     * @param (radius) radius
+     */
+    constructor(center, radius) {
         super(center);
-        this.radius = _radius;
+        this.radius = radius;
     }
 
     get area() {
@@ -57,6 +56,10 @@ export class Circle extends Shape {
 }
 
 export class Polygon extends Shape {
+    /**
+     * @param {center} center
+     * @param (points[]} points
+     */
     constructor(center, points) {
         super(center);
         this._points = points;
@@ -64,23 +67,28 @@ export class Polygon extends Shape {
 
     get perimeter() {
         let arrSide = [];
-        let j = this._points.length;
+        let arr = this._points;
+        const sideCount = arr.length;
         this._perimeter = 0;
-        for (let i = 0; i < j; i++) {
-            if (i === j - 1) {
-                arrSide[i] = +(points(i).getDistance(points[0]));
+        for (let i = 0; i < sideCount - 1; i++) {
+            if (i === sideCount - 1) {
+                arrSide[i] = +(arr[i].getDistance(arr[0])).toFixed(3);
             }
-// что то тут не так  ... (Math.sqrt(Math.pow(this.x - point.x, 2) + Math.pow(this.y - point.y, 2))).toFixed(3) ..
-            // переписать функцию под себя снова ?)
-            arrSide[i] = +(points(i).getDistance(points[i + 1]));
+            arrSide[i] = +(arr[i].getDistance(arr[i + 1])).toFixed(3);
             this._perimeter = this._perimeter + arrSide[i];
         }
         return this._perimeter;
     }
+
 }
 
-export class Rectangle
-    extends Polygon {
+export class Rectangle extends Polygon {
+    /**
+     *
+     * @param {center} center
+     * @param (width) width
+     * @param (height) height
+     */
     constructor(center, width, height) {
         super(center);
         this._width = width;
@@ -97,6 +105,11 @@ export class Rectangle
 }
 
 export class Square extends Rectangle {
+    /**
+     *
+     * @param {center} center
+     * @param (width) width
+     */
     constructor(center, width) {
         super(center, width, width);
     }

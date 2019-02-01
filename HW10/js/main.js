@@ -30,15 +30,15 @@ document.addEventListener('DOMContentLoaded', function () {
             let point = new Point(myX, myY);
             let share = new Shape(point);
             let circle = new Circle(share, point.getradius(point));
-            let points = [];
-            points[0] = point;
-            for (let i = 1; i < myPoints; i++) {
-                let rand = +(Math.random() * 100 + 2).toFixed();
-                points[i] = new Point(+rand + 3, +rand - 5);
-            }
 
+            // for poligon
+            let points = [];
+            for (let i = 0; i < myPoints; i++) {
+                let rand = +(Math.random() * 100 + 2).toFixed(3);
+                points[i] = new Point(+rand + 3, +rand - 1);
+            }
             let polygon = new Polygon(share, points);
-            console.log(points);
+
             // for rectangle and square
             let _width = +point.getDistance(points[1]).toFixed(3);
             let _height = +point.getDistance(points[2]).toFixed(3);
