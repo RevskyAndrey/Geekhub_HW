@@ -1,60 +1,62 @@
-'use strict';
-import {Point, Shape, Circle, Polygon, Rectangle, Square} from "./class.mjs";
-import {testError, showError} from "./module.mjs";
 
-document.addEventListener('DOMContentLoaded', function () {
+import {
+    Point, Shape, Circle, Polygon, Rectangle, Square,
+} from './class.mjs';
+import { testError, showError } from './module.mjs';
 
-    let
-        yourX = document.querySelector('.js_x'),
-        yourY = document.querySelector('.js_y'),
-        yourPoints = document.querySelector('.js_points'),
-        btn = document.querySelector('.js_bnt'),
-        btn_close = document.querySelector('.close');
+document.addEventListener('DOMContentLoaded', () => {
+    const yourX = document.querySelector('.js_x');
 
-    btn_close.addEventListener("click", function () {
-        document.querySelector(".popup").classList.add("hide");
-        document.querySelector(".task").classList.remove("hide");
+    const yourY = document.querySelector('.js_y');
+
+    const yourPoints = document.querySelector('.js_points');
+
+    const btn = document.querySelector('.js_bnt');
+
+    const btnClose = document.querySelector('.close');
+
+    btnClose.addEventListener('click', () => {
+        document.querySelector('.popup').classList.add('hide');
+        document.querySelector('.task').classList.remove('hide');
     });
 
-    btn.addEventListener("click", function () {
-        let myX = +yourX.value;
-        let myY = +yourY.value;
-        let myPoints = +yourPoints.value;
-        let tempX = yourX.value;
-        let error = testError(myX, myY, myPoints);
-        yourX.value = "";
-        yourY.value = "";
-        yourPoints.value = "";
-        if (error == false) {
-
-            let point = new Point(myX, myY);
-            let share = new Shape(point);
-            let circle = new Circle(share, point.getradius(point));
+    btn.addEventListener('click', () => {
+        const myX = +yourX.value;
+        const myY = +yourY.value;
+        const myPoints = +yourPoints.value;
+        const error = testError(myX, myY, myPoints);
+        yourX.value = '';
+        yourY.value = '';
+        yourPoints.value = '';
+        if (error === false) {
+            const point = new Point(myX, myY);
+            const share = new Shape(point);
+            const circle = new Circle(share, point.getradius(point));
 
             // for poligon
-            let points = [];
+            const points = [];
             for (let i = 0; i < myPoints; i++) {
-                let rand = +(Math.random() * 100 + 2).toFixed(3);
+                const rand = +(Math.random() * 100 + 2).toFixed(3);
                 points[i] = new Point(+rand + 3, +rand - 1);
             }
-            let polygon = new Polygon(share, points);
+            const polygon = new Polygon(share, points);
 
             // for rectangle and square
-            let _width = +point.getDistance(points[1]).toFixed(3);
-            let _height = +point.getDistance(points[2]).toFixed(3);
-            let rectangle = new Rectangle(point, _width, _height);
-            let square = new Square(share, _width, _width);
+            const width = +point.getDistance(points[1]).toFixed(3);
+            const height = +point.getDistance(points[2]).toFixed(3);
+            const rectangle = new Rectangle(point, width, height);
+            const square = new Square(share, width, width);
 
-            let shapes = {
+            const shapes = {
                 Shape: share,
                 Polygon: polygon,
                 Rectangle: rectangle,
                 Square: square,
                 Circle: circle,
-                Point: point
+                Point: point,
             };
-            printLog(shapes);
             showPopup();
+            printLog(shapes);
         }
     });
 
@@ -64,9 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     function showPopup() {
-        document.querySelector(".popup").classList.remove("hide");
-        document.querySelector(".task").classList.add("hide");
+        document.querySelector('.popup').classList.remove('hide');
+        document.querySelector('.task').classList.add('hide');
     }
-
 });
-
