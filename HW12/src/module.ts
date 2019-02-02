@@ -1,3 +1,4 @@
+// не захотел компилиться   ек переносил в основной файл //
 export function testError(x:number, y:number, i:number) {
     let boolean:boolean = false;
     const str_empty:string = 'Вы не заполнили все ячейки';

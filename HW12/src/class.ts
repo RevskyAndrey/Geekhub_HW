@@ -1,3 +1,4 @@
+// не захотил компилиться, перенес в основной файл //
 export class Point {
     constructor( private x: number, private y: number) {}
 
@@ -5,7 +6,7 @@ export class Point {
         return new Point(this.x + x1, this.y + y1);
     }
 
-    getDistance(point): number {
+    getDistance(point:Point): number {
         return +(Math.sqrt(Math.pow(this.x - point.x, 2) + Math.pow(this.y - point.y, 2))).toFixed(3);
     }
 
@@ -55,8 +56,7 @@ export class Polygon extends Shape {
 
 export class Rectangle extends Polygon {
     constructor(center: Point, private width: number, private height: number) {
-        super(center);
-
+        super(center,null);
     }
 
     get perimeter(): number {
