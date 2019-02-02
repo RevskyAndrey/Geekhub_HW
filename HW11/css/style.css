@@ -3,12 +3,12 @@
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .box {
-  width: 65%;
-  margin: 0 auto
+  width: 98%;
+  margin: 1% ;
 }
 
 .box-header {
@@ -16,27 +16,34 @@ h1 {
   color: white;
   text-align: center;
   border-radius: 10px  10px 0  0;
-  height: 110px;
+  height: 70px;
 }
 
-.flex {
-  display: flex;
-  justify-content: space-around;
-}
 
 .error {
-  margin-top:8px;
+  margin-top: -15px;
   color: #ff142b;
 }
 
 
 .box-body{
-  height: 50px;
+  height: 80px;
+  background-color: #ccc;
+}
+
+.flex {
+  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #ccc;
-  padding-bottom: 10px;
+
+}
+
+.txt{
+  width: 40%;
+  text-align: center;
+  color: #fff;
 }
 
 .input_task{
@@ -50,8 +57,9 @@ h1 {
 .addBtn {
   padding: 10px;
   width: 15%;
-  height: 38px;
+  height: 35px;
   border: 3px solid #f44336;
+  border-radius: 0 10px  10px 0;
   text-align: center;
   font-size: 16px;
   cursor: pointer;
@@ -67,7 +75,6 @@ h1 {
   width: 75%;
   height: 35px;
   border: 2px solid transparent;
-  border-radius: 10px 0 0 10px   ;
   padding-left: 30px;
 
 }
@@ -176,27 +183,7 @@ ul li.checked .edit {
 }
 
 .box-footer {
-  height: 70px;
+  height: 10px;
   background-color: #ccc;
   border-radius: 0 0 10px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loadBtn {
-  padding: 10px;
-  width: 15%;
-  height: 38px;
-  border: 3px solid #d6aa43;
-  border-radius:8px;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.loadBtn:hover {
-  transition: 0.5s;
-  color: #fff;
-  background: #d6aa43;
 }
