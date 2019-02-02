@@ -74,7 +74,7 @@ export class Polygon extends Shape {
 
     /**
      *
-     * @returns {number|*}
+     * @returns {number}
      */
     get perimeter() {
         const arrSide = [];
