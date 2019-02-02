@@ -31,24 +31,32 @@ export class Shape {
      */
     constructor(center) {
         this._center = center;
-        this._y = center.y;
     }
 }
 
 export class Circle extends Shape {
     /**
      * @param {Point} center
-     * @param (radius) radius
+     * @param {number} radius
      */
     constructor(center, radius) {
         super(center);
         this._radius = radius;
     }
 
+    /**
+     *
+     * @returns {number}
+     */
+
     get area() {
         return +(3.14 * (this.radius * this.radius)).toFixed(3);
     }
 
+    /**
+     *
+     * @returns {number}
+     */
     get perimeter() {
         return +(2 * (3.14 * this.radius)).toFixed(3);
     }
@@ -57,13 +65,17 @@ export class Circle extends Shape {
 export class Polygon extends Shape {
     /**
      * @param {Point} center
-     * @param (points[]} points
+     * @param {points[]} points
      */
     constructor(center, points) {
         super(center);
         this._points = points;
     }
 
+    /**
+     *
+     * @returns {number|*}
+     */
     get perimeter() {
         const arrSide = [];
         const arr = this._points;
@@ -93,10 +105,19 @@ export class Rectangle extends Polygon {
         this._height = height;
     }
 
+    /**
+     *
+     * @returns {number}
+     */
+
     get perimeter() {
         return +(2 * (this._width + this._height)).toFixed(3);
     }
 
+    /**
+     *
+     * @returns {number}
+     */
     get area() {
         return +(this._width * this._height).toFixed(3);
     }
@@ -106,7 +127,7 @@ export class Square extends Rectangle {
     /**
      *
      * @param {Point} center
-     * @param (width) width
+     * @param {number} width
      */
     constructor(center, width) {
         super(center, width, width);
