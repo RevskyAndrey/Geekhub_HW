@@ -1,7 +1,7 @@
-export function showError(classItem, strError) {
-    document.querySelector(classItem).innerHTML = strError;
+export function showError( strError) {
+    document.querySelector('.error').createTextNode = strError;
     setTimeout(() => {
-        document.querySelector(classItem).innerHTML = '';
+        document.querySelector('.error').createTextNode = '';
     }, 1600);
 }
 
