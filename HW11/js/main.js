@@ -1,7 +1,4 @@
-import {showError} from './module.js';
-
 document.addEventListener('DOMContentLoaded', () => {
-    const errorClass = '.error';
     //
     // const allTask = document.querySelector('.all_task');
     //
@@ -13,26 +10,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const list = document.getElementById('list');
 
-    addBtn.addEventListener('click', () => {
-        newElement();
-    });
+    // let thisEvent;
 
-    class TaskItem {
-
-
-        constructor(title, status = false) {
-            this._title = title;
-            this._status = status;
-        }
-
+    class TaskFunction {
         createItem() {
             const li = document.createElement('li');
+            const input = document.createElement('input');
             const divEdit = document.createElement('DIV');
             const span = document.createElement('SPAN');
             const txt = document.createTextNode('X');
             const edit = document.createTextNode('EDIT');
-            li.appendChild(document.createTextNode(this._title));
+            const i = document.createElement('i');
+            const iText = document.createTextNode('SELECT');
             list.appendChild(li);
+            li.appendChild(input);
+            input.value = this._title;
+            li.appendChild(i);
+            i.appendChild(iText);
+            input.className = 'editInput';
             divEdit.className = 'edit';
             divEdit.appendChild(edit);
             li.appendChild(divEdit);
@@ -45,14 +40,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function newElement() {
-        const inputValue = inputTask.value;
-        if (inputValue == '') {
-            const errorStr = 'Вы не ввели задачу, повторите попытку';
-            showError(errorStr);
-        } else {
-            new TaskItem(inputValue).createItem();
-            inputTask.value = '';
+    class TaskItem extends TaskFunction {
+        constructor(title, status = false) {
+            super();
+            this._title = title;
+            this._status = status;
+        }
+    }
+
+
+    class Task extends TaskItem {
+        createItem() {
+            super.createItem();
         }
     }
 
@@ -63,41 +62,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 // toLocal();
                 break;
             case ('SPAN'):
-                const div = ev.target.parentNode;
-                div.remove();
+                ev.target.parentNode.remove();
                 // toLocal();
                 break;
-            // case ("DIV"):
-            //     let temp = ev.target.parentNode.innerText;
-            //     let str = ev.path[1].firstChild.data;
-            //     this_event = ev;
-            //     editTask(str);
-            //     break
+            case ("DIV"):
+                let value = ev.target.previousSibling.previousSibling.value;
+                // thisEvent = ev;
+                // editTask(str);
+                console.error(value, ev);
+                // console.warn(temp);
+                break;
+            default:
+                break;
         }
     });
 
-    // function editTask(item) {
-    //     let btn_add = document.getElementById("btn_add"),
-    //         btn_edit = document.getElementById("btn_edit");
-    //     document.getElementById("input_task").value = item;
-    //     btn_edit.classList.toggle('hide');
-    //     btn_add.classList.toggle('hide');
-    // }
+    function editTask(value,ev) {
+        console.log(value);
+        console.log(ev);
+    }
 
 
-    //
-    // btn_edit.addEventListener("click", function () {
-    //     if (input_task.value != "") {
-    //         let ev = this_event;
-    //         ev.target.classList.remove("edit_this");
-    //         ev.path[1].firstChild.data = input_task.value;
-    //         toLocal();
-    //         input_task.value = "";
-    //     } else {
-    //         ShowError("Вы не выбрали задачу, повторите попытку");
-    //     }
-    // });
-    //
+    function showError(strError) {
+        document.querySelector('.error').innerHTML = strError;
+        setTimeout(() => {
+            document.querySelector('.error').innerHTML = '';
+        }, 1250);
+    }
+
+    addBtn.addEventListener('click', () => {
+        const inputValue = inputTask.value;
+        if (inputValue === '') {
+            const errorStr = 'Вы не ввели задачу, повторите попытку';
+            showError(errorStr);
+        } else {
+            new Task(inputValue).createItem();
+            inputTask.value = '';
+        }
+    });
+
     // const forLocal = localStorage.getItem('todolist');
     // if (forLocal) {
     //     document.querySelector('ul').innerHTML = (forLocal);
@@ -131,5 +134,4 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }
     //     f_print(all, done);
     // }
-
 });

@@ -7,26 +7,24 @@ h1 {
 }
 
 .box {
-  width: 98%;
-  margin: 1% ;
+  width: 97%;
+  margin: 1%;
 }
 
 .box-header {
   background-color: #ccc;
   color: white;
   text-align: center;
-  border-radius: 10px  10px 0  0;
+  border-radius: 10px 10px 0 0;
   height: 70px;
 }
-
 
 .error {
   margin-top: -15px;
   color: #ff142b;
 }
 
-
-.box-body{
+.box-body {
   height: 80px;
   background-color: #ccc;
 }
@@ -37,31 +35,31 @@ h1 {
   justify-content: center;
   align-items: center;
   background-color: #ccc;
-
 }
 
-.txt{
+.txt {
   width: 40%;
   text-align: center;
   color: #fff;
 }
 
-.input_task{
+.input_task {
+  font-size:16px ;
   width: 60%;
   height: 35px;
   border: 2px solid transparent;
-  border-radius: 10px 0 0 10px   ;
+  border-radius: 10px 0 0 10px;
   padding-left: 30px;
 }
 
 .addBtn {
-  padding: 10px;
   width: 15%;
   height: 35px;
   border: 3px solid #f44336;
-  border-radius: 0 10px  10px 0;
+  border-radius: 0 10px 10px 0;
   text-align: center;
   font-size: 16px;
+  line-height: 30px;
   cursor: pointer;
 }
 
@@ -76,27 +74,7 @@ h1 {
   height: 35px;
   border: 2px solid transparent;
   padding-left: 30px;
-
 }
-
-.editBtn {
-  padding: 10px;
-  width: 15%;
-  height: 38px;
-  border: 3px solid #66aa4f;
-  border-radius:0 8px 8px  0;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-
-}
-
-.editBtn:hover {
-  transition: 0.5s;
-  color: #fff;
-  background: #66aa4f;
-}
-
 
 .edit:hover {
   transition: 0.5s;
@@ -104,9 +82,21 @@ h1 {
   color: white;
 }
 
-.edit_this{
+.edit_this {
   background-color: #66aa4f;
   color: white;
+}
+
+.editInput {
+  font-size: 16px;
+  width: 50%;
+  border: none;
+  background: none;
+}
+
+.editInputNow {
+  border: 1px solid #66aa4f ;
+  border-radius: 3px;
 }
 
 ul {
@@ -126,8 +116,8 @@ ul li {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-left: 5px solid  #ccc;
-  border-right: 5px solid  #ccc;
+  border-left: 5px solid #ccc;
+  border-right: 5px solid #ccc;
 }
 
 ul li:nth-child(odd) {
@@ -143,6 +133,7 @@ ul li.checked {
   color: #fff;
   text-decoration: line-through;
 }
+
 ul li.checked::before {
   content: '';
   position: absolute;
@@ -155,6 +146,7 @@ ul li.checked::before {
   height: 15px;
   width: 7px;
 }
+
 .close {
   position: absolute;
   right: 0;
@@ -183,7 +175,7 @@ ul li.checked .edit {
 }
 
 .box-footer {
-  height: 10px;
+  height: 20px;
   background-color: #ccc;
   border-radius: 0 0 10px 10px;
 }
