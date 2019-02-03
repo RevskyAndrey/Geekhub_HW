@@ -68,6 +68,26 @@ h1 {
   color: #fff;
   background: #f44336;
 }
+.hide {
+  display: none;
+}
+
+.editBtn {
+  width: 15%;
+  height: 35px;
+  border: 3px solid #66aa4f;
+  border-radius:0 10px 10px  0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.editBtn:hover {
+  transition: 0.5s;
+  color: #fff;
+  background: #66aa4f;
+}
 
 .edit_task {
   width: 75%;
@@ -89,7 +109,6 @@ h1 {
 
 .editInput {
   font-size: 16px;
-  width: 50%;
   border: none;
   background: none;
 }

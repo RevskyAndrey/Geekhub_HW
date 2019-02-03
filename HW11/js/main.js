@@ -1,42 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    //
     // const allTask = document.querySelector('.all_task');
-    //
     // const doneTask = document.querySelector('.done_task');
-
     const inputTask = document.querySelector('.input_task');
-
     const addBtn = document.querySelector('.addBtn');
-
+    const editBtn = document.querySelector('.editBtn');
     const list = document.getElementById('list');
-
-    // let thisEvent;
+    let thisTarget;
 
     class TaskFunction {
         createItem() {
-            const li = document.createElement('li');
-            const input = document.createElement('input');
-            const divEdit = document.createElement('DIV');
-            const span = document.createElement('SPAN');
-            const txt = document.createTextNode('X');
-            const edit = document.createTextNode('EDIT');
-            const i = document.createElement('i');
-            const iText = document.createTextNode('SELECT');
-            list.appendChild(li);
-            li.appendChild(input);
-            input.value = this._title;
-            li.appendChild(i);
-            i.appendChild(iText);
-            input.className = 'editInput';
-            divEdit.className = 'edit';
-            divEdit.appendChild(edit);
-            li.appendChild(divEdit);
-            span.className = 'close';
-            span.appendChild(txt);
-            li.appendChild(span);
-            if (this._status) {
-                li.classList.add('checked');
-            }
+            list.insertAdjacentHTML('beforeend', `<li><input disabled class="editInput" value=" ${this._title} ">
+<div class="edit">EDIT</div><span class="close">X</span></li>`);
+            // toLocal();
         }
     }
 
@@ -48,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
     class Task extends TaskItem {
         createItem() {
             super.createItem();
@@ -57,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     list.addEventListener('click', (ev) => {
         switch (ev.target.tagName) {
-            case ('LI'):
+            case ('INPUT'):
                 ev.target.classList.toggle('checked');
                 // toLocal();
                 break;
@@ -65,22 +39,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 ev.target.parentNode.remove();
                 // toLocal();
                 break;
-            case ("DIV"):
-                let value = ev.target.previousSibling.previousSibling.value;
-                // thisEvent = ev;
-                // editTask(str);
-                console.error(value, ev);
-                // console.warn(temp);
+            case ('DIV'):
+                const value = ev.target.previousSibling.previousSibling.value;
+                thisTarget = ev.target;
+                editTask(value);
                 break;
             default:
+                ev.target.classList.toggle('checked');
+                // toLocal();
                 break;
         }
     });
 
-    function editTask(value,ev) {
+    function editTask(value) {
         console.log(value);
-        console.log(ev);
+        addBtn.classList.toggle('hide');
+        editBtn.classList.toggle('hide');
+        inputTask.value = value;
+        thisTarget.classList.toggle('edit_this');
     }
+
+    editBtn.addEventListener('click', () => {
+        const inputValue = inputTask.value;
+        if (inputValue === '') {
+            const errorStr = 'Вы не ввели задачу, повторите попытку';
+            showError(errorStr);
+        } else {
+            thisTarget.previousSibling.previousSibling.value = inputValue;
+            thisTarget.classList.remove('edit_this');
+            addBtn.classList.toggle('hide');
+            editBtn.classList.toggle('hide');
+            inputTask.value = '';
+            // toLocal();
+        }
+    });
 
 
     function showError(strError) {
@@ -106,14 +98,14 @@ document.addEventListener('DOMContentLoaded', () => {
     //     document.querySelector('ul').innerHTML = (forLocal);
     //     f_filtr();
     // }
-
-
+    //
+    //
     // function toLocal() {
     //     todolist = list.innerHTML;
     //     localStorage.setItem('todolist', todolist);
     //     f_filtr();
     // }
-
+    //
     // function f_print(all, done) {
     //     const allStr = 'Всего поставленно задач : ';
     //     const doneStr = 'Выполненеый зачач : ';
