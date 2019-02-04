@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addBtn = document.querySelector('.addBtn');
     const editBtn = document.querySelector('.editBtn');
     const list = document.getElementById('list');
+    const select = document.querySelector('.select');
     let thisTarget;
 
     class TaskFunction {
@@ -59,6 +60,33 @@ document.addEventListener('DOMContentLoaded', () => {
         thisTarget.classList.toggle('edit_this');
     }
 
+    select.addEventListener('click', () => {
+        const arrItems = Array.from(list.children);
+        switch (select.value) {
+            case ('done'):
+                for (let i = 0; i < arrItems.length; i++) {
+                    arrItems[i].classList.remove('hide');
+                    if (arrItems[i].classList != 'checked') {
+                        arrItems[i].classList.add('hide');
+                    }
+                }
+                break;
+            case ('notdone'):
+                for (let i = 0; i < arrItems.length; i++) {
+                    arrItems[i].classList.remove('hide');
+                    if (arrItems[i].classList == 'checked') {
+                        arrItems[i].classList.add('hide');
+                    }
+                }
+                break;
+            case ('all'):
+                for (let i = 0; i < arrItems.length; i++) {
+                    arrItems[i].classList.remove('hide');
+                }
+                break;
+        }
+    });
+
     editBtn.addEventListener('click', () => {
         const inputValue = inputTask.value;
         if (inputValue === '') {
@@ -93,37 +121,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // const forLocal = localStorage.getItem('todolist');
-    // if (forLocal) {
-    //     document.querySelector('ul').innerHTML = (forLocal);
-    //     f_filtr();
-    // }
-    //
-    //
-    // function toLocal() {
-    //     todolist = list.innerHTML;
-    //     localStorage.setItem('todolist', todolist);
-    //     f_filtr();
-    // }
-    //
-    // function f_print(all, done) {
-    //     const allStr = 'Всего поставленно задач : ';
-    //     const doneStr = 'Выполненеый зачач : ';
-    //     if (done === undefined) { done = 0; }
-    //     allTask.innerHTML = allStr + all;
-    //     doneTask.innerHTML = doneStr + done;
-    // }
-    //
-    // function f_filtr() {
-    //     const items = document.querySelectorAll('li');
-    //     const all = items.length;
-    //     let done;
-    //     for (let i = 0; i < items.length; i++) {
-    //         const item = items[i];
-    //         const str = item.classList;
-    //         if (done === undefined) { done = 0; }
-    //         if (str.value) { done++; }
-    //     }
-    //     f_print(all, done);
-    // }
+// const forLocal = localStorage.getItem('todolist');
+// if (forLocal) {
+//     document.querySelector('ul').innerHTML = (forLocal);
+//     f_filtr();
+// }
+//
+//
+// function toLocal() {
+//     todolist = list.innerHTML;
+//     localStorage.setItem('todolist', todolist);
+//     f_filtr();
+// }
+//
+// function f_print(all, done) {
+//     const allStr = 'Всего поставленно задач : ';
+//     const doneStr = 'Выполненеый зачач : ';
+//     if (done === undefined) { done = 0; }
+//     allTask.innerHTML = allStr + all;
+//     doneTask.innerHTML = doneStr + done;
+// }
+//
+// function f_filtr() {
+//     const items = document.querySelectorAll('li');
+//     const all = items.length;
+//     let done;
+//     for (let i = 0; i < items.length; i++) {
+//         const item = items[i];
+//         const str = item.classList;
+//         if (done === undefined) { done = 0; }
+//         if (str.value) { done++; }
+//     }
+//     f_print(all, done);
+// }
 });

@@ -25,7 +25,7 @@ h1 {
 }
 
 .box-body {
-  height: 80px;
+  height: 100px;
   background-color: #ccc;
 }
 
@@ -38,9 +38,15 @@ h1 {
 }
 
 .txt {
-  width: 40%;
+  width: 25%;
   text-align: center;
   color: #fff;
+}
+
+.select {
+  margin-right: 25px;
+  height: 35px;
+  border-radius:10px ;
 }
 
 .input_task {
