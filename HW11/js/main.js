@@ -5,13 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const list = document.getElementById('list');
     const select = document.querySelector('.select');
     let thisTarget;
-    const tastObj = {};
 
     class TaskFunction {
         createItem() {
             list.insertAdjacentHTML('beforeend', `<li><input disabled class="editInput" value=" ${this._title} ">
 <div class="edit">EDIT</div><span class="close">X</span></li>`);
-            // toLocal();
+            toLocal();
         }
     }
 
@@ -33,13 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
         switch (ev.target.tagName) {
             case ('INPUT'):
                 ev.target.classList.toggle('checked');
-                funFiltr();
-                // toLocal();
+                toLocal();
                 break;
             case ('SPAN'):
                 ev.target.parentNode.remove();
-                funFiltr();
-                // toLocal();
+                toLocal();
                 break;
             case ('DIV'):
                 const str = ev.target.previousSibling.previousSibling.value;
@@ -49,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             default:
                 ev.target.classList.toggle('checked');
-                funFiltr();
-                // toLocal();
+                toLocal();
 
                 break;
         }
@@ -101,10 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
             addBtn.classList.toggle('hide');
             editBtn.classList.toggle('hide');
             inputTask.value = '';
-            // toLocal();
+            toLocal();
         }
     });
-
 
     function showError(strError) {
         document.querySelector('.error').innerHTML = strError;
@@ -115,29 +110,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     addBtn.addEventListener('click', () => {
         const inputValue = inputTask.value;
+        inputTask.value = '';
         if (inputValue === '') {
             const errorStr = 'Вы не ввели задачу, повторите попытку';
             showError(errorStr);
         } else {
             new Task(inputValue).createItem();
-            inputTask.value = '';
         }
-        funFiltr();
+        toLocal();
     });
 
-    // const forLocal = localStorage.getItem('todolist');
-    // if (forLocal) {
-    //     document.querySelector('ul').innerHTML = (forLocal);
-    //     f_filtr();
-    // }
-    //
-    //
-    // function toLocal() {
-    //     todolist = list.innerHTML;
-    //     localStorage.setItem('todolist', todolist);
-    //     f_filtr();
-    // }
-    //
+    const forLocal = localStorage.getItem('todolist');
+    if (forLocal) {
+        document.querySelector('ul').innerHTML = (forLocal);
+        funFiltr();
+    }
+
+    function toLocal() {
+        funFiltr();
+        const item = list.innerHTML;
+        localStorage.setItem('todolist', item);
+    };
+
     function funPrint(all, done, notDone) {
         document.querySelector('.all_task').innerHTML = all;
         document.querySelector('.done_task').innerHTML = done;
@@ -149,16 +143,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const all = items.children.length;
         let done = 0;
         let notDone = 0;
-        for (let i = 0; i < all; i++) {
-            const item = items.children[i];
-            const str = item.classList;
-            if (str == 'checked') {
-                done++;
-            } else if (str != 'checked') {
-                notDone++;
+        if (all !== 0) {
+            for (let i = 0; i < all; i++) {
+                const item = items.children[i];
+                const str = item.classList;
+                if (str == 'checked') {
+                    done++;
+                } else if (str != 'checked') {
+                    notDone++;
+                }
+                funPrint(all, done, notDone);
             }
-            funPrint(all, done, notDone);
-            console.log(all, done, notDone);
+        } else {
+            funPrint(0, 0, 0);
         }
     }
+
 });
