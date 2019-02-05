@@ -20,12 +20,14 @@ h1 {
 }
 
 .error {
+  font-size: 18px;
+  font-weight: bold;
   margin-top: -15px;
   color: #ff142b;
 }
 
 .box-body {
-  height: 100px;
+  height: 12%;
   background-color: #ccc;
 }
 
@@ -40,32 +42,35 @@ h1 {
 .txt {
   width: 25%;
   text-align: center;
-  color: #fff;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
 }
 
+
 .select {
-  margin-right: 25px;
-  height: 35px;
-  border-radius:10px ;
+  margin-right: 5%;
+  border-radius: 10px;
+  height: 40px;
 }
 
 .input_task {
-  font-size:16px ;
+  font-size: 16px;
   width: 60%;
-  height: 35px;
+  height: 40px;
   border: 2px solid transparent;
   border-radius: 10px 0 0 10px;
   padding-left: 30px;
 }
 
 .addBtn {
-  width: 15%;
-  height: 35px;
+  width: 10%;
+  height: 40px;
   border: 3px solid #f44336;
   border-radius: 0 10px 10px 0;
   text-align: center;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 35px;
   cursor: pointer;
 }
 
@@ -74,18 +79,19 @@ h1 {
   color: #fff;
   background: #f44336;
 }
+
 .hide {
   display: none;
 }
 
 .editBtn {
-  width: 15%;
-  height: 35px;
+  width: 10%;
+  height: 40px;
   border: 3px solid #66aa4f;
-  border-radius:0 10px 10px  0;
+  border-radius: 0 10px 10px 0;
   text-align: center;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 35px;
   cursor: pointer;
 }
 
@@ -120,7 +126,7 @@ h1 {
 }
 
 .editInputNow {
-  border: 1px solid #66aa4f ;
+  border: 1px solid #66aa4f;
   border-radius: 3px;
 }
 

@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // const allTask = document.querySelector('.all_task');
-    // const doneTask = document.querySelector('.done_task');
     const inputTask = document.querySelector('.input_task');
     const addBtn = document.querySelector('.addBtn');
     const editBtn = document.querySelector('.editBtn');
     const list = document.getElementById('list');
     const select = document.querySelector('.select');
     let thisTarget;
+    const tastObj = {};
 
     class TaskFunction {
         createItem() {
@@ -34,26 +33,30 @@ document.addEventListener('DOMContentLoaded', () => {
         switch (ev.target.tagName) {
             case ('INPUT'):
                 ev.target.classList.toggle('checked');
+                funFiltr();
                 // toLocal();
                 break;
             case ('SPAN'):
                 ev.target.parentNode.remove();
+                funFiltr();
                 // toLocal();
                 break;
             case ('DIV'):
-                const value = ev.target.previousSibling.previousSibling.value;
+                const str = ev.target.previousSibling.previousSibling.value;
+                const value = str.slice(0, -1);
                 thisTarget = ev.target;
                 editTask(value);
                 break;
             default:
                 ev.target.classList.toggle('checked');
+                funFiltr();
                 // toLocal();
+
                 break;
         }
     });
 
     function editTask(value) {
-        console.log(value);
         addBtn.classList.toggle('hide');
         editBtn.classList.toggle('hide');
         inputTask.value = value;
@@ -119,39 +122,43 @@ document.addEventListener('DOMContentLoaded', () => {
             new Task(inputValue).createItem();
             inputTask.value = '';
         }
+        funFiltr();
     });
 
-// const forLocal = localStorage.getItem('todolist');
-// if (forLocal) {
-//     document.querySelector('ul').innerHTML = (forLocal);
-//     f_filtr();
-// }
-//
-//
-// function toLocal() {
-//     todolist = list.innerHTML;
-//     localStorage.setItem('todolist', todolist);
-//     f_filtr();
-// }
-//
-// function f_print(all, done) {
-//     const allStr = 'Всего поставленно задач : ';
-//     const doneStr = 'Выполненеый зачач : ';
-//     if (done === undefined) { done = 0; }
-//     allTask.innerHTML = allStr + all;
-//     doneTask.innerHTML = doneStr + done;
-// }
-//
-// function f_filtr() {
-//     const items = document.querySelectorAll('li');
-//     const all = items.length;
-//     let done;
-//     for (let i = 0; i < items.length; i++) {
-//         const item = items[i];
-//         const str = item.classList;
-//         if (done === undefined) { done = 0; }
-//         if (str.value) { done++; }
-//     }
-//     f_print(all, done);
-// }
+    // const forLocal = localStorage.getItem('todolist');
+    // if (forLocal) {
+    //     document.querySelector('ul').innerHTML = (forLocal);
+    //     f_filtr();
+    // }
+    //
+    //
+    // function toLocal() {
+    //     todolist = list.innerHTML;
+    //     localStorage.setItem('todolist', todolist);
+    //     f_filtr();
+    // }
+    //
+    function funPrint(all, done, notDone) {
+        document.querySelector('.all_task').innerHTML = all;
+        document.querySelector('.done_task').innerHTML = done;
+        document.querySelector('.not_done_task').innerHTML = notDone;
+    }
+
+    function funFiltr() {
+        const items = document.getElementById('list');
+        const all = items.children.length;
+        let done = 0;
+        let notDone = 0;
+        for (let i = 0; i < all; i++) {
+            const item = items.children[i];
+            const str = item.classList;
+            if (str == 'checked') {
+                done++;
+            } else if (str != 'checked') {
+                notDone++;
+            }
+            funPrint(all, done, notDone);
+            console.log(all, done, notDone);
+        }
+    }
 });
