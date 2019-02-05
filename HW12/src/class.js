@@ -1,21 +1,17 @@
-
-
-const __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf
-            || ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; })
-            || function (d, b) { for (const p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
-}());
-Object.defineProperty(exports, '__esModule', { value: true });
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
 // не захотил компилиться, перенес в основной файл //
-const Point = /** @class */ (function () {
+var Point = /** @class */ (function () {
     function Point(x, y) {
         this.x = x;
         this.y = y;
@@ -32,91 +28,91 @@ const Point = /** @class */ (function () {
     return Point;
 }());
 exports.Point = Point;
-const Shape = /** @class */ (function () {
+var Shape = /** @class */ (function () {
     function Shape(center) {
         this.center = center;
     }
     return Shape;
 }());
 exports.Shape = Shape;
-const Circle = /** @class */ (function (_super) {
+var Circle = /** @class */ (function (_super) {
     __extends(Circle, _super);
     function Circle(center, radius) {
-        const _this = _super.call(this, center) || this;
+        var _this = _super.call(this, center) || this;
         _this.radius = radius;
         return _this;
     }
-    Object.defineProperty(Circle.prototype, 'area', {
-        get() {
+    Object.defineProperty(Circle.prototype, "area", {
+        get: function () {
             return +(3.14 * (this.radius * this.radius)).toFixed(3);
         },
         enumerable: true,
-        configurable: true,
+        configurable: true
     });
-    Object.defineProperty(Circle.prototype, 'perimeter', {
-        get() {
+    Object.defineProperty(Circle.prototype, "perimeter", {
+        get: function () {
             return +(2 * (3.14 * this.radius)).toFixed(3);
         },
         enumerable: true,
-        configurable: true,
+        configurable: true
     });
     return Circle;
 }(Shape));
 exports.Circle = Circle;
-const Polygon = /** @class */ (function (_super) {
+var Polygon = /** @class */ (function (_super) {
     __extends(Polygon, _super);
     function Polygon(center, points) {
-        const _this = _super.call(this, center) || this;
+        var _this = _super.call(this, center) || this;
         _this.points = points;
         return _this;
     }
-    Object.defineProperty(Polygon.prototype, 'perimeter', {
-        get() {
-            const arrSide = [];
-            const arr = this.points;
-            const sideCount = arr.length;
-            let sum = 0;
-            for (let i = 0; i < sideCount - 1; i++) {
+    Object.defineProperty(Polygon.prototype, "perimeter", {
+        get: function () {
+            var arrSide = [];
+            var arr = this.points;
+            var sideCount = arr.length;
+            var sum = 0;
+            for (var i = 0; i < sideCount - 1; i++) {
                 if (i === sideCount - 1) {
                     arrSide[i] = +(arr[i].getDistance(arr[0])).toFixed(3);
                 }
                 arrSide[i] = +(arr[i].getDistance(arr[i + 1])).toFixed(3);
-                sum += arrSide[i];
+                sum = sum + arrSide[i];
             }
             return sum;
         },
         enumerable: true,
-        configurable: true,
+        configurable: true
     });
     return Polygon;
 }(Shape));
 exports.Polygon = Polygon;
-const Rectangle = /** @class */ (function (_super) {
+var Rectangle = /** @class */ (function (_super) {
     __extends(Rectangle, _super);
     function Rectangle(center, width, height) {
-        const _this = _super.call(this, center, null) || this;
+        var _this = _super.call(this, center, null) || this;
         _this.width = width;
         _this.height = height;
         return _this;
     }
-    Object.defineProperty(Rectangle.prototype, 'perimeter', {
-        get() {
+    Object.defineProperty(Rectangle.prototype, "perimeter", {
+        get: function () {
             return +(2 * (this.width + this.height)).toFixed(3);
         },
         enumerable: true,
-        configurable: true,
+        configurable: true
     });
-    Object.defineProperty(Rectangle.prototype, 'area', {
-        get() {
+    Object.defineProperty(Rectangle.prototype, "area", {
+        get: function () {
             return +(this.width * this.height).toFixed(3);
         },
         enumerable: true,
-        configurable: true,
+        configurable: true
     });
     return Rectangle;
 }(Polygon));
 exports.Rectangle = Rectangle;
-const Square = /** @class */ (function (_super) {
+var Square = /** @class */ (function (_super) {
     __extends(Square, _super);
     function Square(center, width) {
         return _super.call(this, center, width, width) || this;
