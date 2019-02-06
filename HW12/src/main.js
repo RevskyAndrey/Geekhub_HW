@@ -1,9 +1,12 @@
 // import {Point, Shape, Circle, Polygon, Rectangle, Square} from './class';
 // import {testError, showError} from './module';
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -38,19 +41,18 @@ document.addEventListener('DOMContentLoaded', function () {
         function Circle(center, radius) {
             var _this = _super.call(this, center) || this;
             _this.radius = radius;
-            _this.radius = radius;
             return _this;
         }
         Object.defineProperty(Circle.prototype, "area", {
             get: function () {
-                return +(3.14 * (this.radius * this.radius)).toFixed(3);
+                return +(Math.PI * (this.radius * this.radius)).toFixed(3);
             },
             enumerable: true,
             configurable: true
         });
         Object.defineProperty(Circle.prototype, "perimeter", {
             get: function () {
-                return +(2 * (3.14 * this.radius)).toFixed(3);
+                return +(2 * (Math.PI * this.radius)).toFixed(3);
             },
             enumerable: true,
             configurable: true

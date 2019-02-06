@@ -27,15 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
     class Circle extends Shape {
         constructor(center: Point,  private radius: number) {
             super(center);
-            this.radius=radius;
         }
 
         get area(): number {
-            return +(3.14 * (this.radius * this.radius)).toFixed(3);
+            return +(Math.PI * (this.radius * this.radius)).toFixed(3);
         }
 
         get perimeter(): number {
-            return +(2 * (3.14 * this.radius)).toFixed(3);
+            return +(2 * (Math.PI  * this.radius)).toFixed(3);
         }
     }
 
@@ -48,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const arrSide = [];
             const arr = this.points;
             const sideCount = arr.length;
-            let sum: number = 0;
+            let sum = 0;
             for (let i = 0; i < sideCount - 1; i++) {
                 if (i === sideCount - 1) {
                     arrSide[i] = +(arr[i].getDistance(arr[0])).toFixed(3);
