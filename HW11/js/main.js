@@ -4,9 +4,53 @@ document.addEventListener('DOMContentLoaded', () => {
     const editBtn = document.querySelector('.editBtn');
     const list = document.getElementById('list');
     const select = document.querySelector('.select');
+    const forLocal = localStorage.getItem('todolist');
     let thisTarget;
 
-    class TaskFunction {
+    function funPrint(all, done, notDone) {
+        document.querySelector('.all_task').innerHTML = all;
+        document.querySelector('.done_task').innerHTML = done;
+        document.querySelector('.not_done_task').innerHTML = notDone;
+    }
+
+    function filtr() {
+        const items = document.getElementById('list');
+        const all = items.children.length;
+        let done = 0;
+        let notDone = 0;
+        if (all !== 0) {
+            for (let i = 0; i < all; i++) {
+                const item = items.children[i];
+                const str = item.classList;
+                if (str == 'checked') {
+                    done++;
+                } else if (str != 'checked') {
+                    notDone++;
+                }
+                funPrint(all, done, notDone);
+            }
+        } else {
+            funPrint(0, 0, 0);
+        }
+    }
+
+    if (forLocal) {
+        list.innerHTML = (forLocal);
+        filtr();
+    }
+    function toLocal() {
+        filtr();
+        const item = list.innerHTML;
+        localStorage.setItem('todolist', item);
+        //
+    }
+
+    class TaskItem {
+        constructor(title, status = false) {
+            this._title = title;
+            this._status = status;
+        }
+
         createItem() {
             list.insertAdjacentHTML('beforeend', `<li><input disabled class="editInput" value=" ${this._title} ">
 <div class="edit">EDIT</div><span class="close">X</span></li>`);
@@ -14,18 +58,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    class TaskItem extends TaskFunction {
-        constructor(title, status = false) {
-            super();
-            this._title = title;
-            this._status = status;
-        }
-    }
-
     class Task extends TaskItem {
         createItem() {
             super.createItem();
         }
+    }
+
+    function editTask(value) {
+        addBtn.classList.toggle('hide');
+        editBtn.classList.toggle('hide');
+        inputTask.value = value;
+        thisTarget.classList.toggle('edit_this');
+    }
+
+    function showError(strError) {
+        document.querySelector('.error').innerHTML = strError;
+        setTimeout(() => {
+            document.querySelector('.error').innerHTML = '';
+        }, 1250);
     }
 
     list.addEventListener('click', (ev) => {
@@ -51,13 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
         }
     });
-
-    function editTask(value) {
-        addBtn.classList.toggle('hide');
-        editBtn.classList.toggle('hide');
-        inputTask.value = value;
-        thisTarget.classList.toggle('edit_this');
-    }
 
     select.addEventListener('click', () => {
         const arrItems = Array.from(list.children);
@@ -101,13 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    function showError(strError) {
-        document.querySelector('.error').innerHTML = strError;
-        setTimeout(() => {
-            document.querySelector('.error').innerHTML = '';
-        }, 1250);
-    }
-
     addBtn.addEventListener('click', () => {
         const inputValue = inputTask.value;
         inputTask.value = '';
@@ -119,44 +155,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         toLocal();
     });
-
-    const forLocal = localStorage.getItem('todolist');
-    if (forLocal) {
-        document.querySelector('ul').innerHTML = (forLocal);
-        funFiltr();
-    }
-
-    function toLocal() {
-        funFiltr();
-        const item = list.innerHTML;
-        localStorage.setItem('todolist', item);
-    };
-
-    function funPrint(all, done, notDone) {
-        document.querySelector('.all_task').innerHTML = all;
-        document.querySelector('.done_task').innerHTML = done;
-        document.querySelector('.not_done_task').innerHTML = notDone;
-    }
-
-    function funFiltr() {
-        const items = document.getElementById('list');
-        const all = items.children.length;
-        let done = 0;
-        let notDone = 0;
-        if (all !== 0) {
-            for (let i = 0; i < all; i++) {
-                const item = items.children[i];
-                const str = item.classList;
-                if (str == 'checked') {
-                    done++;
-                } else if (str != 'checked') {
-                    notDone++;
-                }
-                funPrint(all, done, notDone);
-            }
-        } else {
-            funPrint(0, 0, 0);
-        }
-    }
-
 });
