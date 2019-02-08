@@ -1,0 +1,219 @@
+/*html, body, ul, li {*/
+  /*margin: 0;*/
+  /*padding: 0;*/
+/*}*/
+
+/*li {*/
+  /*list-style-type: none;*/
+/*}*/
+
+.slider {
+  min-width: 1170px;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider .photos {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.slider .photos img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s;
+
+}
+
+.slider .photos img.showed {
+  opacity: 1;
+}
+
+.buttons {
+  margin: 0 auto;
+  width: 1100px;
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons-list {
+  display: flex;
+  height: 92px;
+}
+
+.arrow-left {
+  width: 36px;
+  height: 36px;
+  background: url(../img/arrow-left.png);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.arrow-left:hover {
+  transition: 0.5s;
+  background: url(../img/arrow-left-active.png);
+}
+
+.arrow-right {
+  width: 36px;
+  height: 36px;
+  background: url(../img/arrow-right.png);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.arrow-right:hover {
+  transition: 0.5s;
+  background: url(../img/arrow-right-active.png);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 92px;
+  height: 92px;
+  background: url(../img/item.png);
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.item-list {
+  width: 93px;
+  height: 93px;
+  position: absolute;
+  left :0;
+  top: 0;
+  bottom: 0;
+}
+
+
+.item:hover {
+  cursor: pointer;
+  background: url(../img/item-hover.png) no-repeat;
+  border: 1px solid transparent;
+}
+
+.item-active {
+  width: 555px;
+  height: 92px;
+  background: url(../img/item-active-1.png);
+  border: 1px solid transparent;
+  position: relative;
+}
+.item-active:hover {
+  width: 555px;
+  height: 92px;
+  background: url(../img/item-active-1.png);
+}
+
+.item-content {
+  transition: 0.75s;
+  display: none;
+  width: 464px;
+  height: 93px;
+}
+
+
+.item-day {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 17px;
+  text-transform: capitalize;
+}
+
+.item-number {
+  text-align: center;
+  color: #fff;
+  font-size: 44px;
+  width: 93px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.item-month {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.content-list {
+  position: absolute;
+  width: 464px;
+  height: 93px;
+  top:0;
+  bottom: 0;
+  left: 50px;
+  color: #fff;
+  display: block;
+}
+.content-list:after{
+ content: "";
+  position: absolute;
+  width: 31px;
+  height: 74px;
+  top:10%;
+  bottom: 10%;
+  right: 20px;
+  background: url(../img/barcode.png);
+
+}
+
+.content-item {
+  display: none;
+}
+
+.item-content-title {
+  font-size: 28px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+}
+
+.content-active {
+  display: block;
+  width: 464px;
+  height: 92px;
+  border: 1px solid transparent;
+  position: absolute;
+}
+
+.item-content-name {
+  font-size: 13px;
+  position: absolute;
+  left: 8px;
+  bottom: 35px;
+}
+
+.item-content-time   {
+  font-size: 13px;
+  position: absolute;
+  left: 8px;
+  bottom: 20px;
+}
+ .buy-tikket {
+  background-color: #484c4d;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 15%;
+}
+
+.buy-tikket:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px #fff;
+}

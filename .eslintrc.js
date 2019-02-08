@@ -17,13 +17,13 @@ module.exports = {
                 SwitchCase: 1
             }
         ],
+
         "no-use-before-define": ["error", { "functions": true, "classes": true }],
         'linebreak-style': ['error', 'unix'],
         quotes: ['error', 'single'],
         semi: ['error', 'always'],
         'no-unused-vars': ['error', {vars: 'local'}],
         'no-plusplus': 'off',
-
         // override default options for rules from base configurations
         'no-cond-assign': ['error', 'always'],
         eqeqeq: ['warn', 'smart'],
