@@ -5,13 +5,27 @@ import {Component} from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   tasks = [];
-  title = '';
+  title: string;
+  completed = false;
+
 
   addTask() {
-    this.tasks.push(this.title);
-    console.log(this.title);
-   }
+    this.tasks.push({
+      title: this.title,
+      status: this.completed
+    });
+    this.title = '';
+  }
 
+  listAction(event) {
+    switch (event.target.classList.value) {
+      case ('delete'):
+        event.target.parentNode.remove();
+    }
+    console.warn(event);
+    console.log(event.target);
+  }
 }

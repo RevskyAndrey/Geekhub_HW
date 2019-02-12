@@ -1,9 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-    <input type="text" placeholder="add task" [(ngModel)]="title">
-    <button (click)="addTask()">add</button>
-
-  <ul *ngFor="let task of tasks">
-
+<div class="wraper">
+  <div class="header">
+    <input class="inputTask" type="text" placeholder="enter a new task" [(ngModel)]="title" (keyup.enter)="addTask()">
+    <button class="btnAdd" (click)="addTask()">add task</button>
+  </div>
+  <ul class="task__list">
+    <li class="item" *ngFor="let task of tasks">
+      <input type="checkbox">{{ task.title }}
+      <span class="edit" (click)="listAction($event)">Edit</span>
+      <span class="delete" (click)="listAction($event)">X</span>
+    </li>
   </ul>
+
+
+
 </div>
