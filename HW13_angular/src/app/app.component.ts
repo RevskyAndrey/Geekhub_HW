@@ -9,23 +9,37 @@ import {Component} from '@angular/core';
 export class AppComponent {
   tasks = [];
   title: string;
-  completed = false;
+  completed = 'false';
+  id = 0;
+  edit = 'false';
 
 
   addTask() {
     this.tasks.push({
+      id: this.id,
       title: this.title,
-      status: this.completed
+      status: this.completed,
+      edit: this.edit
     });
     this.title = '';
+    this.id++;
   }
 
-  listAction(event) {
-    switch (event.target.classList.value) {
-      case ('delete'):
-        event.target.parentNode.remove();
+  editTask() {
+    event.target.classList.toggle('editTask');
+    event.target.previousSibling.classList.toggle('tastTitleEdit');
+  }
+
+  deleteTask(id) {
+    this.tasks = this.tasks.filter(task => task.id !== id);
+  }
+
+  statusTask() {
+    if (this.tasks.status !== 'true') {
+      this.tasks.status = 'true';
+    } else if (this.tasks.status === 'true') {
+      this.tasks.status = 'false';
     }
-    console.warn(event);
-    console.log(event.target);
+    event.target.nextSibling.classList.toggle('statusTask');
   }
 }

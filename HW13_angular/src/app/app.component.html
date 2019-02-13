@@ -3,12 +3,14 @@
   <div class="header">
     <input class="inputTask" type="text" placeholder="enter a new task" [(ngModel)]="title" (keyup.enter)="addTask()">
     <button class="btnAdd" (click)="addTask()">add task</button>
+    <button class="bntEdit hide" (click)="editTask()">edit task</button>
   </div>
   <ul class="task__list">
     <li class="item" *ngFor="let task of tasks">
-      <input type="checkbox">{{ task.title }}
-      <span class="edit" (click)="listAction($event)">Edit</span>
-      <span class="delete" (click)="listAction($event)">X</span>
+      <input type="checkbox" (click)="statusTask()">
+      <input class="tastTitle" type="text" value="{{ task.title }}">
+      <span class="edit" (click)="editTask()">Edit</span>
+      <span class="delete" (click)="deleteTask(task.id)">X</span>
     </li>
   </ul>
 
