@@ -6,40 +6,43 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 
+
 export class AppComponent {
   tasks = [];
   title: string;
   completed = 'false';
   id = 0;
-  edit = 'false';
+  doneTask = 0;
+  notDoneTask = 0;
+  allTask = 0;
 
-
-  addTask() {
+  private addTask() {
     this.tasks.push({
       id: this.id,
       title: this.title,
       status: this.completed,
-      edit: this.edit
     });
     this.title = '';
     this.id++;
   }
 
-  editTask() {
+  private editTask() {
     event.target.classList.toggle('editTask');
-    event.target.previousSibling.classList.toggle('tastTitleEdit');
+    event.target.previousSibling.classList.toggle('taskTitleEdit');
   }
 
-  deleteTask(id) {
+  private deleteTask(id) {
     this.tasks = this.tasks.filter(task => task.id !== id);
   }
 
-  statusTask() {
+  private statusTask(i) {
     if (this.tasks.status !== 'true') {
       this.tasks.status = 'true';
     } else if (this.tasks.status === 'true') {
       this.tasks.status = 'false';
     }
     event.target.nextSibling.classList.toggle('statusTask');
+    // event.target.parentNode.children[1].classList.toggle('statusTask');
   }
+
 }

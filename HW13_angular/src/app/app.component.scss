@@ -9,36 +9,60 @@
 .wraper {
   margin: 1%;
   width: 97%;
+  .h1 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+
   .header {
     margin: 0 auto;
     width: 80%;
-    height: 60px;
+    height: 100px;
     background: #ccc;
     border-radius: 10px 10px 0 0;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3);
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      padding-top: 20px;
+      .inputTask {
+        height: 35px;
+        width: 70%;
+        padding-left: 25px;
+        border: none;
+        border-radius: 10px 0 0 10px;
+      }
+      .btnAdd {
+        height: 37px;
+        width: 10%;
+        color: #bb0000;
+        border-radius: 0 10px 10px 0;
+        border: 2px solid #bb0000;
+        &:hover {
+          transition: 0.5s;
+          color: #fff;
+          background: #bb0000;
+        }
+      }
+      .select {
+        margin-right: 2%;
+        border-radius: 10px;
+        height: 35px;
+      }
+    }
+  }
+  .flex_txt {
+    padding-top: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3);
-
-    .inputTask {
-      height: 35px;
-      width: 70%;
-      padding-left: 25px;
-      border: none;
-      border-radius: 10px 0 0 10px;
-
-    }
-    .btnAdd {
-      height: 37px;
-      width: 10%;
-      color: #bb0000;
-      border-radius: 0 10px 10px 0;
-      border: 2px solid #bb0000;
-      &:hover {
-        transition: 0.5s;
-        color: #fff;
-        background: #bb0000;
-      }
+    .txt {
+      min-width: 200px;
+      margin: 0 25px;
     }
   }
   .task__list {
@@ -56,18 +80,18 @@
       position: relative;
       .tastTitle {
         position: relative;
-          top :-3px;
+        top: -3px;
         padding-left: 15px;
         width: 90%;
         height: 35px;
         border: none;
         background: none;
       }
-      .tastTitleEdit{
+      .taskTitleEdit {
         border: 2px solid #00bb00;
       }
-      .statusTask{
-        color: #00cc00;
+      .statusTask {
+        color: #00aa00;
         text-decoration: line-through;
       }
       .delete {
