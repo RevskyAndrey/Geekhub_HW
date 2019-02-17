@@ -1,0 +1,73 @@
+.item {
+  margin-left: -40px;
+  padding-left: 25px;
+  position: relative;
+  height: 36px;
+  line-height: 35px;
+  border: 2px solid #bbbbbb;
+  margin-top: 8px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+
+  .svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 1px solid #c8c8c8;
+    padding: 1px;
+  }
+  .taskTitle {
+    padding-left: 15px;
+    position: relative;
+    top: 0;
+    width: 85%;
+    height: 30px;
+    border: none;
+    background: none;
+    .taskTitleEdit {
+      border: 2px solid #00bb00;
+    }
+    .statusTask {
+      color: #00aa00;
+      text-decoration: line-through;
+    }
+  }
+  .delete {
+    position: absolute;
+    right: 0;
+    top:0;
+    border: 2px solid #ff0000;
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      transition: 0.5s;
+      background: #ff0000;
+    }
+  }
+  .edit {
+    position: absolute;
+    right: 40px;
+    top: 0;
+    border: 2px solid #00bb00;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      transition: 0.5s;
+      background: #00bb00;
+    }
+  }
+  .archive{
+    position: absolute;
+    right: 80px;
+    top: 0;
+    border: 2px solid #0000dd;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      transition: 0.5s;
+      background: #0000dd;
+    }
+  }
+}

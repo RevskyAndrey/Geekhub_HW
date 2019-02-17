@@ -1,3 +1,9 @@
-<p>
-  task-item works!
-</p>
+<li class="item">
+  <input class="checkbox" type="checkbox" (click)="statusTask(i)">
+  <input class="taskTitle" type="text" value="{{ task.text }}">
+  <img class="svg archive" height="30px" alt="архив" title="archive task" src="../assets/img/archive.svg">
+  <img class="svg edit" height="30px" alt="pen" title="edit task" src="../assets/img/edit.svg">
+  <img class="svg delete" (click)="deleteTask(task.id)" alt="корзна" title="remove task"
+       src="../assets/img/waste-bin.svg">
+
+</li>
