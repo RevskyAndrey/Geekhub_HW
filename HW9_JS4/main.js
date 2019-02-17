@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let myXMLHttp = new XMLHttpRequest();
 
     // функция генерации рандомного числа //
+
     function randomN(rand) {
         rand = min + Math.random() * (max + 1 - min);
         rand = Math.floor(rand);
@@ -15,12 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // запрос на сервер и возврат результата через callback
+
     function getPosts(callback,limitNumber,pageNumber) {
         myXMLHttp.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
                 callback(JSON.parse(this.responseText));
             }
         };
+
         myXMLHttp.open("GET", `http://apistaging.theatre.pp.ua/posts.json?limit=${limitNumber}&page=${pageNumber}`);
         myXMLHttp.send();
     }
@@ -28,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function start() {
         //  первый запрос //
         setTimeout(function () {
+
             limitNumber1 = randomN(limitNumber1);
         }, 1000);
         setTimeout(function () {
@@ -49,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 2000);
         //  запрос на сервер через callback //
 
+
         setTimeout(function () {
 
             getPosts(function (result,limitNumber1,pageNumber1) {
@@ -57,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 2500);
         // функция получения промиса //
         setTimeout(getPostPromis, 2500);
-
 
         setTimeout(getPostsAsync, 2500);
     }
@@ -77,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.warn("Async =>", JSON.parse(request.response));
             }
         });
+
         request.open('GET', `http://apistaging.theatre.pp.ua/posts.json?limit=${limitNumber}&page=${pageNumber}`);
         request.send();
     }
