@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HW12_TypeScript</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="main">
+  <div class="task">
+    <h1> Завдання створити класи на <strong>TypeScrint </strong> </h1>
+    <ul>
+      <li>фігура: ( координати: х, у )</li>
+      <li> фігура -> круг ( координати: х, у ) -> радіус, площа(), периметр-длина окружности()</li>
+      <li> фігура: -> багатокутник, -> вершини[координати], периметр()</li>
+      <li> багатокутник:-> прямокутник -> довжина, висота, площа(), периметр()</li>
+      <li> прямокутник: -> квадрат -> довжинаСторони , площа(), периметр()</li>
+    </ul>
+    <p class="error"></p>
+    <p class="text_center"> Введите координаты для точки (Х и У) и количество углов для многоугольника ( не менее
+      3х)</p>
+    <div class="form">
+      <input class="txt js_x" placeholder=" Введите x">
+      <input class="txt js_y" placeholder=" Введите У">
+      <input class="txt js_points" placeholder=" Введите кол-во углов">
+      <button class="btn js_bnt">Enter</button>
+    </div>
+  </div>
+  <div class="popup hide">
+    <header class="popup_header">
+      <p>Откройте консоль для получения результатов </p>
+      <span class="close">X</span>
+    </header>
+  </div>
+</main>
+<script type="module" src="dist/main.js"></script>
+</body>
+</html>
