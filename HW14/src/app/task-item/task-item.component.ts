@@ -13,6 +13,17 @@ export class TaskItemComponent implements OnInit {
 
   ngOnInit() {
   }
+  archiveTask(id) {
+    this.task.isArchived = true;
+    event.target.parentNode.classList.add('hide');
+  }
 
+  editTask(id) {
+   console.log(event.target.parentNode.classList);
+  }
 
+  deleteTask(id) {
+  this.task.isRemoved = true;
+  event.target.parentNode.classList.add('hide');
+  }
 }
