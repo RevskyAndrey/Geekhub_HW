@@ -1,0 +1,32 @@
+<div class="header">
+
+  <img height="30" alt="Angular Logo"
+       src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <span> TodoList service</span>
+</div>
+<form class="form">
+
+  <input class="new-task-input"
+         [(ngModel)]="newValue" type="text"
+         [ngModelOptions]="{standalone: true}"
+         placeholder="Enter your task...">
+  <button class="add-new-task" (click)="addNew(newValue)">Add</button>
+</form>
+
+<div class="footer">
+  <button [ngClass]="{'active-btn': activeFilter === filters['A']}"
+          (click)="show(filters['A'])">Tasks: {{ todos.length }}
+  </button>
+  <button class="bnt-done" [ngClass]="{'active-btn': activeFilter === filters['D']}" (click)="show(filters['D'])">Done:
+    {{ checkedTasks.length }}
+  </button>
+</div>
+
+<ul class="list-task">
+  <li *ngFor="let task of todos; let i = index">
+    <app-task-item [task]="task"
+                   (updateTask)="update($event, i)"
+                   [hidden]="activeFilter === filters['D'] && !task.isChecked">
+    </app-task-item>
+  </li>
+</ul>
