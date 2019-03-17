@@ -1,0 +1,11 @@
+<div class="task-item">
+  <input type="checkbox" class="checkbox" [(ngModel)]="task.isChecked">
+
+  <input class="taskTitle" type="text" (keyup.enter)="edit()" [(ngModel)]="task.value"
+         [ngClass]="{'editThisTask': task.editing , 'task-Done':task.isChecked}">
+
+  <img class="svg edit" (click)="edit()" alt="edit" title="edit task" src="../assets/img/edit.svg">
+
+  <img class="svg delete" (click)="remove()" alt="remove" title="remove task" src="../assets/img/waste-bin.svg">
+
+</div>
